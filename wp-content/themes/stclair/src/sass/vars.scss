@@ -1,0 +1,47 @@
+/*********************
+COLOURS
+*********************/
+
+$primary-color: #0F2F95; /* blue */
+$secondary-color: #061852; /* dark blue */
+$tertiary-color: #F7F6EC; /* off yellow */
+$quaternary-color: #ECECF7; /* light purple */
+$quinary-color: #001B71; /* dark blue */
+$heading-font-color: #001B71; /* dark blue */
+$font-color: #424445; /* dark grey */
+$border-color: #979797; /* grey */
+
+/*********************
+SIZES
+*********************/
+
+$site-width: 1562px;
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+@font-face {
+    font-family: Ogg Roman;
+    src: url("/wp-content/themes/stclair/fonts/Ogg-Roman.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SharpGroteskExp Book;
+    src: url("/wp-content/themes/stclair/fonts/SharpGroteskExp Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SharpGroteskExp Light;
+    src: url("/wp-content/themes/stclair/fonts/SharpGroteskExp Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SharpGroteskUltExp Thin;
+    src: url("/wp-content/themes/stclair/fonts/SharpGroteskUltExp Thin.otf") format("opentype");
+}
+
+$heading-font-family: Ogg Roman;
+$secondary-font-family: SharpGroteskExp Book;
+$tertiary-font-family: SharpGroteskExp Light;
+$quaternary-font-family: SharpGroteskUltExp Thin;

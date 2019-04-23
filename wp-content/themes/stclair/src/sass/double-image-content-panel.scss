@@ -1,0 +1,97 @@
+.double-image-content-panel {
+    &__wrapper {
+        background-color: $tertiary-color;
+    }
+
+    &__container {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: 60px 40px;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 60px;
+        }
+
+        @include breakpoint(largedesktop) {
+            padding: 140px 90px 140px 148px;
+            justify-content: space-between;
+        }
+    }
+
+    &__left {
+        &--heading {
+            max-width: 240px;
+            padding-bottom: 20px;
+
+            @include breakpoint(tablet) {
+                padding-bottom: 54px;
+            }
+        }
+
+        &--paragraph {
+            font-size: em(14);
+            letter-spacing: 1px;
+            line-height: 28px;
+            color: $font-color;
+            font-family: $secondary-font-family;
+            margin-bottom: 40px;
+
+            @include breakpoint(tablet) {
+                max-width: 356px;
+                margin-right: 80px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        // add margin inside the wrapper so the image respects the space that is left including the margin and stays 100%.
+        &--large-image-wrapper {
+            margin-bottom: 20px;
+
+            @include breakpoint(tablet) {
+                margin: 0 0 100px 80px;
+            }
+
+            @include breakpoint(largedesktop) {
+                margin: 0 0 188px 170px;
+            }
+        }
+
+        &--large-image {
+            width: 100%;
+
+            @include breakpoint(desktop) {
+                max-width: 520px;
+            }
+
+            @include breakpoint(largedesktop) {
+                max-width: 664px;
+            }
+        }
+
+        &--small-image {
+            width: 100%;
+
+            @include breakpoint(tablet) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                max-width: 280px;
+            }
+
+            @include breakpoint(desktop) {
+                max-width: 320px;
+            }
+        
+            @include breakpoint(largedesktop) {
+                max-width: 398px;
+            }
+        }
+    }
+}

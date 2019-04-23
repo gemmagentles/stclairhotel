@@ -1,0 +1,148 @@
+/* Theme Name: St. Clair Theme */
+
+@import 'vars.scss';
+@import 'breakpoints.scss';
+@import 'pixel-to-em.scss';
+@import 'header.scss';
+@import 'hero-slider.scss';
+@import 'intro-block.scss';
+@import 'background-image-content-panel.scss';
+@import 'double-image-content-panel.scss';
+@import 'half-and-half-panel.scss';
+@import 'book-now-banner.scss';
+@import 'footer.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+}
+
+section {
+  position: relative;
+}
+
+// used on header.php content
+.mobile-only {
+
+  @include breakpoint(smalldesktop) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Listen to tab events to enable outlines (accessibility improvement) there is js to detect this too to add it in for tab users in the app.js file.
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+:root {
+  font-size: em(16);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $heading-font-family;
+  color: $heading-font-color;
+}
+
+h1 {
+  font-size: em(24);
+  line-height: 32px;
+  letter-spacing: 2.1px;
+  
+  @include breakpoint(smalldesktop) {
+    font-size: em(42);
+    line-height: 52px;
+  }
+
+  @include breakpoint(largedesktop) {
+    font-size: em(56);
+    line-height: 66px;
+  }
+
+  @include breakpoint(xlargedesktop) {
+    font-size: em(72);
+    line-height: 92px;
+  }
+}
+
+h2 {
+  font-size: em(38);
+  letter-spacing: 1.81px;
+  line-height: 54px;
+
+  @include breakpoint(smalldesktop) {
+    font-size: em(62);
+    line-height: 70px;
+  }
+}
+
+h3 {
+  font-size: em(24);
+  letter-spacing: 1px;
+}
+
+/*********************
+BUTTON
+*********************/
+
+.stclair-button {
+  border: 0;
+  background: $primary-color;
+  color: white;
+  text-transform: uppercase;
+  font-family: $tertiary-font-family;
+  letter-spacing: 3.05px;
+  padding: 15px;
+  font-size: em(12);
+  transition: background-color 0.7s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+      background-color: $secondary-color;
+      cursor: pointer;
+  }
+
+  @include breakpoint(largedesktop) {
+    font-size: em(14);
+    padding: 24px 46px;
+  }
+}
+
+.stclair-button-white {
+  border: 0;
+  background: white;
+  color: $primary-color;
+  text-transform: uppercase;
+  font-family: $tertiary-font-family;
+  letter-spacing: 3.05px;
+  padding: 20px 40px;
+  font-size: em(14);
+}
+
+.arrow-button {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 50px;
+  height: 45px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,268 @@
+.footer {
+
+    &__pattern {
+        width: 100%;
+        margin-bottom: -4px;
+    }
+
+    &__top--container {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: 15px 20px;
+
+        @include breakpoint(xlargedesktop) {
+            padding: 35px 0;
+        }
+    }
+
+    &__middle--container {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: 35px 20px 70px;
+        text-align: center;
+
+        @include breakpoint(smalldesktop) {
+            text-align: left;
+        }
+
+        @include breakpoint(xlargedesktop) {
+            padding: 35px 0 70px;
+        }
+    }
+
+    &__bottom--container {
+        padding: 50px;
+        max-width: $site-width;
+        margin: 0 auto;
+
+        @include breakpoint(smalldesktop) {
+            padding: 35px 20px;
+        }
+
+        @include breakpoint(xlargedesktop) {
+            padding: 35px 0;
+        }
+    }
+
+    // top start *****************************
+    &__top {
+        background: $quinary-color;
+        text-align: center;
+    }
+
+    &__logo {
+        padding: 70px 20px 10px;
+        text-align: center;
+
+        @include breakpoint(smalldesktop) {
+            padding: 70px 20px 80px;
+        }
+
+        &--img {
+            width: 100%;
+            max-width: 180px;
+        }
+    }
+
+    &__line {
+        display: none;
+        visibility: hidden;
+
+        @include breakpoint(smalldesktop) {
+            display: block;
+            visibility: visible;
+            border-width: 0.5px;
+            border-color: $border-color;
+        }
+
+        &--mobile {
+            display: block;
+            visibility: visible;
+            border-width: 0.5px;
+            border-color: $border-color;
+            max-width: 80px;
+            text-align: center;
+            margin: 30px auto;
+
+            @include breakpoint(smalldesktop) {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+    // top end *****************************
+    
+
+    // middle start *****************************
+    &__middle {
+        background: $quinary-color;
+
+        &--container {
+
+            @include breakpoint(smalldesktop) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__contact {
+        color: white;
+        font-family: $tertiary-font-family;
+        font-size: em(12);
+        letter-spacing: 1.07px;
+        line-height: 25px;
+
+        .email {
+            color: white;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .current-menu-item a {
+        position: relative;
+
+        @include breakpoint(smalldesktop) {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 5px;
+                border-bottom: 1px solid white;
+                width: 100%;
+                top: 10px;
+                left: 0;
+            }
+        }
+    }
+
+    &__nav li {
+        list-style-type: none;
+        padding-bottom: 20px;
+    }
+
+    &__nav a {
+        color: white;
+        font-family: $tertiary-font-family;
+        font-size: em(12);
+        letter-spacing: 1.07px;
+        text-decoration: none;
+        position: relative;
+
+        &:hover,
+        &:focus,
+        &:active {
+    
+            &::after {
+                content: "";
+                position: absolute;
+                height: 5px;
+                border-bottom: 1px solid white;
+                width: 100%;
+                top: 10px;
+                left: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__signup-wrapper {
+        position: relative;
+        margin: 10px auto;
+        width: 240px;
+
+        @include breakpoint(smalldesktop) {
+            width: 280px;
+        }
+    }
+
+    &__heading {
+        color: white;
+    }
+
+    &__signup {
+        border: 1px solid white;
+        padding: 14px;
+        background: $quinary-color;
+        color: lighten( $font-color, 35% );
+        font-size: em(12);
+        margin: 15px 0;
+        font-family: $tertiary-font-family;
+        letter-spacing: 0.5px;
+        width: 240px;
+
+        @include breakpoint(smalldesktop) {
+            width: 280px;
+        }
+    }
+
+    &__social {
+
+        &--link {
+            &:first-child {
+                .footer__social--icon {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        &--icon {
+            padding-left: 20px;
+        }
+    }
+    // middle end *****************************
+
+    // bottom start *****************************
+    &__bottom {
+        background: $secondary-color;
+
+        &--container {
+            text-align: center;
+
+            @include breakpoint(smalldesktop) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__copyright {
+        color: white;
+        text-transform: uppercase;
+        font-family: $tertiary-font-family;
+        font-size: em(12);
+        letter-spacing: 1.07px;
+        line-height: 24px;
+    }
+
+    &__accredit {
+        color: white;
+        font-family: $tertiary-font-family;
+        font-size: em(12);
+        letter-spacing: 1.07px;
+        padding-top: 20px;
+        line-height: 24px;
+
+        @include breakpoint(smalldesktop) {
+            padding-top: 0;
+        }
+
+        &--link {
+            text-decoration: none;
+            color: white;
+
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: underline;
+            }
+        }
+    }
+    // bottom end *****************************
+
+}
+

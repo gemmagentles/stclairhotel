@@ -1,0 +1,50 @@
+.background-image-content-panel {
+    &__wrapper {
+        background-image: url('/wp-content/themes/stclair/img/wedding.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__container {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: 100px 20px 110px;
+        color: white;
+        text-align: center;
+
+        @include breakpoint(smalldesktop) {
+            padding: 195px 20px 150px;
+        }
+    }
+
+    &__subheading {
+        text-transform: uppercase;
+        font-family: $tertiary-font-family;
+        font-size: em(16);
+        letter-spacing: 2.82px;
+        padding: 20px;
+
+        @include breakpoint(smalldesktop) {
+            font-size: em(18);
+        }
+    }
+
+    &__heading {
+        color: white;
+    }
+
+    &__paragraph {
+        max-width: 876px;
+        margin: 0 auto;
+        font-family: $tertiary-font-family;
+        font-size: em(16);
+        line-height: 31px;
+        letter-spacing: 1.49px;
+        padding: 20px;
+    }
+
+    &__button {
+        margin-top: 54px;
+    }
+}

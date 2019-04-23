@@ -1,0 +1,41 @@
+.book_now_banner {
+    &__wrapper {
+        padding: 20px;
+        margin-bottom: 40px;
+
+        @include breakpoint(smalldesktop) {
+            padding: 100px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__container {
+        max-width: $site-width;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        color: white;
+        text-align: center;
+        padding: 84px 20px 0;
+    }
+
+    &__bar-wrapper {
+        background: white;
+        padding: 40px;
+        margin: 100px;
+        text-align: center;
+        
+        @include breakpoint(smalldesktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        color: $font-color;
+        font-family: $tertiary-font-family;
+        font-size: em(16);
+    }
+}

@@ -1,0 +1,131 @@
+// default styles for all variations of this component
+.half-and-half-panel {
+    &__container {
+        background-color: $tertiary-color;
+        
+        &:nth-child(even) {
+            .half-and-half-panel__inner {
+                flex-direction: row-reverse;
+                justify-content: space-around;
+            }
+        }
+    }
+
+    &__inner {
+        padding: 60px 40px;
+        max-width: $site-width;
+        margin: 0 auto;
+        
+        @include breakpoint(tablet) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 175px 60px;
+        }
+
+        @include breakpoint(largedesktop) {
+            justify-content: space-between;
+        }
+    }
+
+    &__text-section {
+        @include breakpoint(tablet) {
+            max-width: 398px;
+        }
+    }
+
+    &__paragraph {
+        min-width: 300px;
+        font-family: $tertiary-font-family;
+        font-size: em(14);
+        line-height: 28px;
+        letter-spacing: 1px;
+        padding: 25px 35px 35px 0;
+
+        @include breakpoint(tablet) {
+            max-width: 350px;
+            padding: 25px 0 35px 0;
+            margin-right: 50px;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 64px 0 52px 0;
+            margin-right: 50px;
+        }
+    }
+
+    &__image {
+        margin-top: 50px;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            margin-top: 0;
+        }
+    }
+}
+
+// styles specific for this component on home page only 
+.home {
+    .half-and-half-panel {
+        &__container {
+            background-color: white;
+
+            .half-and-half-panel__inner {   
+                padding: 60px 40px;
+
+                @include breakpoint(smalldesktop) {
+                    padding: 100px 60px 175px;
+                }
+
+                @include breakpoint(desktop) {
+                    padding: 175px 60px;
+                }
+            }
+            
+            &:last-child {
+                background-image: url('/wp-content/themes/stclair/img/paper-texture-repeat.jpg');
+
+                .half-and-half-panel__inner {
+
+                    @include breakpoint(tablet) {
+                        padding: 60px 40px;
+                        justify-content: flex-end;
+                    }
+    
+                    @include breakpoint(desktop) {
+                        padding: 60px 90px 147px 60px;
+                        margin-top: 50px;
+                        align-items: unset;
+                    }
+    
+                    @include breakpoint(xlargedesktop) {
+                        padding: 100px 60px 150px 0;
+                        margin-top: 50px;
+                    }
+                }
+
+                .half-and-half-panel__text-section {
+                    @include breakpoint(tablet) {
+                        margin-left: 50px;
+                        padding-top: 35px;
+                    }
+                    
+                    @include breakpoint(largedesktop) {
+                        margin-left: 150px;
+                    }
+                }
+    
+                .half-and-half-panel__image {
+                    @include breakpoint(smalldesktop) {
+                        margin-top: -130px;
+                    }
+    
+                    @include breakpoint(largedesktop) {
+                        margin-top: -168px;
+                    }
+                }
+            }
+        }
+    }
+}
+
