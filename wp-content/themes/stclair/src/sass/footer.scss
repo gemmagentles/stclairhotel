@@ -1,4 +1,5 @@
 .footer {
+    background-color: $quinary-color;
 
     &__pattern {
         width: 100%;
@@ -6,19 +7,19 @@
     }
 
     &__top--container {
-        max-width: $site-width;
+        max-width: $footer-width;
         margin: 0 auto;
-        padding: 15px 20px;
+        padding: 15px 40px;
 
         @include breakpoint(xlargedesktop) {
-            padding: 35px 0;
+            padding: 0 0 35px 0;
         }
     }
 
     &__middle--container {
-        max-width: $site-width;
+        max-width: $footer-width;
         margin: 0 auto;
-        padding: 35px 20px 70px;
+        padding: 35px 40px 70px;
         text-align: center;
 
         @include breakpoint(smalldesktop) {
@@ -32,15 +33,15 @@
 
     &__bottom--container {
         padding: 50px;
-        max-width: $site-width;
+        max-width: $footer-width;
         margin: 0 auto;
 
         @include breakpoint(smalldesktop) {
-            padding: 35px 20px;
+            padding: 15px 40px;
         }
 
         @include breakpoint(xlargedesktop) {
-            padding: 35px 0;
+            padding: 15px 0;
         }
     }
 
@@ -106,7 +107,8 @@
         }
     }
 
-    &__contact {
+    &__contact,
+    &__heading {
         color: white;
         font-family: $tertiary-font-family;
         font-size: em(12);
@@ -122,6 +124,12 @@
                 text-decoration: underline;
             }
         }
+    }
+
+    &__tel {
+        // stop iphones styling phone number to link.
+        color: inherit; 
+        text-decoration: none; 
     }
 
     .current-menu-item a {
@@ -142,7 +150,7 @@
 
     &__nav li {
         list-style-type: none;
-        padding-bottom: 20px;
+        padding-bottom: 12px;
     }
 
     &__nav a {
@@ -180,20 +188,16 @@
         }
     }
 
-    &__heading {
-        color: white;
-    }
-
     &__signup {
         border: 1px solid white;
-        padding: 14px;
+        padding: 0 20px;
         background: $quinary-color;
         color: lighten( $font-color, 35% );
         font-size: em(12);
-        margin: 15px 0;
         font-family: $tertiary-font-family;
         letter-spacing: 0.5px;
         width: 240px;
+        height: 46px;
 
         @include breakpoint(smalldesktop) {
             width: 280px;

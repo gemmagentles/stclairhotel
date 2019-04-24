@@ -107,7 +107,7 @@ BUTTON
   text-transform: uppercase;
   font-family: $tertiary-font-family;
   letter-spacing: 3.05px;
-  padding: 15px;
+  padding: 20px 30px;
   font-size: em(12);
   transition: background-color 0.7s ease;
 
@@ -138,7 +138,7 @@ BUTTON
 .arrow-button {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 0;
   right: 0;
   width: 50px;
   height: 45px;

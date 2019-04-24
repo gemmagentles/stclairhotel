@@ -22,11 +22,11 @@
     </header>
     <header class="header clear" role="banner">
         <div class="header__wrapper">
-            <div class="logo">
+            <div class="header__logo-wrapper">
                 <a href="<?php echo home_url(); ?>">
                     <?php $brand_header_logo = get_field( 'brand_header_logo', 'option' ); ?>
                     <?php if ( $brand_header_logo ) { ?>
-                        <img src="<?php echo $brand_header_logo['url']; ?>" alt="<?php echo $brand_header_logo['alt']; ?>" />
+                        <img class="header__logo-desktop" src="<?php echo $brand_header_logo['url']; ?>" alt="<?php echo $brand_header_logo['alt']; ?>" />
                     <?php } ?>
                 </a>
             </div>
@@ -58,6 +58,6 @@
                 </div>
                 <!-- mobile only end -->
             </nav>
-            <button class="stclair-button" type="button" formtarget="_blank" onClick="window.open('https://www.marriott.com/hotels/travel/dtwtx-the-st-clair-inn-a-tribute-portfolio-hotel/');">Reserve</button>
+            <button class="stclair-button header__reserve-button" type="button" formtarget="_blank" onClick="window.open('https://www.marriott.com/hotels/travel/dtwtx-the-st-clair-inn-a-tribute-portfolio-hotel/');">Reserve</button>
         </div>
     </header>

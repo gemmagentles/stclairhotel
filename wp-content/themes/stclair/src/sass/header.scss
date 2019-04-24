@@ -131,6 +131,14 @@
         padding: 20px 0;        
     }
 
+    &__logo-desktop {
+        max-width: 66px;
+
+        @include breakpoint(largedesktop) {
+            max-width: 97px;
+        }
+    }
+
     &__wrapper {
         max-width: $site-width;
         margin: 0 auto;
@@ -274,6 +282,16 @@
             @keyframes fadein {
                 from {opacity: 0;}
             }
+        }
+    }
+
+    &__reserve-button.stclair-button {
+        @include breakpoint(smalldesktop) {
+            padding: 15px;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 20px 30px;
         }
     }
 }

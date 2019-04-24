@@ -6,8 +6,12 @@
     &__container {
         max-width: $site-width;
         margin: 0 auto;
-        padding: 100px 0 160px 0;
+        padding: 100px 0;
         text-align: center;
+
+        @include breakpoint(smalldesktop) {
+            padding: 100px 0 160px 0;
+        }
     }
 
     &__heading {
