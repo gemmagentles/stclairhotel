@@ -857,8 +857,8 @@ h1 {
       text-decoration: none; }
       .footer__contact .email:hover, .footer__contact .email:focus, .footer__heading .email:hover, .footer__heading .email:focus {
         text-decoration: underline; }
-  .footer__tel {
-    color: inherit;
+  .footer a[href^="tel"] {
+    color: white;
     text-decoration: none; }
   .footer .current-menu-item a {
     position: relative; }
@@ -906,7 +906,7 @@ h1 {
     font-family: SharpGroteskExp Light;
     letter-spacing: 0.5px;
     width: 240px;
-    height: 46px; }
+    height: 45px; }
     @media (min-width: 64em) {
       .footer__signup {
         width: 280px; } }
