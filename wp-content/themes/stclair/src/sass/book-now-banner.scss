@@ -10,7 +10,7 @@
     }
 
     &__container {
-        max-width: $site-width;
+        max-width: 1112px;
         margin: 0 auto;
     }
 
@@ -23,7 +23,7 @@
     &__bar-wrapper {
         background: white;
         padding: 40px;
-        margin: 100px;
+        margin: 100px 0;
         text-align: center;
         
         @include breakpoint(smalldesktop) {

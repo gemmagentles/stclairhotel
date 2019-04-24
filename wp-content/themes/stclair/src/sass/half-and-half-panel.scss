@@ -73,12 +73,16 @@
             .half-and-half-panel__inner {   
                 padding: 60px 40px;
 
+                @include breakpoint(tablet) {
+                    padding: 60px;
+                }
+
                 @include breakpoint(smalldesktop) {
                     padding: 100px 60px 175px;
                 }
 
-                @include breakpoint(desktop) {
-                    padding: 175px 60px;
+                @include breakpoint(largedesktop) {
+                    padding: 140px 90px 140px 148px;
                 }
             }
             
@@ -88,7 +92,6 @@
                 .half-and-half-panel__inner {
 
                     @include breakpoint(tablet) {
-                        padding: 60px 40px;
                         justify-content: flex-end;
                     }
     
@@ -98,8 +101,8 @@
                         align-items: unset;
                     }
     
-                    @include breakpoint(xlargedesktop) {
-                        padding: 100px 60px 150px 0;
+                    @include breakpoint(largedesktop) {
+                        padding: 100px 90px 150px 148px;
                         margin-top: 50px;
                     }
                 }

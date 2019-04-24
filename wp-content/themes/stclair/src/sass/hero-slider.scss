@@ -4,7 +4,8 @@
         position: relative;
         background: black;
         height: calc(100% - 10px);
-
+        overflow: hidden;
+        
         .tns-nav,
         [data-action='stop'],
         [data-action='start'] {

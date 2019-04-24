@@ -22,7 +22,7 @@
 							<p><?php the_field( 'contact_info_address_line_1', 'option' ); ?></p>
 							<p><?php the_field( 'contact_info_address_line_2', 'option' ); ?></p>
 							<br>
-							<p><span>T: </span><span><?php the_field( 'contact_info_phone_number', 'option' ); ?></span></p>
+							<p><span>T: </span><span class="footer__tel"><?php the_field( 'contact_info_phone_number', 'option' ); ?></span></p>
 							<p><span>E: </span><a class="email" href="mailto:<?php the_field( 'contact_info_email', 'option' ); ?>" target="_blank"><?php the_field( 'contact_info_email', 'option' ); ?></a></p>
 						</div>
 						<hr class="footer__line--mobile">
@@ -31,7 +31,7 @@
 						</nav>
 						<hr class="footer__line--mobile">
 						<div class="footer__newsletter">
-							<h3 class="footer__heading">Join our mailing list.</h3>
+							<p class="footer__heading">Join our mailing list.</p>
 							<div class="footer__signup-wrapper">
 								<input class="footer__signup" type="text" name="newsletter" placeholder="Enter your email here">
 								<button class="arrow-button" type="submit" value="">

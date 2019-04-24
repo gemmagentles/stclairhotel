@@ -15,9 +15,12 @@
             padding: 60px;
         }
 
+        @include breakpoint(smalldesktop) {
+            justify-content: space-between;
+        }
+
         @include breakpoint(largedesktop) {
             padding: 140px 90px 140px 148px;
-            justify-content: space-between;
         }
     }
 
