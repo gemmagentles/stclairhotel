@@ -126,9 +126,9 @@
         }
     }
 
-    &__tel {
+    a[href^="tel"] {
         // stop iphones styling phone number to link.
-        color: inherit; 
+        color: white; 
         text-decoration: none; 
     }
 
@@ -197,7 +197,7 @@
         font-family: $tertiary-font-family;
         letter-spacing: 0.5px;
         width: 240px;
-        height: 46px;
+        height: 45px;
 
         @include breakpoint(smalldesktop) {
             width: 280px;
