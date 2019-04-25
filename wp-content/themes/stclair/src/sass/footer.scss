@@ -198,6 +198,7 @@
         letter-spacing: 0.5px;
         width: 240px;
         height: 45px;
+        border-radius: 0;
 
         @include breakpoint(smalldesktop) {
             width: 280px;
