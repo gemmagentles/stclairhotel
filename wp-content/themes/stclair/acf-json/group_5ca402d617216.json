@@ -7,7 +7,7 @@
             "label": "Logo",
             "name": "logo",
             "type": "image",
-            "instructions": "",
+            "instructions": "Optional",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -145,6 +145,13 @@
                 "operator": "==",
                 "value": "events-and-meetings-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "rooms-and-cottages-template.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -155,5 +162,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1555469885
+    "modified": 1556151429
 }

@@ -1,4 +1,6 @@
 /* Theme Name: St. Clair Theme */
+/* Version: 0.1 */
+/* Author: Another Blank Page */
 /*********************
 COLOURS
 *********************/
@@ -774,6 +776,70 @@ h1 {
   font-family: SharpGroteskExp Light;
   font-size: 1em; }
 
+.cards__wrapper {
+  background: #F7F6EC; }
+
+.cards__container {
+  max-width: 1562px;
+  margin: 0 auto;
+  padding: 20px 20px 45px; }
+  @media (min-width: 48em) {
+    .cards__container {
+      padding: 35px 35px 100px; } }
+
+.cards__inner {
+  /* Set all boxes as same height */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.cards__heading {
+  text-align: center;
+  padding: 50px 40px 30px; }
+  @media (min-width: 48em) {
+    .cards__heading {
+      padding: 80px 60px 60px; } }
+
+.cards__individual-card-wrapper {
+  background: white;
+  max-width: 361px;
+  text-align: center;
+  display: flex;
+  /* Make the divs inside card div stack */
+  flex-direction: column;
+  margin: 20px; }
+
+.cards__individual-card-inner {
+  padding: 40px 34px 0;
+  /* Set all content to be the 100% height use this instead of height: 100%; because safari has view port bug */
+  flex: 2; }
+
+.cards__image {
+  width: 100%; }
+
+.cards__title {
+  font-size: 1.625em;
+  line-height: 32px;
+  letter-spacing: 2.1px; }
+  @media (min-width: 64em) {
+    .cards__title {
+      font-size: 2em;
+      line-height: 36px; } }
+
+.cards__individual-card--paragraph {
+  padding: 32px 30px 5px;
+  font-family: SharpGroteskExp Light;
+  font-size: 0.875em;
+  font-weight: lighter;
+  line-height: 1.5;
+  letter-spacing: 1.3px; }
+
+.cards__individual-card--button {
+  padding: 40px 50px; }
+
+.cards__button {
+  width: 100%; }
+
 .footer {
   background-color: #001B71; }
   .footer__pattern {
@@ -906,7 +972,8 @@ h1 {
     font-family: SharpGroteskExp Light;
     letter-spacing: 0.5px;
     width: 240px;
-    height: 45px; }
+    height: 45px;
+    border-radius: 0; }
     @media (min-width: 64em) {
       .footer__signup {
         width: 280px; } }
