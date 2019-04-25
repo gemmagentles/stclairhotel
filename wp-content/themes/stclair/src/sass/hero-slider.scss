@@ -160,11 +160,6 @@
         //     }
         // }
     }
-
-    &__watercolor {
-        display: none;
-        visibility: hidden;
-    }
 }
 
 .home {
@@ -201,10 +196,16 @@
             }
         }
 
+        &__watercolor-wrapper {
+            overflow: hidden;
+        }
+
         &__watercolor {
-            width: 100%;
-            display: block;
-            visibility: visible;
+            width: 150%;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
         }
     }
 }

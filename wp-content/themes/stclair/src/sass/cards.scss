@@ -54,10 +54,6 @@
         line-height: 32px;
         letter-spacing: 2.1px;
 
-        // @include breakpoint(tablet) {
-        //     font-size: em(28);
-        // }
-
         @include breakpoint(smalldesktop) {
             font-size: em(32);
             line-height: 36px;

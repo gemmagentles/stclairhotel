@@ -468,10 +468,6 @@ h1 {
       width: 100%;
       max-height: none; } }
 
-.hero-slider__watercolor {
-  display: none;
-  visibility: hidden; }
-
 .home .hero-slider__content {
   background-color: rgba(29, 59, 155, 0.2); }
 
@@ -498,10 +494,14 @@ h1 {
       font-size: 1.125em;
       line-height: 34px; } }
 
+.home .hero-slider__watercolor-wrapper {
+  overflow: hidden; }
+
 .home .hero-slider__watercolor {
-  width: 100%;
-  display: block;
-  visibility: visible; }
+  width: 150%; }
+  @media (min-width: 48em) {
+    .home .hero-slider__watercolor {
+      width: 100%; } }
 
 .intro-block__wrapper {
   background-image: url("/wp-content/themes/stclair/img/paper-texture-repeat.jpg"); }
@@ -842,9 +842,13 @@ h1 {
 
 .footer {
   background-color: #001B71; }
-  .footer__pattern {
-    width: 100%;
-    margin-bottom: -4px; }
+  .footer__watercolor-wrapper {
+    overflow: hidden; }
+  .footer__watercolor {
+    width: 150%; }
+    @media (min-width: 48em) {
+      .footer__watercolor {
+        width: 100%; } }
   .footer__top--container {
     max-width: 1285px;
     margin: 0 auto;
