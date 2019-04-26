@@ -1,6 +1,14 @@
+.white-cards .cards__individual-card-wrapper {
+    border: 1px solid lighten($border-color, 20%);
+}
+
 .cards {
-    &__wrapper {
+    &__wrapper.yellow-cards {
         background: $tertiary-color;
+    }
+
+    &__wrapper.white-cards {
+        background: white;
     }
 
     &__container {
@@ -56,6 +64,19 @@
 
         @include breakpoint(smalldesktop) {
             font-size: em(32);
+            line-height: 36px;
+        }
+    }
+
+    &__subtitle {
+        font-size: em(20);
+        line-height: 26px;
+        letter-spacing: 1.31px;
+        padding-top: 6px;
+        color: $primary-color;
+
+        @include breakpoint(smalldesktop) {
+            font-size: em(24);
             line-height: 36px;
         }
     }

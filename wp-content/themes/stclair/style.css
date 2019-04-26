@@ -468,6 +468,16 @@ h1 {
       width: 100%;
       max-height: none; } }
 
+.hero-slider__watercolor-wrapper {
+  overflow: hidden;
+  font-size: 0; }
+
+.hero-slider__watercolor {
+  width: 150%; }
+  @media (min-width: 48em) {
+    .hero-slider__watercolor {
+      width: 100%; } }
+
 .home .hero-slider__content {
   background-color: rgba(29, 59, 155, 0.2); }
 
@@ -493,15 +503,6 @@ h1 {
     .home .hero-slider__content--text {
       font-size: 1.125em;
       line-height: 34px; } }
-
-.home .hero-slider__watercolor-wrapper {
-  overflow: hidden; }
-
-.home .hero-slider__watercolor {
-  width: 150%; }
-  @media (min-width: 48em) {
-    .home .hero-slider__watercolor {
-      width: 100%; } }
 
 .intro-block__wrapper {
   background-image: url("/wp-content/themes/stclair/img/paper-texture-repeat.jpg"); }
@@ -776,8 +777,14 @@ h1 {
   font-family: SharpGroteskExp Light;
   font-size: 1em; }
 
-.cards__wrapper {
+.white-cards .cards__individual-card-wrapper {
+  border: 1px solid #cacaca; }
+
+.cards__wrapper.yellow-cards {
   background: #F7F6EC; }
+
+.cards__wrapper.white-cards {
+  background: white; }
 
 .cards__container {
   max-width: 1562px;
@@ -824,6 +831,17 @@ h1 {
   @media (min-width: 64em) {
     .cards__title {
       font-size: 2em;
+      line-height: 36px; } }
+
+.cards__subtitle {
+  font-size: 1.25em;
+  line-height: 26px;
+  letter-spacing: 1.31px;
+  padding-top: 6px;
+  color: #0F2F95; }
+  @media (min-width: 64em) {
+    .cards__subtitle {
+      font-size: 1.5em;
       line-height: 36px; } }
 
 .cards__individual-card--paragraph {

@@ -98,11 +98,11 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "rooms-and-cottages-template.php"
+                "value": "accommodations-template.php"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -110,5 +110,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556151397
+    "modified": 1556234957
 }

@@ -1,4 +1,4 @@
-<?php /* Template Name: Rooms & Cottages Page Template */ get_header(); ?>
+<?php /* Template Name: Accommodations Page Template */ get_header(); ?>
 
 	<main role="main">
 		<!-- Hero Slider -->
@@ -15,9 +15,15 @@
 
 		<!-- Cards -->
 		<section>
-			<?php get_template_part('partials/cards'); ?> 		
+			<?php get_template_part('partials/cards-yellow'); ?> 		
 		</section>
 		<!-- /Cards -->
+
+		<!-- Cards Clone -->
+		<section>
+			<?php get_template_part('partials/cards-clone-white'); ?> 		
+		</section>
+		<!-- /Cards Clone -->
 
 	</main>
 

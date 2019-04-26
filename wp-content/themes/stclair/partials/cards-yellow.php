@@ -1,6 +1,6 @@
-<div class="cards__wrapper">
+<div class="cards__wrapper yellow-cards">
     <div class="cards__container">
-        <h2 class="cards__heading"><?php the_field( 'heading' ); ?></h2>
+        <h2 class="cards__heading"><?php the_field( 'cards_heading' ); ?></h2>
         <?php if ( have_rows( 'card_repeater' ) ) : ?>
             <div class="cards__inner">
                 <?php while ( have_rows( 'card_repeater' ) ) : the_row(); ?>
