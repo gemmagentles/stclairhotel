@@ -160,6 +160,20 @@
         //     }
         // }
     }
+
+    &__watercolor-wrapper {
+        overflow: hidden;
+        // remove any gaps 
+        font-size: 0;
+    }
+
+    &__watercolor {
+        width: 150%;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+        }
+    }
 }
 
 .home {
@@ -193,18 +207,6 @@
             @include breakpoint(smalldesktop) {
                 font-size: em(18);
                 line-height: 34px;
-            }
-        }
-
-        &__watercolor-wrapper {
-            overflow: hidden;
-        }
-
-        &__watercolor {
-            width: 150%;
-
-            @include breakpoint(tablet) {
-                width: 100%;
             }
         }
     }
