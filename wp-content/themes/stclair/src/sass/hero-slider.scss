@@ -161,9 +161,18 @@
         // }
     }
 
+    &__watercolor-wrapper {
+        overflow: hidden;
+        // remove any gaps 
+        font-size: 0;
+    }
+
     &__watercolor {
-        display: none;
-        visibility: hidden;
+        width: 150%;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+        }
     }
 }
 
@@ -199,12 +208,6 @@
                 font-size: em(18);
                 line-height: 34px;
             }
-        }
-
-        &__watercolor {
-            width: 100%;
-            display: block;
-            visibility: visible;
         }
     }
 }

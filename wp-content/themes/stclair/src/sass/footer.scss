@@ -1,9 +1,16 @@
 .footer {
     background-color: $quinary-color;
 
-    &__pattern {
-        width: 100%;
-        margin-bottom: -4px;
+    &__watercolor-wrapper {
+        overflow: hidden;
+    }
+
+    &__watercolor {
+        width: 150%;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+        }
     }
 
     &__top--container {
@@ -198,6 +205,7 @@
         letter-spacing: 0.5px;
         width: 240px;
         height: 45px;
+        border-radius: 0;
 
         @include breakpoint(smalldesktop) {
             width: 280px;
