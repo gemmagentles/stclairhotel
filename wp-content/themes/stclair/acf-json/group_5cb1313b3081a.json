@@ -196,13 +196,6 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "restaurants-and-bars-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
                 "value": "weddings-template.php"
             }
         ],
@@ -211,6 +204,13 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "events-and-meetings-template.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "restaurants-and-bars-template.php"
             }
         ]
     ],
@@ -222,5 +222,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556231632
+    "modified": 1556246585
 }
