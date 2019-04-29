@@ -2,7 +2,7 @@
     <div class="cards__container">
     <?php if ( have_rows( 'cards_clone' ) ) : ?>
 	<?php while ( have_rows( 'cards_clone' ) ) : the_row(); ?>
-        <h2 class="cards__heading"><?php the_field( 'cards_heading' ); ?></h2>
+        <h2 class="cards__heading"><?php the_sub_field( 'cards_heading' ); ?></h2>
         <?php if ( have_rows( 'card_repeater' ) ) : ?>
             <div class="cards__inner">
                 <?php while ( have_rows( 'card_repeater' ) ) : the_row(); ?>
