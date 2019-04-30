@@ -1,0 +1,158 @@
+.half-and-half-content-slider {
+    &__wrapper {
+        display: flex;
+        max-width: $site-width;
+        margin: 0 auto;
+    }
+
+    &__content-wrapper {
+        max-width: 578px;
+        margin: 104px 108px 0 146px;
+    }
+
+    &__heading {
+        font-size: em(24);
+        line-height: 32px;
+        letter-spacing: 1.46px;
+
+        @include breakpoint(smalldesktop) {
+            font-size: em(50);
+            line-height: 72px;
+        }
+    }
+
+    &__paragraph {
+        min-width: 300px;
+        font-family: $tertiary-font-family;
+        font-size: em(14);
+        line-height: 28px;
+        letter-spacing: 1px;
+        padding: 25px 35px 35px 0;
+
+        @include breakpoint(tablet) {
+            max-width: 450px;
+            padding: 25px 0 35px 0;
+            margin-right: 50px;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 160px 0 52px 0;
+            margin-right: 50px;
+        }
+    }
+
+    &__slider-wrapper {
+        max-width: 776px;
+        position: relative;
+
+        .tns-nav,
+        [data-action='stop'],
+        [data-action='start'] {
+            display: none;
+            visibility: hidden;
+        }
+
+        .tns-controls {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 250px;
+            bottom: 36px;
+            z-index: 2;
+        }
+    
+        [data-controls='prev'],
+        [data-controls='next'] {
+            background: transparent;
+            color: white;
+            height: 27px;
+            border: none;
+            background-repeat: no-repeat;
+            color: transparent;
+
+            @include breakpoint(smalldesktop) {
+                height: 40px;
+            }
+        }
+    
+        [data-controls='prev'] {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            margin-left: 36px;
+            opacity: 0.6;
+    
+            @include breakpoint(smalldesktop) {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='40' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            }
+        }
+    
+        [data-controls='next'] {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            margin-right: 20px;
+            transform: rotate(180deg);
+            opacity: 0.6;
+    
+            @include breakpoint(smalldesktop) {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='40' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    &__progress-nav {
+        color: $font-color;
+        font-family: $heading-font-family;
+        position: relative;
+        display: flex;
+        margin-top: -108px;
+        background: white;
+        max-width: 260px;
+        padding: 30px 20px;
+        justify-content: center;
+
+        &--current-number {
+            font-size: em(16);
+            letter-spacing: 6.16px;
+            vertical-align: middle;
+            margin-top: 6px;
+            color: $primary-color;
+
+            @include breakpoint(largedesktop) {
+                font-size: em(29);
+                margin-top: 0;
+            }
+        }
+
+        &--total-number {
+            font-size: em(14);
+            letter-spacing: 4.04px;
+            margin-top: 8px;
+
+            @include breakpoint(largedesktop) {
+                font-size: em(19);
+                margin-top: 5px;
+            }
+        }
+
+        &--line {
+            position: relative;
+            width: 14px;
+            height: 1px;
+            margin: 18px 10px;
+
+            @include breakpoint(largedesktop) {
+                width: 20px;
+            }
+
+            span {
+                width: 14px;
+                height: 1px;
+                border-bottom: 1px solid $font-color;
+                position: absolute;
+
+                @include breakpoint(largedesktop) {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
