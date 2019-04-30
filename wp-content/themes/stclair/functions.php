@@ -165,6 +165,8 @@ function html5blank_footer_scripts()
 {
     wp_register_script('hero-main-slider', get_template_directory_uri() . '/js/hero-slider.js', array('jquery'), '1.0.0'); // Conditional script(s)
     wp_enqueue_script('hero-main-slider'); // Enqueue it!
+    wp_register_script('highlight-main-slider', get_template_directory_uri() . '/js/highlight-slider.js', array('jquery'), '1.0.0'); // Conditional script(s)
+    wp_enqueue_script('highlight-main-slider'); // Enqueue it!
 }
 
 // Load HTML5 Blank conditional scripts

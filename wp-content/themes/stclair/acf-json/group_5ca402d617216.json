@@ -152,6 +152,13 @@
                 "operator": "==",
                 "value": "accommodations-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "restaurant-template.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -164,5 +171,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556245134
+    "modified": 1556246694
 }

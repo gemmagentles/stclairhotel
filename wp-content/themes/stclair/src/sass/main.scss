@@ -13,6 +13,7 @@
 @import 'half-and-half-panel.scss';
 @import 'book-now-banner.scss';
 @import 'cards.scss';
+@import 'highlight-slider.scss';
 @import 'footer.scss';
 
 * {
@@ -97,6 +98,16 @@ h2 {
 h3 {
   font-size: em(24);
   letter-spacing: 1px;
+}
+
+h4 {
+  font-size: em(12);
+  letter-spacing: 2.53px;
+  line-height: 20px;
+
+  @include breakpoint(desktop) {
+    font-size: em(16);
+  }
 }
 
 /*********************

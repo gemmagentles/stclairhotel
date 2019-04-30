@@ -1,0 +1,165 @@
+.highlight-slider {
+
+    &__wrapper {
+        position: relative;
+        margin: 80px 0 180px;
+
+        .tns-nav,
+        [data-action='stop'],
+        [data-action='start'] {
+            display: none;
+            visibility: hidden;
+        }
+
+        .tns-controls {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            top: calc(50% + 57px);
+            transform: translateY(calc(-50% - 57px));
+            z-index: 2;
+
+            @include breakpoint(smalldesktop) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    
+        [data-controls='prev'],
+        [data-controls='next'] {
+            background: transparent;
+            color: white;
+            height: 27px;
+            border: none;
+            background-repeat: no-repeat;
+            color: transparent;
+
+            @include breakpoint(smalldesktop) {
+                height: 40px;
+            }
+        }
+    
+        [data-controls='prev'] {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            margin-left: 20px;
+    
+            @include breakpoint(smalldesktop) {
+                margin-left: 40px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='40' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            }
+        }
+    
+        [data-controls='next'] {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='28' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            margin-right: 20px;
+            transform: rotate(180deg);
+    
+            @include breakpoint(smalldesktop) {
+                margin-right: 40px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='40' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    &__slide-image {
+        width: 100%;
+    }
+
+    &__info {
+        background: white;
+        padding: 10px 30px 10px 0;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint(mobile) {
+            position: relative;
+        }
+
+        @include breakpoint(largedesktop) {
+            padding: 30px 50px 30px 0;
+        }
+
+        &::before {
+            content: "";
+            border-bottom: 2px solid $primary-color;
+            width: 38px;
+            position: absolute;
+            top: 48%;
+
+            @include breakpoint(largedesktop) {
+                width: 72px;
+            }
+        }
+
+        &--title {
+            text-transform: uppercase;
+            font-family: $tertiary-font-family;
+            // to account for before line
+            padding-left: 52px;
+
+            @include breakpoint(largedesktop) {
+                padding-left: 90px;
+            }
+        }
+    }
+
+    &__progress-nav {
+        padding-left: 20px;
+        color: $font-color;
+        font-family: $heading-font-family;
+        position: relative;
+        display: flex;
+
+        @include breakpoint(largedesktop) {
+            padding-left: 30px;
+        }
+
+        &--current-number {
+            font-size: em(16);
+            letter-spacing: 6.16px;
+            vertical-align: middle;
+            margin-top: 6px;
+
+            @include breakpoint(largedesktop) {
+                font-size: em(29);
+                margin-top: 0;
+            }
+        }
+
+        &--total-number {
+            font-size: em(14);
+            letter-spacing: 4.04px;
+            margin-top: 8px;
+
+            @include breakpoint(largedesktop) {
+                font-size: em(19);
+                margin-top: 5px;
+            }
+        }
+
+        &--line {
+            position: relative;
+            width: 14px;
+            height: 1px;
+            margin: 18px 10px;
+
+            @include breakpoint(largedesktop) {
+                width: 20px;
+            }
+
+            span {
+                width: 14px;
+                height: 1px;
+                border-bottom: 1px solid $font-color;
+                position: absolute;
+
+                @include breakpoint(largedesktop) {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
