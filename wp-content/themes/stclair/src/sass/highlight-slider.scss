@@ -15,18 +15,29 @@
             position: absolute;
             display: flex;
             justify-content: space-between;
+            width: 100%;
+            top: calc(50% + 57px);
+            transform: translateY(calc(-50% - 57px));
             z-index: 2;
-            bottom: 0;
+
+            @include breakpoint(smalldesktop) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     
         [data-controls='prev'],
         [data-controls='next'] {
             background: transparent;
             color: white;
-            height: 40px;
+            height: 27px;
             border: none;
             background-repeat: no-repeat;
             color: transparent;
+
+            @include breakpoint(smalldesktop) {
+                height: 40px;
+            }
         }
     
         [data-controls='prev'] {
@@ -51,68 +62,103 @@
         }
     }
 
-    .tns-slide-active:nth-child(2) {
-        border: solid 2px green;
-    }
-
     &__slide-image {
-        max-width: 1330px;
         width: 100%;
     }
 
     &__info {
         background: white;
-        padding: 30px 50px 30px 0;
+        padding: 10px 30px 10px 0;
         position: absolute;
         bottom: 0;
         display: flex;
         align-items: center;
 
+        @include breakpoint(mobile) {
+            position: relative;
+        }
+
+        @include breakpoint(largedesktop) {
+            padding: 30px 50px 30px 0;
+        }
+
         &::before {
             content: "";
             border-bottom: 2px solid $primary-color;
-            width: 72px;
+            width: 38px;
             position: absolute;
             top: 48%;
+
+            @include breakpoint(largedesktop) {
+                width: 72px;
+            }
         }
 
         &--title {
             text-transform: uppercase;
             font-family: $tertiary-font-family;
-            padding-left: 90px; // to account for before line
+            // to account for before line
+            padding-left: 52px;
+
+            @include breakpoint(largedesktop) {
+                padding-left: 90px;
+            }
         }
     }
 
     &__progress-nav {
-        padding-left: 30px;
+        padding-left: 20px;
         color: $font-color;
         font-family: $heading-font-family;
         position: relative;
         display: flex;
 
+        @include breakpoint(largedesktop) {
+            padding-left: 30px;
+        }
+
         &--current-number {
-            font-size: em(29);
+            font-size: em(16);
             letter-spacing: 6.16px;
             vertical-align: middle;
+            margin-top: 6px;
+
+            @include breakpoint(largedesktop) {
+                font-size: em(29);
+                margin-top: 0;
+            }
         }
 
         &--total-number {
-            font-size: em(19);
+            font-size: em(14);
             letter-spacing: 4.04px;
-            margin-top: 5px;
+            margin-top: 8px;
+
+            @include breakpoint(largedesktop) {
+                font-size: em(19);
+                margin-top: 5px;
+            }
         }
 
         &--line {
             position: relative;
-            width: 20px;
+            width: 14px;
             height: 1px;
             margin: 18px 10px;
 
-            span {
+            @include breakpoint(largedesktop) {
                 width: 20px;
+            }
+
+            span {
+                width: 14px;
                 height: 1px;
                 border-bottom: 1px solid $font-color;
                 position: absolute;
+
+                @include breakpoint(largedesktop) {
+                    width: 20px;
+                }
             }
         }
     }

@@ -101,9 +101,13 @@ h3 {
 }
 
 h4 {
-  font-size: em(16);
+  font-size: em(12);
   letter-spacing: 2.53px;
   line-height: 20px;
+
+  @include breakpoint(desktop) {
+    font-size: em(16);
+  }
 }
 
 /*********************
