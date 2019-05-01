@@ -132,3 +132,116 @@
     }
 }
 
+// styles specific for this component on restaurant page only 
+.restaurant {
+    .half-and-half-panel__wrapper {
+        @include breakpoint(desktop) {
+            padding-top: 245px;
+        }
+    }
+
+    .half-and-half-panel__container:first-child {
+        background: $quaternary-color;
+
+        .half-and-half-panel__inner {
+            align-items: normal;
+
+            @include breakpoint(tablet) {
+                padding: 70px 60px 80px;
+            }
+
+            @include breakpoint(desktop) {
+                padding: 124px 60px 100px;
+            }
+        }
+
+        .half-and-half-panel__text-section {
+
+            @include breakpoint(mobile) {
+                max-width: none;
+            }
+            
+            @include breakpoint(tablet) {
+                margin-right: 40px;
+            }
+
+            @include breakpoint(smalldesktop) {
+                max-width: 530px;
+            }
+        }
+
+        .half-and-half-panel__heading {
+            max-width: 300px;
+        }
+
+        .half-and-half-panel__paragraph {
+            padding: 25px 10px 18px 0;
+
+            @include breakpoint(desktop) {
+                max-width: 480px;
+            }
+
+            @include breakpoint(desktop) {
+                padding: 30px 0 52px 0;
+            }
+        }
+
+        .half-and-half-panel__download-link {
+            display: block;
+            padding: 20px 0 20px 24px;
+            text-decoration: none;
+            color: $quinary-color;
+            font-size: em(22);
+            line-height: 28px;
+            letter-spacing: 2.18px;
+            font-family: $heading-font-family;
+
+            @include breakpoint(smalldesktop) {
+                font-size: em(32);
+                line-height: 46px;
+                padding: 24px 0 24px 30px;
+            }
+
+            &:first-child {
+                padding: 0 0 20px 24px;
+
+                @include breakpoint(smalldesktop) {
+                    padding: 0 0 24px 30px;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                opacity: 0.8;
+            }
+
+            &--wrapper {
+                display: flex;
+                align-items: baseline;
+                border-bottom: 1px solid $border-color;
+
+                @include breakpoint(tablet) {
+                    margin-right: 40px;
+                }
+            }
+
+            &--icon {
+                display: inline;
+                width: 8px;
+                height: 14px;
+                
+                @include breakpoint(smalldesktop) {
+                    width: 10px;
+                    height: 22px;
+                }
+            }
+        }
+
+        .half-and-half-panel__image-section {
+            @include breakpoint(desktop) {
+                margin-top: -244px;
+            }
+        }
+    }
+}
+

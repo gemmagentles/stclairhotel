@@ -79,10 +79,10 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_5cb6933bf8ca7",
-                    "label": "Download Link Text",
-                    "name": "download_link_text",
-                    "type": "text",
+                    "key": "field_5cc9e2e7b9b10",
+                    "label": "Download Link",
+                    "name": "download_link",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -91,30 +91,51 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5cb6943e6a4d2",
-                    "label": "Download Link File",
-                    "name": "download_link_file",
-                    "type": "file",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_size": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cb6933bf8ca7",
+                            "label": "Download Link Text",
+                            "name": "download_link_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5cb6943e6a4d2",
+                            "label": "Download Link File",
+                            "name": "download_link_file",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
                 },
                 {
                     "key": "field_5cb1316a657fb",
@@ -212,6 +233,13 @@
                 "operator": "==",
                 "value": "restaurants-and-bars-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "restaurant-template.php"
+            }
         ]
     ],
     "menu_order": 4,
@@ -222,5 +250,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556246585
+    "modified": 1556734907
 }

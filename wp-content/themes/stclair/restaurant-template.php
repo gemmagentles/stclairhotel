@@ -13,6 +13,12 @@
 		</section>
 		<!-- /Intro Block Slider -->
 
+		<!-- Menu List -->
+		<section>
+			<?php get_template_part('partials/half-and-half-panel'); ?> 		
+		</section>
+		<!-- /Menu List -->
+
 		<!-- Content Box Overlay -->
 		<section>
 			<?php get_template_part('partials/content-box-overlay'); ?> 		

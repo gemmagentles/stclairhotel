@@ -744,6 +744,79 @@ h1 {
       .home .half-and-half-panel__container:last-child .half-and-half-panel__image {
         margin-top: -168px; } }
 
+@media (min-width: 70em) {
+  .restaurant .half-and-half-panel__wrapper {
+    padding-top: 245px; } }
+
+.restaurant .half-and-half-panel__container:first-child {
+  background: #ECECF7; }
+  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__inner {
+    align-items: normal; }
+    @media (min-width: 48em) {
+      .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__inner {
+        padding: 70px 60px 80px; } }
+    @media (min-width: 70em) {
+      .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__inner {
+        padding: 124px 60px 100px; } }
+  @media (max-width: 37.5em) {
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+      max-width: none; } }
+  @media (min-width: 48em) {
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+      margin-right: 40px; } }
+  @media (min-width: 64em) {
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+      max-width: 530px; } }
+  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__heading {
+    max-width: 300px; }
+  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__paragraph {
+    padding: 25px 10px 18px 0; }
+    @media (min-width: 70em) {
+      .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__paragraph {
+        max-width: 480px; } }
+    @media (min-width: 70em) {
+      .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__paragraph {
+        padding: 30px 0 52px 0; } }
+  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link {
+    display: block;
+    padding: 20px 0 20px 24px;
+    text-decoration: none;
+    color: #001B71;
+    font-size: 1.375em;
+    line-height: 28px;
+    letter-spacing: 2.18px;
+    font-family: Ogg Roman; }
+    @media (min-width: 64em) {
+      .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link {
+        font-size: 2em;
+        line-height: 46px;
+        padding: 24px 0 24px 30px; } }
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link:first-child {
+      padding: 0 0 20px 24px; }
+      @media (min-width: 64em) {
+        .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link:first-child {
+          padding: 0 0 24px 30px; } }
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link:hover, .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link:focus {
+      opacity: 0.8; }
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link--wrapper {
+      display: flex;
+      align-items: baseline;
+      border-bottom: 1px solid #979797; }
+      @media (min-width: 48em) {
+        .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link--wrapper {
+          margin-right: 40px; } }
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link--icon {
+      display: inline;
+      width: 8px;
+      height: 14px; }
+      @media (min-width: 64em) {
+        .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__download-link--icon {
+          width: 10px;
+          height: 22px; } }
+  @media (min-width: 70em) {
+    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__image-section {
+      margin-top: -244px; } }
+
 .half-and-half-content-slider__wrapper {
   max-width: 1562px;
   margin: 0 auto 60px; }
