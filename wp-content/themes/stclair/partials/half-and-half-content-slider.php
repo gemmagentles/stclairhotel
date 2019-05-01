@@ -17,7 +17,7 @@
                     <?php $image_slide = get_sub_field( 'image_slide' ); ?>
                     <?php if ( $image_slide ) { ?>
                         <div>
-                            <img src="<?php echo $image_slide['url']; ?>" alt="<?php echo $image_slide['alt']; ?>" />
+                            <img class="half-and-half-content-slider__image" src="<?php echo $image_slide['url']; ?>" alt="<?php echo $image_slide['alt']; ?>" />
                         </div>
                     <?php } ?>
                 <?php endwhile; ?>

@@ -1,21 +1,79 @@
 .half-and-half-content-slider {
     &__wrapper {
-        display: flex;
         max-width: $site-width;
-        margin: 0 auto;
+        margin: 0 auto 60px;
+
+        @include breakpoint(smalldesktop) {
+            display: flex;
+            margin: 120px auto 180px;
+            padding: 50px 0 40px;
+        }
+
+        @include breakpoint(largedesktop) {
+            padding: 134px 0 115px;
+        }
     }
 
     &__content-wrapper {
-        max-width: 578px;
-        margin: 104px 108px 0 146px;
+        padding: 40px;
+        position: relative;
+
+        @include breakpoint(smalldesktop) {
+            max-width: 578px;
+            margin: 48px 20px 0 50px;
+            padding: 0;
+        }
+
+        @include breakpoint(largedesktop) {
+            margin: 104px 108px 0 146px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $quaternary-color;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            @include breakpoint(smalldesktop) {
+                top: -48px;
+                left: -370px;
+                width: 550px;
+                height: 248px;
+            }
+
+            @include breakpoint(largedesktop) {
+                top: -104px;
+                width: 611px;
+                height: 480px;
+            }
+        }
     }
 
     &__heading {
         font-size: em(24);
-        line-height: 32px;
+        line-height: 36px;
         letter-spacing: 1.46px;
 
-        @include breakpoint(smalldesktop) {
+        @include breakpoint(tablet) {
+            font-size: em(28);
+            line-height: 42px;
+        }
+
+        @include breakpoint(desktop) {
+            font-size: em(34);
+            line-height: 52px;
+        }
+
+        @include breakpoint(largedesktop) {
+            font-size: em(42);
+            line-height: 62px;
+        }
+
+        @include breakpoint(xlargedesktop) {
             font-size: em(50);
             line-height: 72px;
         }
@@ -30,20 +88,53 @@
         padding: 25px 35px 35px 0;
 
         @include breakpoint(tablet) {
-            max-width: 450px;
             padding: 25px 0 35px 0;
             margin-right: 50px;
         }
 
+        @include breakpoint(smalldesktop) {
+            max-width: 450px;
+            padding: 80px 0 35px 0;
+        }
+
         @include breakpoint(desktop) {
-            padding: 160px 0 52px 0;
             margin-right: 50px;
+            padding: 98px 0 52px 0;
+
+        }
+
+        @include breakpoint(largedesktop) {
+            padding: 160px 0 52px 0;
         }
     }
 
     &__slider-wrapper {
-        max-width: 776px;
         position: relative;
+        z-index: 1;
+
+        @include breakpoint(smalldesktop) {
+            max-width: 776px;
+        }
+
+        &::after {
+            @include breakpoint(smalldesktop) {
+                content: "";
+                position: absolute;
+                right: -190px;
+                background: $tertiary-color;
+                width: 100%;
+                z-index: -1;
+                right: -190px;
+                top: -50px;
+                height: calc(100% + 100px);
+            }
+
+            @include breakpoint(largedesktop) {
+                top: -134px;
+                height: calc(100% + 248px);
+                right: -260px;
+            }
+        }
 
         .tns-nav,
         [data-action='stop'],
@@ -58,8 +149,16 @@
             justify-content: space-between;
             width: 100%;
             max-width: 250px;
-            bottom: 36px;
+            bottom: 27px;
             z-index: 2;
+
+            @include breakpoint(smalldesktop) {
+                bottom: 20px;
+            }
+
+            @include breakpoint(largedesktop) {
+                bottom: 24px;
+            }
         }
     
         [data-controls='prev'],
@@ -98,16 +197,24 @@
         }
     }
 
+    &__image {
+        width: 100%;
+
+        @include breakpoint(largedesktop) {
+            min-width: 776px;
+        }
+    }
+
     &__progress-nav {
         color: $font-color;
         font-family: $heading-font-family;
-        position: relative;
+        position: absolute;
         display: flex;
-        margin-top: -108px;
         background: white;
-        max-width: 260px;
-        padding: 30px 20px;
+        width: 260px;
+        padding: 20px;
         justify-content: center;
+        bottom: 0;
 
         &--current-number {
             font-size: em(16);
