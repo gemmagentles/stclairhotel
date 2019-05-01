@@ -13,6 +13,12 @@
 		</section>
 		<!-- /Intro Block Slider -->
 
+		<!-- Content Box Overlay -->
+		<section>
+			<?php get_template_part('partials/content-box-overlay'); ?> 		
+		</section>
+		<!-- /Content Box Overlay -->
+
 		<!-- Highlight Slider -->
 		<section>
 			<?php get_template_part('partials/highlight-slider'); ?> 		
