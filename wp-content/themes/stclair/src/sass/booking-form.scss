@@ -1,0 +1,146 @@
+.booking-form {
+    &__wrapper {
+        background: $tertiary-color;
+    }
+
+    &__container {
+        max-width: 797px;
+        margin: 0 auto; 
+        padding: 100px 40px;
+
+        .wpforms-field-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 0 40px !important;
+
+            input,
+            textarea,
+            select {
+                background: $tertiary-color !important;
+                border: 1px solid $border-color !important;
+                font-family: $tertiary-font-family !important;
+                font-size: em(12) !important;
+                line-height: 28px !important;
+                letter-spacing: 1px !important;
+            }
+        }
+
+        .wpforms-field-label {
+            color: $quinary-color !important;
+            font-family: $tertiary-font-family;
+            text-transform: uppercase !important;
+            letter-spacing: 0.75px !important;
+            font-size: em(12) !important;
+            color: $quinary-color !important;
+        }
+
+        div.wpforms-container-full .wpforms-form label.wpforms-error {
+            padding-top: 12px;
+            font-size: em(12);
+            font-family: $tertiary-font-family;
+            letter-spacing: 0.75px !important;
+        }
+
+        div.wpforms-container-full .wpforms-form .wpforms-field {
+            padding: 10px 0;
+            position: relative;
+
+            @include breakpoint(tablet) {
+                padding: 10px 20px;
+            }
+        }
+
+        .wpforms-field-textarea {
+            &::before {
+                content: "Additional Information, Questions and/or Comments";
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: $heading-font-family;
+                color: $font-color;
+                font-size: em(20);
+                letter-spacing: 1px;
+
+                @include breakpoint(tablet) {
+                    left: 20px;
+                    font-size: em(24);
+                }
+            }
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+    &__sub-heading {
+        color: $font-color;
+        font-size: em(20);
+        
+        @include breakpoint(tablet) {
+            padding: 0 20px;
+        }
+    }
+
+
+    &__input {
+        &--full {
+            min-width: 100%;
+            padding-top: 80px !important;
+            margin-top: 40px !important;
+
+            @include breakpoint(mobile) {
+                padding-top: 120px !important;
+            }
+
+            @include breakpoint(tablet) {
+                padding-top: 70px !important;
+            }
+        }
+
+        &--half {
+            min-width: 100%;
+
+            @include breakpoint(tablet) {
+                min-width: 50%;
+            }
+        }
+        
+        &--third {
+            min-width: 100%;
+
+            @include breakpoint(tablet) {
+                min-width: 33.33%;
+            }
+        }
+    }
+
+    &__button {
+        border: 0 !important;
+        background: $primary-color !important;
+        color: white !important;
+        text-transform: uppercase !important;
+        font-family: $tertiary-font-family !important;
+        letter-spacing: 3.05px !important;
+        padding: 20px 30px !important;
+        font-size: em(12) !important;
+        transition: background-color 0.7s ease !important;
+      
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $secondary-color !important;
+            cursor: pointer !important;
+        }
+
+        @include breakpoint(tablet) {
+            margin-left: 20px !important;
+        }
+      
+        @include breakpoint(largedesktop) {
+            font-size: em(14) !important;
+            padding: 24px 46px !important;
+        }
+    }
+}

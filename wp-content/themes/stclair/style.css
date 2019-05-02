@@ -1322,6 +1322,113 @@ h1 {
   .content_box_overlay__image-box--image {
     width: 100%; }
 
+.booking-form__wrapper {
+  background: #F7F6EC; }
+
+.booking-form__container {
+  max-width: 797px;
+  margin: 0 auto;
+  padding: 100px 40px; }
+  .booking-form__container .wpforms-field-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 40px !important; }
+    .booking-form__container .wpforms-field-container input,
+    .booking-form__container .wpforms-field-container textarea,
+    .booking-form__container .wpforms-field-container select {
+      background: #F7F6EC !important;
+      border: 1px solid #979797 !important;
+      font-family: SharpGroteskExp Light !important;
+      font-size: 0.75em !important;
+      line-height: 28px !important;
+      letter-spacing: 1px !important; }
+  .booking-form__container .wpforms-field-label {
+    color: #001B71 !important;
+    font-family: SharpGroteskExp Light;
+    text-transform: uppercase !important;
+    letter-spacing: 0.75px !important;
+    font-size: 0.75em !important;
+    color: #001B71 !important; }
+  .booking-form__container div.wpforms-container-full .wpforms-form label.wpforms-error {
+    padding-top: 12px;
+    font-size: 0.75em;
+    font-family: SharpGroteskExp Light;
+    letter-spacing: 0.75px !important; }
+  .booking-form__container div.wpforms-container-full .wpforms-form .wpforms-field {
+    padding: 10px 0;
+    position: relative; }
+    @media (min-width: 48em) {
+      .booking-form__container div.wpforms-container-full .wpforms-form .wpforms-field {
+        padding: 10px 20px; } }
+  .booking-form__container .wpforms-field-textarea::before {
+    content: "Additional Information, Questions and/or Comments";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: Ogg Roman;
+    color: #424445;
+    font-size: 1.25em;
+    letter-spacing: 1px; }
+    @media (min-width: 48em) {
+      .booking-form__container .wpforms-field-textarea::before {
+        left: 20px;
+        font-size: 1.5em; } }
+
+.booking-form__heading {
+  text-align: center;
+  padding-bottom: 60px; }
+
+.booking-form__sub-heading {
+  color: #424445;
+  font-size: 1.25em; }
+  @media (min-width: 48em) {
+    .booking-form__sub-heading {
+      padding: 0 20px; } }
+
+.booking-form__input--full {
+  min-width: 100%;
+  padding-top: 80px !important;
+  margin-top: 40px !important; }
+  @media (max-width: 37.5em) {
+    .booking-form__input--full {
+      padding-top: 120px !important; } }
+  @media (min-width: 48em) {
+    .booking-form__input--full {
+      padding-top: 70px !important; } }
+
+.booking-form__input--half {
+  min-width: 100%; }
+  @media (min-width: 48em) {
+    .booking-form__input--half {
+      min-width: 50%; } }
+
+.booking-form__input--third {
+  min-width: 100%; }
+  @media (min-width: 48em) {
+    .booking-form__input--third {
+      min-width: 33.33%; } }
+
+.booking-form__button {
+  border: 0 !important;
+  background: #0F2F95 !important;
+  color: white !important;
+  text-transform: uppercase !important;
+  font-family: SharpGroteskExp Light !important;
+  letter-spacing: 3.05px !important;
+  padding: 20px 30px !important;
+  font-size: 0.75em !important;
+  transition: background-color 0.7s ease !important; }
+  .booking-form__button:hover, .booking-form__button:focus, .booking-form__button:active {
+    background-color: #061852 !important;
+    cursor: pointer !important; }
+  @media (min-width: 48em) {
+    .booking-form__button {
+      margin-left: 20px !important; } }
+  @media (min-width: 87em) {
+    .booking-form__button {
+      font-size: 0.875em !important;
+      padding: 24px 46px !important; } }
+
 .footer {
   background-color: #001B71; }
   .footer__watercolor-wrapper {
