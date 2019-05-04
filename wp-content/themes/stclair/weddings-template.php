@@ -19,6 +19,12 @@
 		</section>
 		<!-- /Half and Half Panel -->
 
+		<!-- Highlight Slider -->
+		<section>
+			<?php get_template_part('partials/highlight-slider'); ?> 		
+		</section>
+		<!-- /Highlight Slider -->
+
 	</main>
 
 <?php get_footer(); ?>
