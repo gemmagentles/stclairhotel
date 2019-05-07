@@ -1,0 +1,135 @@
+.icon-list-with-content {
+    &__background {
+        @include breakpoint(tablet) {
+            background: $quaternary-color;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 auto 40px;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            justify-content: space-between;
+            max-width: $site-width;
+            margin: 0 auto 60px;
+        }
+
+        @include breakpoint(smalldesktop) {
+            margin: 0 auto 100px;
+        }
+    }
+
+    &__content-wrapper {
+        padding: 40px;
+
+        @include breakpoint(tablet) {
+            padding: 40px 60px 40px 40px;
+        }
+
+        @include breakpoint(smalldesktop) {
+            margin: 48px 60px 0 50px;
+            padding: 0;
+        }
+
+        @include breakpoint(largedesktop) {
+            margin: 104px 108px 0 146px;
+        }
+    }
+
+    &__heading {
+        font-size: em(24);
+        line-height: 36px;
+        letter-spacing: 1.46px;
+
+        @include breakpoint(tablet) {
+            font-size: em(34);
+            line-height: 52px;
+            max-width: 340px;
+        }
+
+        @include breakpoint(largedesktop) {
+            font-size: em(42);
+            line-height: 62px;
+        }
+
+        @include breakpoint(xlargedesktop) {
+            font-size: em(50);
+            line-height: 72px;
+        }
+    }
+
+    &__paragraph {
+        min-width: 300px;
+        font-family: $tertiary-font-family;
+        font-size: em(14);
+        line-height: 28px;
+        letter-spacing: 1px;
+        padding: 25px 35px 0 0;
+
+        @include breakpoint(tablet) {
+            max-width: 350px;
+            padding: 25px 0 0 0;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 40px 0 12px 0;
+        }
+    }
+
+    &__button {
+        margin-top: 30px;
+    }
+
+    &__icon-list-wrapper {
+        background: $quaternary-color;
+        padding: 60px 40px 80px;
+        width: 100%;
+        max-width: 810px;
+
+        @include breakpoint(smalldesktop) {
+            padding: 100px;
+        }
+    }
+
+    &__icon-list-container {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid white;
+        padding: 12px 0;
+        
+        @include breakpoint(tablet) {
+            padding: 20px 0;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        max-width: 40px;
+        margin-right: 30px;
+
+        @include breakpoint(smalldesktop) {
+            max-width: 60px;
+            margin-right: 60px;
+        }
+
+        &--text {
+            font-size: em(20);
+            line-height: 28px;
+            letter-spacing: 1.63px;
+            color: $quinary-color;
+            font-family: $heading-font-family;
+
+            @include breakpoint(smalldesktop) {
+                font-size: em(24);
+                line-height: 26px;
+            }
+        }
+    }
+}
