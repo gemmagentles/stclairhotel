@@ -60,7 +60,7 @@
                     "label": "Button Text",
                     "name": "button_text",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Optional",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -163,6 +163,13 @@
                 "operator": "==",
                 "value": "individual-accommodation-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "directions-template.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -173,5 +180,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1557205786
+    "modified": 1557269423
 }

@@ -51,7 +51,7 @@
         @include breakpoint(tablet) {
             font-size: em(34);
             line-height: 52px;
-            max-width: 340px;
+            max-width: 370px;
         }
 
         @include breakpoint(largedesktop) {
@@ -74,7 +74,7 @@
         padding: 25px 35px 0 0;
 
         @include breakpoint(tablet) {
-            max-width: 350px;
+            max-width: 396px;
             padding: 25px 0 0 0;
         }
 
