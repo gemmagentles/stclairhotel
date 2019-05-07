@@ -1,6 +1,6 @@
 {
   "name": "domar",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Wordpress website for St. Clair.",
   "main": "index.js",
   "scripts": {
