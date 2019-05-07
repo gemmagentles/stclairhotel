@@ -20,15 +20,17 @@
 					<?php } ?>
 					<!-- Download Link -->
 					<?php if ( have_rows( 'download_link' ) ) : ?>
-						<?php while ( have_rows( 'download_link' ) ) : the_row(); ?>
-							<?php $download_link_file = get_sub_field( 'download_link_file' ); ?>
-							<?php if ( $download_link_file ) { ?>
-								<div class="half-and-half-panel__download-link--wrapper">
-									<img class="half-and-half-panel__download-link--icon"src="<?php echo get_template_directory_uri(); ?>/img/icons/blue-arrow.svg" alt="">
-									<a class="half-and-half-panel__download-link" target="_blank" href="<?php echo $download_link_file['url']; ?>"><?php the_sub_field( 'download_link_text' ); ?></a>
-								</div>
-							<?php } ?>
-						<?php endwhile; ?>
+						<div class="half-and-half-panel__download-links">
+							<?php while ( have_rows( 'download_link' ) ) : the_row(); ?>
+								<?php $download_link_file = get_sub_field( 'download_link_file' ); ?>
+								<?php if ( $download_link_file ) { ?>
+									<div class="half-and-half-panel__download-link--wrapper">
+										<img class="half-and-half-panel__download-link--icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/blue-arrow.svg" alt="">
+										<a class="half-and-half-panel__download-link" target="_blank" href="<?php echo $download_link_file['url']; ?>"><?php the_sub_field( 'download_link_text' ); ?></a>
+									</div>
+								<?php } ?>
+							<?php endwhile; ?>
+						</div>
 					<?php else : ?>
 						<?php // no rows found ?>
 					<?php endif; ?>

@@ -102,7 +102,8 @@
             padding: 30px 30px 0;
             animation-name: fadeIn;
             animation-duration: 2s;
-
+            max-width: 935px;
+            
             @keyframes fadeIn {
                 from {opacity: 0;}
                 to {opacity: 1;}
