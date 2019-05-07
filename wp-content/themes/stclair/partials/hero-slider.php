@@ -28,7 +28,9 @@
         <?php endwhile; ?>
     </div>
 </div>
-<img src="<?php echo get_template_directory_uri(); ?>/img/watercolour-header.jpg" alt="" class="hero-slider__watercolor">
+<div class="hero-slider__watercolor-wrapper">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/watercolour-header.jpg" alt="" class="hero-slider__watercolor">
+</div>
 <?php else : ?>
 	<?php // no rows found ?>
 <?php endif; ?>

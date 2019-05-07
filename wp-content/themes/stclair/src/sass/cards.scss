@@ -1,0 +1,102 @@
+.white-cards .cards__individual-card-wrapper {
+    border: 1px solid lighten($border-color, 20%);
+}
+
+.cards {
+    &__wrapper.yellow-cards {
+        background: $tertiary-color;
+    }
+
+    &__wrapper.white-cards {
+        background: white;
+    }
+
+    &__container {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: 20px 20px 45px;
+
+        @include breakpoint(tablet) {
+            padding: 35px 35px 100px;
+        }
+    }
+
+    &__inner {
+        /* Set all boxes as same height */
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__heading {
+        text-align: center;
+        padding: 50px 40px 30px;
+
+        @include breakpoint(tablet) {
+            padding: 80px 60px 60px;
+        }
+    }
+
+    &__individual-card-wrapper {
+        background: white;
+        max-width: 361px;
+        text-align: center;
+        display: flex;
+        /* Make the divs inside card div stack */
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    &__individual-card-inner {
+        padding: 40px 34px 0;
+        /* Set all content to be the 100% height use this instead of height: 100%; because safari has view port bug */
+        flex: 2;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: em(26);
+        line-height: 32px;
+        letter-spacing: 2.1px;
+
+        @include breakpoint(smalldesktop) {
+            font-size: em(32);
+            line-height: 36px;
+        }
+    }
+
+    &__subtitle {
+        font-size: em(20);
+        line-height: 26px;
+        letter-spacing: 1.31px;
+        padding-top: 6px;
+        color: $primary-color;
+
+        @include breakpoint(smalldesktop) {
+            font-size: em(24);
+            line-height: 36px;
+        }
+    }
+
+    &__individual-card {
+        &--paragraph {
+            padding: 32px 30px 5px;
+            font-family: $tertiary-font-family;
+            font-size: em(14);
+            font-weight: lighter;
+            line-height: 1.5;
+            letter-spacing: 1.3px;
+        }
+
+        &--button {
+            padding: 40px 50px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+}

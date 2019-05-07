@@ -1,4 +1,6 @@
 /* Theme Name: St. Clair Theme */
+/* Version: 0.1 */
+/* Author: Another Blank Page */
 
 @import 'vars.scss';
 @import 'breakpoints.scss';
@@ -9,7 +11,12 @@
 @import 'background-image-content-panel.scss';
 @import 'double-image-content-panel.scss';
 @import 'half-and-half-panel.scss';
+@import 'half-and-half-content-slider.scss';
 @import 'book-now-banner.scss';
+@import 'cards.scss';
+@import 'highlight-slider.scss';
+@import 'content-box-overlay.scss';
+@import 'booking-form.scss';
 @import 'footer.scss';
 
 * {
@@ -20,6 +27,7 @@
 
 body {
   background: white;
+  overflow-x: hidden;
 }
 
 section {
@@ -94,6 +102,16 @@ h2 {
 h3 {
   font-size: em(24);
   letter-spacing: 1px;
+}
+
+h4 {
+  font-size: em(12);
+  letter-spacing: 2.53px;
+  line-height: 20px;
+
+  @include breakpoint(desktop) {
+    font-size: em(16);
+  }
 }
 
 /*********************

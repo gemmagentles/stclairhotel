@@ -17,6 +17,16 @@ if ( function_exists('acf_add_options_page') ) {
     acf_add_options_sub_page('Global Site Options');
 }
 
+
+
+
+// Update CSS within in Admin
+function admin_style() {
+    wp_enqueue_style('admin-styles', get_template_directory_uri().'/admin.css');
+  }
+  add_action('admin_enqueue_scripts', 'admin_style');
+
+
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
@@ -155,6 +165,10 @@ function html5blank_footer_scripts()
 {
     wp_register_script('hero-main-slider', get_template_directory_uri() . '/js/hero-slider.js', array('jquery'), '1.0.0'); // Conditional script(s)
     wp_enqueue_script('hero-main-slider'); // Enqueue it!
+    wp_register_script('highlight-main-slider', get_template_directory_uri() . '/js/highlight-slider.js', array('jquery'), '1.0.0'); // Conditional script(s)
+    wp_enqueue_script('highlight-main-slider'); // Enqueue it!
+    wp_register_script('half-and-half-content-main-slider', get_template_directory_uri() . '/js/half-and-half-content-slider.js', array('jquery'), '1.0.0'); // Conditional script(s)
+    wp_enqueue_script('half-and-half-content-main-slider'); // Enqueue it!
 }
 
 // Load HTML5 Blank conditional scripts

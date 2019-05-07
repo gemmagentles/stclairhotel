@@ -1,0 +1,78 @@
+.content_box_overlay {
+    &__wrapper {
+        max-width: $site-width;
+        margin: 0 auto;
+        position: relative;
+
+        @include breakpoint(smalldesktop) {
+            display: flex;
+            align-items: center;
+            padding-left: 276px;
+            margin-top: 68px;
+        }
+
+        @include breakpoint(largedesktop) {
+            padding-left: 360px;
+        }
+    }
+
+    &__text-box {
+        background: white;
+        padding: 70px;
+
+        @include breakpoint(mobile) {
+            padding:  40px; 
+        }
+
+        @include breakpoint(smalldesktop) {
+            padding: 70px; 
+        }
+        
+        @include breakpoint(smalldesktop) {
+            position: absolute;
+            left: 0;
+            max-width: 558px;
+            max-height: 594px;
+        }
+
+        &--heading {
+            font-size: em(38);
+            letter-spacing: 1.81px;
+            line-height: 54px;
+
+            @include breakpoint(smalldesktop) {
+                font-size: em(40);
+                line-height: 52px;
+            }
+          
+            @include breakpoint(largedesktop) {
+              font-size: em(62);
+              line-height: 70px;
+            }
+        }
+
+        &--paragraph {
+            font-family: $tertiary-font-family;
+            font-size: em(14);
+            line-height: 28px;
+            letter-spacing: 1px;
+            padding-top: 36px;
+        }
+    }
+
+    &__image-box {
+        padding: 0 70px 70px;
+
+        @include breakpoint(mobile) {
+            padding:  0 40px 40px; 
+        }
+
+        @include breakpoint(smalldesktop) {
+            padding: 70px; 
+        }
+
+        &--image {
+            width: 100%;
+        }
+    }
+}

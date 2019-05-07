@@ -1,5 +1,7 @@
         <footer class="footer" role="contentinfo">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/footer-paint.png" alt="" class="footer__pattern">
+				<div class="footer__watercolor-wrapper">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/footer-paint.png" alt="" class="footer__watercolor">
+				</div>
 				<div class="footer__top">
 					<div class="footer__top--container">
 						<a href="#top" title="Top">
