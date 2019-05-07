@@ -982,7 +982,7 @@ h1 {
   @media (min-width: 64em) {
     .half-and-half-content-slider__wrapper {
       display: flex;
-      margin: 120px auto 180px;
+      margin: 120px auto 140px;
       padding: 50px 0 40px; } }
   @media (min-width: 87em) {
     .half-and-half-content-slider__wrapper {
@@ -1588,6 +1588,114 @@ h1 {
     .booking-form__button {
       font-size: 0.875em !important;
       padding: 24px 46px !important; } }
+
+@media (min-width: 48em) {
+  .icon-list-with-content__background {
+    background: #ECECF7;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    overflow: hidden; } }
+
+.icon-list-with-content__wrapper {
+  margin: 0 auto 40px; }
+  @media (min-width: 48em) {
+    .icon-list-with-content__wrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1562px;
+      margin: 0 auto 60px; } }
+  @media (min-width: 64em) {
+    .icon-list-with-content__wrapper {
+      margin: 0 auto 100px; } }
+
+.icon-list-with-content__content-wrapper {
+  padding: 40px; }
+  @media (min-width: 48em) {
+    .icon-list-with-content__content-wrapper {
+      padding: 40px 60px 40px 40px; } }
+  @media (min-width: 64em) {
+    .icon-list-with-content__content-wrapper {
+      margin: 48px 60px 0 50px;
+      padding: 0; } }
+  @media (min-width: 87em) {
+    .icon-list-with-content__content-wrapper {
+      margin: 104px 108px 0 146px; } }
+
+.icon-list-with-content__heading {
+  font-size: 1.5em;
+  line-height: 36px;
+  letter-spacing: 1.46px; }
+  @media (min-width: 48em) {
+    .icon-list-with-content__heading {
+      font-size: 2.125em;
+      line-height: 52px;
+      max-width: 370px; } }
+  @media (min-width: 87em) {
+    .icon-list-with-content__heading {
+      font-size: 2.625em;
+      line-height: 62px; } }
+  @media (min-width: 98.875em) {
+    .icon-list-with-content__heading {
+      font-size: 3.125em;
+      line-height: 72px; } }
+
+.icon-list-with-content__paragraph {
+  min-width: 300px;
+  font-family: SharpGroteskExp Light;
+  font-size: 0.875em;
+  line-height: 28px;
+  letter-spacing: 1px;
+  padding: 25px 35px 0 0; }
+  @media (min-width: 48em) {
+    .icon-list-with-content__paragraph {
+      max-width: 396px;
+      padding: 25px 0 0 0; } }
+  @media (min-width: 70em) {
+    .icon-list-with-content__paragraph {
+      padding: 40px 0 12px 0; } }
+
+.icon-list-with-content__button {
+  margin-top: 30px; }
+
+.icon-list-with-content__icon-list-wrapper {
+  background: #ECECF7;
+  padding: 60px 40px 80px;
+  width: 100%;
+  max-width: 810px; }
+  @media (min-width: 64em) {
+    .icon-list-with-content__icon-list-wrapper {
+      padding: 100px; } }
+
+.icon-list-with-content__icon-list-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding: 12px 0; }
+  @media (min-width: 48em) {
+    .icon-list-with-content__icon-list-container {
+      padding: 20px 0; } }
+
+.icon-list-with-content__icon {
+  width: 100%;
+  max-width: 40px;
+  margin-right: 30px; }
+  @media (min-width: 64em) {
+    .icon-list-with-content__icon {
+      max-width: 60px;
+      margin-right: 60px; } }
+  .icon-list-with-content__icon--text {
+    font-size: 1.25em;
+    line-height: 28px;
+    letter-spacing: 1.63px;
+    color: #001B71;
+    font-family: Ogg Roman; }
+    @media (min-width: 64em) {
+      .icon-list-with-content__icon--text {
+        font-size: 1.5em;
+        line-height: 26px; } }
 
 .footer {
   background-color: #001B71; }
