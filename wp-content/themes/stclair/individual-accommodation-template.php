@@ -19,6 +19,12 @@
 		</section>
 		<!-- /Half and Half Content Slider -->
 
+		<!-- Icon List with Content -->
+		<section>
+			<?php get_template_part('partials/icon-list-with-content'); ?> 		
+		</section>
+		<!-- /Icon List with Content -->
+
 	</main>
 
 <?php get_footer(); ?>
