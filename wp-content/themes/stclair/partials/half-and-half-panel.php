@@ -25,7 +25,7 @@
 								<?php $download_link_file = get_sub_field( 'download_link_file' ); ?>
 								<?php if ( $download_link_file ) { ?>
 									<div class="half-and-half-panel__download-link--wrapper">
-										<img class="half-and-half-panel__download-link--icon"src="<?php echo get_template_directory_uri(); ?>/img/icons/blue-arrow.svg" alt="">
+										<img class="half-and-half-panel__download-link--icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/blue-arrow.svg" alt="">
 										<a class="half-and-half-panel__download-link" target="_blank" href="<?php echo $download_link_file['url']; ?>"><?php the_sub_field( 'download_link_text' ); ?></a>
 									</div>
 								<?php } ?>

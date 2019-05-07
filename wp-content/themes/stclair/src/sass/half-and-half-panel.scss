@@ -8,30 +8,54 @@
                 flex-direction: row-reverse;
                 justify-content: space-around;
             }
+            .half-and-half-panel__text-section {
+                @include breakpoint(tablet) {
+                    padding: 68px 0 0 62px;
+                }
+                @include breakpoint(largedesktop) {
+                    padding: 118px 0 0 162px;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            .half-and-half-panel__text-section {
+                @include breakpoint(tablet) {
+                    padding: 68px 62px 0 0;
+                }
+                @include breakpoint(largedesktop) {
+                    padding: 118px 162px 0 0;
+                }
+            }
+        }
+
+        &:first-child {
+            padding-top: 50px;
+        }
+
+        &:last-child {
+            padding-bottom: 50px;
         }
     }
 
     &__inner {
-        padding: 60px 40px;
-        max-width: $site-width;
+        padding: 30px 40px;
+        max-width: 1333px;
         margin: 0 auto;
         
         @include breakpoint(tablet) {
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            // padding: 175px 60px;
-            padding: 60px;
+            padding: 80px 60px 20px 60px;
         }
 
         @include breakpoint(largedesktop) {
             justify-content: space-between;
+            padding: 80px 60px;
         }
-    }
 
-    &__text-section {
-        @include breakpoint(tablet) {
-            max-width: 398px;
+        @include breakpoint(xlargedesktop) {
+            padding: 80px 0;
         }
     }
 
@@ -41,28 +65,17 @@
         font-size: em(14);
         line-height: 28px;
         letter-spacing: 1px;
-        // padding: 25px 35px 35px 0;
         padding: 25px 35px 0 0;
 
         @include breakpoint(tablet) {
             max-width: 350px;
-            // padding: 25px 0 35px 0;
             padding: 25px 0 0 0;
-            margin-right: 50px;
         }
 
         @include breakpoint(desktop) {
-            // padding: 64px 0 52px 0;
-            padding: 64px 0 12px 0;
-            margin-right: 50px;
+            padding: 40px 0 12px 0;
         }
     }
-
-    // &__download-links {
-    //     @include breakpoint(smalldesktop) {
-    //         margin-bottom: 40px;
-    //     }
-    // }
 
     &__download-link {
         display: block;
@@ -120,7 +133,7 @@
     }
 
     &__image {
-        margin-top: 50px;
+        margin-top: 30px;
         width: 100%;
 
         @include breakpoint(tablet) {
@@ -135,19 +148,30 @@
         &__container {
             background-color: white;
 
-            .half-and-half-panel__inner {   
-                padding: 60px 40px;
+            .half-and-half-panel__heading {
+                font-size: em(24);
+                line-height: 28px;
 
                 @include breakpoint(tablet) {
-                    padding: 60px;
+                    font-size: em(36);
+                    line-height: 38px;
                 }
 
-                @include breakpoint(smalldesktop) {
-                    padding: 100px 60px 175px;
+                @include breakpoint(desktop) {
+                    font-size: em(46);
+                    line-height: 48px;
                 }
+            }
 
-                @include breakpoint(largedesktop) {
-                    padding: 140px 90px 140px 148px;
+            &:first-child {
+                .half-and-half-panel__text-section {
+                    @include breakpoint(tablet) {
+                        padding: 0 18px 0 0;
+                    }
+
+                    @include breakpoint(largedesktop) {
+                        padding: 75px 18px 0 0;
+                    }
                 }
             }
             
@@ -160,26 +184,26 @@
                         justify-content: flex-end;
                     }
     
-                    @include breakpoint(desktop) {
-                        padding: 60px 90px 147px 60px;
-                        margin-top: 50px;
+                    @include breakpoint(smalldesktop) {
                         align-items: unset;
+                        padding: 75px 60px 150px 60px;
+                        margin-top: 140px;
                     }
     
                     @include breakpoint(largedesktop) {
-                        padding: 100px 90px 150px 148px;
-                        margin-top: 50px;
+                        padding: 75px 60px 100px 60px;
+                        margin-top: 140px;
                     }
                 }
 
                 .half-and-half-panel__text-section {
                     @include breakpoint(tablet) {
-                        margin-left: 50px;
-                        padding-top: 35px;
+                        padding: 0 0 0 40px;
                     }
                     
                     @include breakpoint(largedesktop) {
-                        margin-left: 150px;
+                        padding: 0 0 0 124px;
+
                     }
                 }
     
@@ -204,7 +228,13 @@
 .weddings,
 .discover {
     .half-and-half-panel__wrapper {
+
         @include breakpoint(desktop) {
+            padding-top: 180px;
+            padding-bottom: 180px;
+        }
+
+        @include breakpoint(largedesktop) {
             padding-top: 245px;
             padding-bottom: 285px;
         }
@@ -216,11 +246,15 @@
             align-items: normal;
 
             @include breakpoint(tablet) {
-                padding: 70px 60px 80px;
+                padding: 80px 60px 20px 60px;
             }
 
             @include breakpoint(desktop) {
-                padding: 124px 60px 100px;
+                padding: 124px 60px 80px;
+            }
+
+            @include breakpoint(xlargedesktop) {
+                padding: 80px 0;
             }
         }
 
@@ -232,10 +266,19 @@
             
             @include breakpoint(tablet) {
                 margin-right: 40px;
+                padding: 0 30px 0 0;
             }
 
             @include breakpoint(smalldesktop) {
                 max-width: 530px;
+            }
+
+            @include breakpoint(desktop) {
+                padding: 0 62px 0 0;
+            }
+
+            @include breakpoint(largedesktop) {
+                padding: 0 162px 0 0;
             }
         }
 
@@ -248,9 +291,6 @@
 
             @include breakpoint(desktop) {
                 max-width: 480px;
-            }
-
-            @include breakpoint(desktop) {
                 padding: 30px 0 52px 0;
             }
         }
@@ -264,7 +304,9 @@
 
     .half-and-half-panel__container:last-child {
         .half-and-half-panel__image-section {
-            margin-bottom: -210px;
+            @include breakpoint(desktop) {
+                margin-bottom: -210px;
+            }
         }
     }
 }
@@ -273,6 +315,75 @@
     .half-and-half-panel__container:first-child {
         background: $quaternary-color;
     }
+
+    .half-and-half-panel__wrapper {
+
+        @include breakpoint(desktop) {
+            padding-bottom: 0;
+        }
+    }
 }
 
+.weddings {
+    .half-and-half-panel__wrapper {
+        @include breakpoint(desktop) {
+            padding-bottom: 150px;
+        }
+    }
+}
 
+.events-meetings {
+    .half-and-half-panel__list {
+        font-family: $secondary-font-family;
+        font-size: em(12);
+        line-height: 20px;
+        letter-spacing: 0.67px;
+        text-transform: uppercase;
+        color: $font-color;
+        padding-top: 40px;
+        padding-left: 92px;
+        position: relative;
+
+        p {
+            padding-bottom: 20px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 48px;
+            background: $quinary-color;
+            width: 72px;
+            height: 2px;
+        }
+    }
+
+    .half-and-half-panel__container:first-child {
+        .half-and-half-panel__list {
+            padding-top: 20px;
+
+            &::before {
+                top: 28px;
+            }
+
+            @include breakpoint(tablet) {
+                padding-top: 0;
+
+                &::before {
+                    top: 2px;
+                }
+            }
+        }
+    }
+
+    .half-and-half-panel__container:last-child {
+        .half-and-half-panel__image-section {
+            margin-bottom: 0;
+        }
+    }
+
+    .half-and-half-panel__wrapper {
+        padding-bottom: 30px;
+    }
+}
