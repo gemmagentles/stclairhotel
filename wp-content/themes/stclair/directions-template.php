@@ -6,7 +6,13 @@
 		<section>
 			<?php get_template_part('partials/icon-list-with-content'); ?> 		
 		</section>
-		<!-- /Icon List with Content -->
+        <!-- /Icon List with Content -->
+        
+        <!-- Accordion -->
+		<section>
+			<?php get_template_part('partials/accordion'); ?> 		
+		</section>
+		<!-- /Accordion -->
 
 	</main>
 

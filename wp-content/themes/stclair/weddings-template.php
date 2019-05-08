@@ -25,6 +25,12 @@
 		</section>
 		<!-- /Highlight Slider -->
 
+		 <!-- Accordion -->
+		 <section>
+			<?php get_template_part('partials/accordion'); ?> 		
+		</section>
+		<!-- /Accordion -->
+
 	</main>
 
 <?php get_footer(); ?>
