@@ -349,6 +349,30 @@ h1 {
     left: 25px;
     position: relative; }
 
+.hero__wrapper {
+  background: #F7F6EC; }
+
+.hero__container {
+  max-width: 626px;
+  margin: 0 auto;
+  position: relative;
+  padding: 200px 20px; }
+
+.hero__content {
+  position: absolute;
+  text-align: center; }
+  .hero__content--heading {
+    color: white; }
+  .hero__content--paragraph {
+    color: white;
+    font-size: 1em;
+    line-height: 27px;
+    letter-spacing: 1.49px;
+    font-family: SharpGroteskExp Book; }
+
+.hero__image {
+  width: 100%; }
+
 .hero-slider__wrapper {
   position: relative;
   background: black;

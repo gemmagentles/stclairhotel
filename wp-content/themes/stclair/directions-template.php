@@ -2,6 +2,12 @@
 
 	<main role="main">
 
+        <!-- Hero -->
+		<section>
+			<?php get_template_part('partials/hero'); ?> 		
+		</section>
+        <!-- /Hero -->
+
 		<!-- Icon List with Content -->
 		<section>
 			<?php get_template_part('partials/icon-list-with-content'); ?> 		

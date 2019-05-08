@@ -1,0 +1,33 @@
+.hero {
+    &__wrapper {
+        background: $tertiary-color;
+    }
+
+    &__container {
+        max-width: 626px;
+        margin: 0 auto;
+        position: relative;
+        padding: 200px 20px;
+    }
+
+    &__content {
+        position: absolute;
+        text-align: center;
+
+        &--heading {
+            color: white;
+        }
+
+        &--paragraph {
+            color: white;
+            font-size: em(16);
+            line-height: 27px;
+            letter-spacing: 1.49px;
+            font-family: $secondary-font-family;
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
