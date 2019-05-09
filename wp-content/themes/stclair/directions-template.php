@@ -8,6 +8,12 @@
 		</section>
         <!-- /Hero -->
 
+        <!-- Wysiwyg Editor -->
+		<section>
+			<?php get_template_part('partials/wysiwyg-editor'); ?> 		
+		</section>
+        <!-- /Wysiwyg Editor -->
+
 		<!-- Icon List with Content -->
 		<section>
 			<?php get_template_part('partials/icon-list-with-content'); ?> 		

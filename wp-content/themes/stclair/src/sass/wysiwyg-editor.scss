@@ -1,0 +1,63 @@
+.wysiwyg-editor {
+    &__wrapper {
+        max-width: 830px;
+        margin: 0 auto;
+        padding: 40px;
+        font-family: $secondary-font-family;
+        font-size: em(16);
+        line-height: 24px;
+        letter-spacing: 1px;
+        color: $font-color;
+
+        @include breakpoint(tablet) {
+            padding: 120px 40px 166px;
+        }
+
+        ol {
+            margin-left: 24px;
+        }
+
+        ul {
+            margin-left: 15px;
+        }
+
+        a {
+            color: $quinary-color;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            margin: 70px 0;
+        }
+
+        blockquote {
+            font-size: em(30);
+            line-height: 48px;
+            text-align: center;
+            font-family: $heading-font-family;
+            color: $heading-font-color;
+            letter-spacing: 1.13px;
+            padding: 60px 20px 30px;
+            position: relative;
+
+            @include breakpoint(tablet) {
+                font-size: em(43);
+                line-height: 62px;
+            }
+
+            &::before {
+                content: "\201C";
+                font-size: em(36);
+                position: absolute;
+                top: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

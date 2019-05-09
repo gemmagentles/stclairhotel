@@ -1812,6 +1812,50 @@ h1 {
   background: #F7F6EC;
   padding: 10px 0; }
 
+.wysiwyg-editor__wrapper {
+  max-width: 830px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: SharpGroteskExp Book;
+  font-size: 1em;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #424445; }
+  @media (min-width: 48em) {
+    .wysiwyg-editor__wrapper {
+      padding: 120px 40px 166px; } }
+  .wysiwyg-editor__wrapper ol {
+    margin-left: 24px; }
+  .wysiwyg-editor__wrapper ul {
+    margin-left: 15px; }
+  .wysiwyg-editor__wrapper a {
+    color: #001B71; }
+    .wysiwyg-editor__wrapper a:hover, .wysiwyg-editor__wrapper a:focus {
+      text-decoration: none; }
+  .wysiwyg-editor__wrapper img {
+    width: 100%;
+    margin: 70px 0; }
+  .wysiwyg-editor__wrapper blockquote {
+    font-size: 1.875em;
+    line-height: 48px;
+    text-align: center;
+    font-family: Ogg Roman;
+    color: #001B71;
+    letter-spacing: 1.13px;
+    padding: 60px 20px 30px;
+    position: relative; }
+    @media (min-width: 48em) {
+      .wysiwyg-editor__wrapper blockquote {
+        font-size: 2.6875em;
+        line-height: 62px; } }
+    .wysiwyg-editor__wrapper blockquote::before {
+      content: "\201C";
+      font-size: 2.25em;
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%); }
+
 .footer {
   background-color: #001B71; }
   .footer__watercolor-wrapper {
