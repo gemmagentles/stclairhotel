@@ -114,6 +114,13 @@
                 "operator": "==",
                 "value": "individual-accommodation-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "careers-template.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -124,5 +131,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556588447
+    "modified": 1557427081
 }

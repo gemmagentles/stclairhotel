@@ -84,6 +84,20 @@
                 "operator": "==",
                 "value": "restaurant-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "events-and-meetings-template.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "weddings-template.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -94,5 +108,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556752710
+    "modified": 1557374568
 }
