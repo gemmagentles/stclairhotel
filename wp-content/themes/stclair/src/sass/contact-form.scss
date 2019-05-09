@@ -1,9 +1,10 @@
 .contact__wrapper {
-    padding: 122px 40px 114px;
-    max-width: 1048px;
+    padding: 60px 40px 60px;
+    max-width: 1128px;
     margin: 0 auto;
 
     @include breakpoint(tablet) {
+        padding: 122px 40px 114px;
         display: flex;
         justify-content: space-between;
     }
@@ -12,7 +13,11 @@
 .contact__heading {
     font-size: em(24);
     line-height: 32px;
-    padding: 0 20px 30px;
+    padding: 20px 0 30px;
+
+    @include breakpoint(tablet) {
+        padding: 0 20px 30px;
+    }
 
     @include breakpoint(smalldesktop) {
         font-size: em(42);
@@ -23,7 +28,10 @@
 .contact-form {
     &__container {
         width: 100%;
-        max-width: 400px;
+
+        @include breakpoint(tablet) {
+            max-width: 400px;
+        }
 
         @include breakpoint(smalldesktop) {
             max-width: 623px;
@@ -77,11 +85,6 @@
         line-height: 24px;
         letter-spacing: 1px;
         color: $font-color;
-        padding-left: 50px;
-
-        @include breakpoint(smalldesktop) {
-            padding-left: 0;
-        }
 
         a[href^="tel"] {
             // stop iphones styling phone number to link.
@@ -91,7 +94,9 @@
     }
 
     &__content {
-        padding-left: 20px;
+        @include breakpoint(tablet) {
+            padding-left: 20px;
+        }
     }
 
     &__initial {
