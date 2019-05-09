@@ -1943,6 +1943,22 @@ h1 {
       left: 50%;
       transform: translateX(-50%); }
 
+.careers-page__wysiwyg {
+  background: #F7F6EC; }
+  .careers-page__wysiwyg .wysiwyg-editor__wrapper {
+    padding: 40px; }
+    @media (min-width: 48em) {
+      .careers-page__wysiwyg .wysiwyg-editor__wrapper {
+        padding: 120px 40px 60px; } }
+
+.careers-page__button--wrapper {
+  background: #F7F6EC; }
+
+.careers-page__button--container {
+  max-width: 830px;
+  margin: 0 auto;
+  padding: 0 40px 100px; }
+
 .footer {
   background-color: #001B71; }
   .footer__watercolor-wrapper {

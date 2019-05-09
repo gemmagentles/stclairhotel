@@ -6,11 +6,11 @@
 		
         <!-- /Map -->
 
-        <!-- Wysiwyg Editor -->
+        <!-- Contact Form -->
 		<section>
 			<?php get_template_part('partials/contact-form'); ?> 		
 		</section>
-        <!-- /Wysiwyg Editor -->
+        <!-- /Contact Form -->
 
 	</main>
 

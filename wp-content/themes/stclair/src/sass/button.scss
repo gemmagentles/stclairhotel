@@ -1,0 +1,11 @@
+.careers-page__button {
+    &--wrapper {
+        background: $tertiary-color;
+    }
+
+    &--container {
+        max-width: 830px;
+        margin: 0 auto;
+        padding: 0 40px 100px;
+    }
+}
