@@ -1,0 +1,110 @@
+.contact__wrapper {
+    padding: 122px 40px 114px;
+    max-width: 1048px;
+    margin: 0 auto;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contact__heading {
+    font-size: em(24);
+    line-height: 32px;
+    padding: 0 20px 30px;
+
+    @include breakpoint(smalldesktop) {
+        font-size: em(42);
+        line-height: 48px;
+    }
+}
+
+.contact-form {
+    &__container {
+        width: 100%;
+        max-width: 400px;
+
+        @include breakpoint(smalldesktop) {
+            max-width: 623px;
+        }
+
+        .wpforms-field-container {
+            padding: 20px 0 40px !important;
+    
+            input,
+            textarea {
+                border: 1px solid $border-color !important;
+                font-family: $tertiary-font-family !important;
+                font-size: em(12) !important;
+                line-height: 28px !important;
+                letter-spacing: 1px !important;
+                width: 100%;
+            }
+        }
+
+        .wpforms-field-label {
+            color: $quinary-color !important;
+            font-family: $tertiary-font-family;
+            text-transform: uppercase !important;
+            letter-spacing: 0.75px !important;
+            font-size: em(12) !important;
+            color: $quinary-color !important;
+        }
+    
+        div.wpforms-container-full .wpforms-form label.wpforms-error {
+            padding-top: 12px;
+            font-size: em(12);
+            font-family: $tertiary-font-family;
+            letter-spacing: 0.75px !important;
+        }
+    
+        div.wpforms-container-full .wpforms-form .wpforms-field {
+            padding: 10px 0;
+            position: relative;
+    
+            @include breakpoint(tablet) {
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+.contact-info {
+    &__container {
+        font-family: $secondary-font-family;
+        font-size: em(16);
+        line-height: 24px;
+        letter-spacing: 1px;
+        color: $font-color;
+        padding-left: 50px;
+
+        @include breakpoint(smalldesktop) {
+            padding-left: 0;
+        }
+
+        a[href^="tel"] {
+            // stop iphones styling phone number to link.
+            color: $font-color; 
+            text-decoration: none; 
+        }
+    }
+
+    &__content {
+        padding-left: 20px;
+    }
+
+    &__initial {
+        color: $quinary-color;
+    }
+
+    &__email {
+        color: $font-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
