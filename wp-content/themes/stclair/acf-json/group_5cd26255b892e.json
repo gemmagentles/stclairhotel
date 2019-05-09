@@ -121,6 +121,20 @@
                 "operator": "==",
                 "value": "directions-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "basic-page-template.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "careers-template.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -133,5 +147,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557359329
+    "modified": 1557427063
 }

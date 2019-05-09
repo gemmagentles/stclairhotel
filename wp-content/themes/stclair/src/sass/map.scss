@@ -1,0 +1,7 @@
+.map__wrapper {
+    margin-bottom: 60px;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 122px;
+    }
+}

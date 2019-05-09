@@ -3,14 +3,16 @@
 	<main role="main">
 
         <!-- Map -->
-		
+		<section>
+			<?php get_template_part('partials/map'); ?> 		
+		</section>
         <!-- /Map -->
 
-        <!-- Wysiwyg Editor -->
+        <!-- Contact Form -->
 		<section>
 			<?php get_template_part('partials/contact-form'); ?> 		
 		</section>
-        <!-- /Wysiwyg Editor -->
+        <!-- /Contact Form -->
 
 	</main>
 

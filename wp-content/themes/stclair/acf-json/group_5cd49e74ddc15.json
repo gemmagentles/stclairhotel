@@ -1,11 +1,11 @@
 {
-    "key": "group_5cd37321ae15c",
-    "title": "Wysiwyg Editor",
+    "key": "group_5cd49e74ddc15",
+    "title": "Map",
     "fields": [
         {
-            "key": "field_5cd373343be65",
-            "label": "Wysiwyg Editor",
-            "name": "wysiwyg_editor",
+            "key": "field_5cd49e8be41b1",
+            "label": "Map Shortcode",
+            "name": "map_shortcode",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -34,14 +34,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "basic-page-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "careers-template.php"
+                "value": "contact-template.php"
             }
         ]
     ],
@@ -53,5 +46,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1557427048
+    "modified": 1557438801
 }
