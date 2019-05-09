@@ -12,7 +12,13 @@
 		<section>
 			<?php get_template_part('partials/wysiwyg-editor'); ?> 		
 		</section>
-        <!-- /Wysiwyg Editor -->
+		<!-- /Wysiwyg Editor -->
+		
+		<!-- Map -->
+		<section>
+			<?php get_template_part('partials/map'); ?> 		
+		</section>
+        <!-- /Map -->
 
 		<!-- Icon List with Content -->
 		<section>

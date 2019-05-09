@@ -3,7 +3,9 @@
 	<main role="main">
 
         <!-- Map -->
-		
+		<section>
+			<?php get_template_part('partials/map'); ?> 		
+		</section>
         <!-- /Map -->
 
         <!-- Contact Form -->
