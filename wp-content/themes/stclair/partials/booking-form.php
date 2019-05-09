@@ -1,5 +1,5 @@
 <div class="booking-form__wrapper">
-    <div class="booking-form__container">
+    <div class="booking-form__container stclair-forms">
         <?php if ( have_rows( 'wpform' ) ) : ?>
             <?php while ( have_rows( 'wpform' ) ) : the_row(); ?>
                 <h2 class="booking-form__heading"><?php the_sub_field( 'heading' ); ?></h2>

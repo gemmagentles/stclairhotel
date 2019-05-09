@@ -31,6 +31,12 @@
 		</section>
 		<!-- /Accordion -->
 
+		<!-- Booking Form -->
+		<section>
+			<?php get_template_part('partials/booking-form'); ?> 		
+		</section>
+		<!-- /Booking Form -->
+
 	</main>
 
 <?php get_footer(); ?>
