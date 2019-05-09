@@ -2,7 +2,7 @@
 
     <?php while ( have_rows( 'hero' ) ) : the_row(); ?>
 
-        <div class="hero__wrapper">
+        <div class="hero__wrapper <?php if( get_sub_field('background_option') == 'backgroundimage' ): ?>hero__wrapper--background-image<?php endif; ?>" <?php if( get_sub_field('background_option') == 'backgroundimage' ): ?>style="background-image: url('<?php the_sub_field( 'background_image' ); ?>');"<?php endif; ?>>
             <div class="hero__container">
 
                 <div class="hero__content">
@@ -10,14 +10,7 @@
                     <p class="hero__content--paragraph"><?php the_sub_field( 'hero_paragraph' ); ?></p>
                 </div>
 
-            </div>
-
-            <?php if( get_sub_field('background_option') == 'backgroundimage' ): ?>
-                <?php $background_image = get_sub_field( 'background_image' ); ?>
-                <?php if ( $background_image ) { ?>
-                    <img class="hero__image" src="<?php echo $background_image['url']; ?>" alt="<?php echo $background_image['alt']; ?>" />
-                <?php } ?>
-            <?php endif; ?>     
+            </div>  
 
         </div>
     <?php endwhile; ?>

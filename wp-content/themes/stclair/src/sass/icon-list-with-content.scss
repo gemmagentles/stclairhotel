@@ -66,12 +66,11 @@
     }
 
     &__paragraph {
-        min-width: 300px;
         font-family: $tertiary-font-family;
         font-size: em(14);
         line-height: 28px;
         letter-spacing: 1px;
-        padding: 25px 35px 0 0;
+        padding: 25px 0 0 0;
 
         @include breakpoint(tablet) {
             max-width: 396px;
