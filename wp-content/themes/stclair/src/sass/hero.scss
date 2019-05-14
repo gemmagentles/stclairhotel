@@ -5,11 +5,15 @@
 
     &__blog-date {
         color: white;
-        font-size: em(18);
+        font-size: em(14);
         letter-spacing: 2.82px;
         line-height: 20px;
         font-family: $tertiary-font-family;
         text-transform: uppercase;
+
+        @include breakpoint(tablet) {
+            font-size: em(18);
+        }
     }
     
     &__news {
