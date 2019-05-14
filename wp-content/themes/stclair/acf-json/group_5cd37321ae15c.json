@@ -43,6 +43,20 @@
                 "operator": "==",
                 "value": "careers-template.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "individual-news-post-template.php"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "wpb-single-post.php"
+            }
         ]
     ],
     "menu_order": 1,
@@ -53,5 +67,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1557427048
+    "modified": 1557866475
 }

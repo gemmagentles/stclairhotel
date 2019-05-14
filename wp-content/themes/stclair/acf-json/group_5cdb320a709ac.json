@@ -1,0 +1,43 @@
+{
+    "key": "group_5cdb320a709ac",
+    "title": "Wysiwyg Editor 2",
+    "fields": [
+        {
+            "key": "field_5cdb321654895",
+            "label": "Wysiwyg Editor 2",
+            "name": "wysiwyg_editor_2",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "wpb-single-post.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1557869303
+}
