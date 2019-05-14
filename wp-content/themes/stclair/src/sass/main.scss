@@ -43,6 +43,27 @@ section {
   position: relative;
 }
 
+.pagination {
+  max-width: $site-width;
+  text-align: center;
+  margin: 0 auto;
+  font-family: $secondary-font-family;
+  color: $font-color;
+  font-size: em(18);
+  padding: 0 40px 80px;
+
+  .page-numbers {
+    color: $font-color;
+    margin: 10px;
+  }
+
+  .current {
+    color: white;
+    background: $primary-color;
+    padding: 18px;
+  }
+}
+
 // used on header.php content
 .mobile-only {
 
