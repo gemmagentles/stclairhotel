@@ -2011,6 +2011,9 @@ h1 {
   @media (min-width: 98.875em) {
     .photo-gallery__wrapper {
       padding: 120px 0; } }
+  .photo-gallery__wrapper--section {
+    text-align: center;
+    padding-bottom: 80px; }
 
 .photo-gallery__image {
   width: 100%;
@@ -2216,17 +2219,20 @@ section {
   max-width: 1562px;
   text-align: center;
   margin: 0 auto;
+  padding: 0 40px 80px; }
+
+.page-numbers {
+  color: #424445;
+  margin: 10px;
   font-family: SharpGroteskExp Book;
   color: #424445;
   font-size: 1.125em;
-  padding: 0 40px 80px; }
-  .pagination .page-numbers {
-    color: #424445;
-    margin: 10px; }
-  .pagination .current {
-    color: white;
-    background: #0F2F95;
-    padding: 18px; }
+  text-decoration: none; }
+
+.current {
+  color: white;
+  background: #0F2F95;
+  padding: 18px; }
 
 @media (min-width: 64em) {
   .mobile-only {

@@ -9,7 +9,7 @@
         <!-- /Hero Slider -->
 
         <!-- Photo Gallery -->
-		<section>
+		<section class="photo-gallery__wrapper--section">
 			<?php get_template_part('partials/photo-gallery'); ?> 		
 		</section>
 		<!-- /Photo Gallery -->
