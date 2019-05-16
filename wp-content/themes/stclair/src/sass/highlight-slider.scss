@@ -163,3 +163,13 @@
         }
     }
 }
+
+.post-template {
+    .highlight-slider__wrapper {
+        margin: 0;
+
+        @include breakpoint(tablet) {
+            margin: 80px 0 0;
+        }
+    }
+}

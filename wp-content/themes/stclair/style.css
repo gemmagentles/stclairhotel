@@ -354,11 +354,14 @@ h1 {
 
 .hero__blog-date {
   color: white;
-  font-size: 1.125em;
+  font-size: 0.875em;
   letter-spacing: 2.82px;
   line-height: 20px;
   font-family: SharpGroteskExp Light;
   text-transform: uppercase; }
+  @media (min-width: 48em) {
+    .hero__blog-date {
+      font-size: 1.125em; } }
 
 @media (min-width: 48em) {
   .hero__news {
@@ -1474,6 +1477,12 @@ h1 {
         .highlight-slider__progress-nav--line span {
           width: 20px; } }
 
+.post-template .highlight-slider__wrapper {
+  margin: 0; }
+  @media (min-width: 48em) {
+    .post-template .highlight-slider__wrapper {
+      margin: 80px 0 0; } }
+
 .content_box_overlay__wrapper {
   max-width: 1562px;
   margin: 0 auto;
@@ -1922,10 +1931,12 @@ h1 {
   font-size: 1em;
   line-height: 24px;
   letter-spacing: 1px;
-  color: #424445; }
+  color: #424445;
+  text-align: center; }
   @media (min-width: 48em) {
     .wysiwyg-editor__wrapper {
-      padding: 120px 40px 166px; } }
+      padding: 120px 40px 166px;
+      text-align: left; } }
   .wysiwyg-editor__wrapper ol {
     margin-left: 24px; }
   .wysiwyg-editor__wrapper ul {
@@ -1965,6 +1976,36 @@ h1 {
     @media (min-width: 48em) {
       .careers-page__wysiwyg .wysiwyg-editor__wrapper {
         padding: 120px 40px 60px; } }
+
+.post-template .wysiwyg-editor__wrapper {
+  padding: 40px; }
+  @media (min-width: 48em) {
+    .post-template .wysiwyg-editor__wrapper {
+      padding: 120px 40px 50px; } }
+
+.social-share__wrapper {
+  margin: 0 auto 40px;
+  max-width: 830px;
+  padding: 40px; }
+
+.social-share__container {
+  border-top: 2px solid #001B71; }
+  .social-share__container .supsystic-social-sharing .sharer-flat.twitter,
+  .social-share__container .supsystic-social-sharing .sharer-flat.facebook {
+    background-color: #001B71; }
+    .social-share__container .supsystic-social-sharing .sharer-flat.twitter:hover, .social-share__container .supsystic-social-sharing .sharer-flat.twitter:focus,
+    .social-share__container .supsystic-social-sharing .sharer-flat.facebook:hover,
+    .social-share__container .supsystic-social-sharing .sharer-flat.facebook:focus {
+      background-color: #0F2F95 !important; }
+  .social-share__container .supsystic-social-sharing a.social-sharing-button.sharer-flat.facebook:hover {
+    background-color: #0F2F95 !important; }
+
+.social-share__title {
+  text-align: center;
+  color: #424445;
+  font-family: SharpGroteskExp Book;
+  font-size: 1em;
+  padding: 60px 20px 20px; }
 
 .careers-page__button--wrapper {
   background: #F7F6EC; }
@@ -2199,17 +2240,20 @@ section {
   max-width: 1562px;
   text-align: center;
   margin: 0 auto;
+  padding: 0 40px 80px; }
+
+.page-numbers {
+  color: #424445;
+  margin: 10px;
   font-family: SharpGroteskExp Book;
   color: #424445;
   font-size: 1.125em;
-  padding: 0 40px 80px; }
-  .pagination .page-numbers {
-    color: #424445;
-    margin: 10px; }
-  .pagination .current {
-    color: white;
-    background: #0F2F95;
-    padding: 18px; }
+  text-decoration: none; }
+
+.current {
+  color: white;
+  background: #0F2F95;
+  padding: 18px; }
 
 @media (min-width: 64em) {
   .mobile-only {
