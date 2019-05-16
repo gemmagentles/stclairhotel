@@ -2035,9 +2035,6 @@ h1 {
   @media (min-width: 98.875em) {
     .photo-gallery__wrapper {
       padding: 120px 0; } }
-  .photo-gallery__wrapper--section {
-    text-align: center;
-    padding-bottom: 80px; }
 
 .photo-gallery__image {
   width: 100%;
@@ -2050,12 +2047,6 @@ h1 {
   @media (min-width: 48em) {
     .photo-gallery__image {
       margin-bottom: 0; } }
-  .photo-gallery__image .lazy-image {
-    opacity: 0.1;
-    will-change: opacity;
-    transition: all 0.3s; }
-  .photo-gallery__image .lazy-image.loaded {
-    opacity: 1; }
 
 .footer {
   background-color: #001B71; }
