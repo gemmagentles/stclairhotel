@@ -1983,6 +1983,30 @@ h1 {
     .post-template .wysiwyg-editor__wrapper {
       padding: 120px 40px 50px; } }
 
+.social-share__wrapper {
+  margin: 0 auto 40px;
+  max-width: 830px;
+  padding: 40px; }
+
+.social-share__container {
+  border-top: 2px solid #001B71; }
+  .social-share__container .supsystic-social-sharing .sharer-flat.twitter,
+  .social-share__container .supsystic-social-sharing .sharer-flat.facebook {
+    background-color: #001B71; }
+    .social-share__container .supsystic-social-sharing .sharer-flat.twitter:hover, .social-share__container .supsystic-social-sharing .sharer-flat.twitter:focus,
+    .social-share__container .supsystic-social-sharing .sharer-flat.facebook:hover,
+    .social-share__container .supsystic-social-sharing .sharer-flat.facebook:focus {
+      background-color: #0F2F95 !important; }
+  .social-share__container .supsystic-social-sharing a.social-sharing-button.sharer-flat.facebook:hover {
+    background-color: #0F2F95 !important; }
+
+.social-share__title {
+  text-align: center;
+  color: #424445;
+  font-family: SharpGroteskExp Book;
+  font-size: 1em;
+  padding: 60px 20px 20px; }
+
 .careers-page__button--wrapper {
   background: #F7F6EC; }
 
@@ -2026,6 +2050,12 @@ h1 {
   @media (min-width: 48em) {
     .photo-gallery__image {
       margin-bottom: 0; } }
+  .photo-gallery__image .lazy-image {
+    opacity: 0.1;
+    will-change: opacity;
+    transition: all 0.3s; }
+  .photo-gallery__image .lazy-image.loaded {
+    opacity: 1; }
 
 .footer {
   background-color: #001B71; }

@@ -1,0 +1,33 @@
+.social-share {
+    &__wrapper {
+        margin: 0 auto 40px;
+        max-width: 830px;
+        padding: 40px;
+    }
+
+    &__container {
+        border-top: 2px solid $quinary-color;
+
+        .supsystic-social-sharing .sharer-flat.twitter,
+        .supsystic-social-sharing .sharer-flat.facebook {
+            background-color: $quinary-color;
+        
+            &:hover,
+            &:focus {
+                background-color: $primary-color !important;
+            }
+        }
+
+        .supsystic-social-sharing a.social-sharing-button.sharer-flat.facebook:hover {
+            background-color: $primary-color !important;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: $font-color;
+        font-family: $secondary-font-family;
+        font-size: em(16);
+        padding: 60px 20px 20px;
+    }
+}

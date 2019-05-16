@@ -40,7 +40,13 @@
 		<section>
 			<?php get_template_part('partials/wysiwyg-editor-2'); ?> 		
 		</section>
-		<!-- /Wysiwyg Editor 2 -->
+        <!-- /Wysiwyg Editor 2 -->
+        
+        <!-- Social Share -->
+        <section>
+			<?php get_template_part('partials/social-share'); ?> 		
+        </section>
+        <!-- /Social Share -->
 
     </article>
     <!-- /article -->
