@@ -803,6 +803,10 @@ h1 {
 .half-and-half-panel__button {
   margin-top: 40px; }
 
+.half-and-half-panel__image-section {
+  display: flex;
+  align-items: flex-end; }
+
 .half-and-half-panel__image {
   margin-top: 30px;
   width: 100%; }
@@ -810,189 +814,7 @@ h1 {
     .half-and-half-panel__image {
       margin-top: 0; } }
 
-.home .half-and-half-panel__container {
-  background-color: white; }
-  .home .half-and-half-panel__container .half-and-half-panel__heading {
-    font-size: 1.5em;
-    line-height: 28px; }
-    @media (min-width: 48em) {
-      .home .half-and-half-panel__container .half-and-half-panel__heading {
-        font-size: 2.25em;
-        line-height: 38px; } }
-    @media (min-width: 70em) {
-      .home .half-and-half-panel__container .half-and-half-panel__heading {
-        font-size: 2.875em;
-        line-height: 48px; } }
-  @media (min-width: 48em) {
-    .home .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
-      padding: 0 18px 0 0; } }
-  @media (min-width: 87em) {
-    .home .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
-      padding: 75px 18px 0 0; } }
-  .home .half-and-half-panel__container:last-child {
-    background-image: url("/wp-content/themes/stclair/img/paper-texture-repeat.jpg"); }
-    @media (min-width: 48em) {
-      .home .half-and-half-panel__container:last-child .half-and-half-panel__inner {
-        justify-content: flex-end; } }
-    @media (min-width: 64em) {
-      .home .half-and-half-panel__container:last-child .half-and-half-panel__inner {
-        align-items: unset;
-        padding: 75px 60px 150px 60px;
-        margin-top: 140px; } }
-    @media (min-width: 87em) {
-      .home .half-and-half-panel__container:last-child .half-and-half-panel__inner {
-        padding: 75px 60px 100px 60px;
-        margin-top: 140px; } }
-    @media (min-width: 48em) {
-      .home .half-and-half-panel__container:last-child .half-and-half-panel__text-section {
-        padding: 0 0 0 40px; } }
-    @media (min-width: 87em) {
-      .home .half-and-half-panel__container:last-child .half-and-half-panel__text-section {
-        padding: 0 0 0 124px; } }
-    @media (min-width: 64em) {
-      .home .half-and-half-panel__container:last-child .half-and-half-panel__image {
-        margin-top: -130px; } }
-    @media (min-width: 87em) {
-      .home .half-and-half-panel__container:last-child .half-and-half-panel__image {
-        margin-top: -168px; } }
-
-@media (min-width: 70em) {
-  .restaurant .half-and-half-panel__wrapper,
-  .restaurants-and-bars .half-and-half-panel__wrapper,
-  .events-meetings .half-and-half-panel__wrapper,
-  .weddings .half-and-half-panel__wrapper,
-  .discover .half-and-half-panel__wrapper {
-    padding-top: 180px;
-    padding-bottom: 180px; } }
-
-@media (min-width: 87em) {
-  .restaurant .half-and-half-panel__wrapper,
-  .restaurants-and-bars .half-and-half-panel__wrapper,
-  .events-meetings .half-and-half-panel__wrapper,
-  .weddings .half-and-half-panel__wrapper,
-  .discover .half-and-half-panel__wrapper {
-    padding-top: 245px;
-    padding-bottom: 285px; } }
-
-.restaurant .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-.restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-.events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-.weddings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-.discover .half-and-half-panel__container:first-child .half-and-half-panel__inner {
-  align-items: normal; }
-  @media (min-width: 48em) {
-    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .weddings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .discover .half-and-half-panel__container:first-child .half-and-half-panel__inner {
-      padding: 80px 60px 20px 60px; } }
-  @media (min-width: 70em) {
-    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .weddings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .discover .half-and-half-panel__container:first-child .half-and-half-panel__inner {
-      padding: 124px 60px 80px; } }
-  @media (min-width: 98.875em) {
-    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .weddings .half-and-half-panel__container:first-child .half-and-half-panel__inner,
-    .discover .half-and-half-panel__container:first-child .half-and-half-panel__inner {
-      padding: 80px 0; } }
-
-@media (max-width: 37.5em) {
-  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .weddings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .discover .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
-    max-width: none; } }
-
-@media (min-width: 48em) {
-  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .weddings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .discover .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
-    margin-right: 40px;
-    padding: 0 30px 0 0; } }
-
-@media (min-width: 64em) {
-  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .weddings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .discover .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
-    max-width: 530px; } }
-
-@media (min-width: 70em) {
-  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .weddings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .discover .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
-    padding: 0 62px 0 0; } }
-
-@media (min-width: 87em) {
-  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .weddings .half-and-half-panel__container:first-child .half-and-half-panel__text-section,
-  .discover .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
-    padding: 0 162px 0 0; } }
-
-.restaurant .half-and-half-panel__container:first-child .half-and-half-panel__heading,
-.restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__heading,
-.events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__heading,
-.weddings .half-and-half-panel__container:first-child .half-and-half-panel__heading,
-.discover .half-and-half-panel__container:first-child .half-and-half-panel__heading {
-  max-width: 300px; }
-
-.restaurant .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-.restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-.events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-.weddings .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-.discover .half-and-half-panel__container:first-child .half-and-half-panel__paragraph {
-  padding: 25px 10px 18px 0; }
-  @media (min-width: 70em) {
-    .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-    .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-    .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-    .weddings .half-and-half-panel__container:first-child .half-and-half-panel__paragraph,
-    .discover .half-and-half-panel__container:first-child .half-and-half-panel__paragraph {
-      max-width: 480px;
-      padding: 30px 0 52px 0; } }
-
-@media (min-width: 70em) {
-  .restaurant .half-and-half-panel__container:first-child .half-and-half-panel__image-section,
-  .restaurants-and-bars .half-and-half-panel__container:first-child .half-and-half-panel__image-section,
-  .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__image-section,
-  .weddings .half-and-half-panel__container:first-child .half-and-half-panel__image-section,
-  .discover .half-and-half-panel__container:first-child .half-and-half-panel__image-section {
-    margin-top: -244px; } }
-
-@media (min-width: 70em) {
-  .restaurant .half-and-half-panel__container:last-child .half-and-half-panel__image-section,
-  .restaurants-and-bars .half-and-half-panel__container:last-child .half-and-half-panel__image-section,
-  .events-meetings .half-and-half-panel__container:last-child .half-and-half-panel__image-section,
-  .weddings .half-and-half-panel__container:last-child .half-and-half-panel__image-section,
-  .discover .half-and-half-panel__container:last-child .half-and-half-panel__image-section {
-    margin-bottom: -210px; } }
-
-.restaurant .half-and-half-panel__container:first-child {
-  background: #ECECF7; }
-
-@media (min-width: 70em) {
-  .restaurant .half-and-half-panel__wrapper {
-    padding-bottom: 0; } }
-
-@media (min-width: 70em) {
-  .weddings .half-and-half-panel__wrapper {
-    padding-bottom: 150px; } }
-
-.events-meetings .half-and-half-panel__list {
+.half-and-half-panel__list {
   font-family: SharpGroteskExp Book;
   font-size: 0.75em;
   line-height: 20px;
@@ -1002,9 +824,9 @@ h1 {
   padding-top: 40px;
   padding-left: 92px;
   position: relative; }
-  .events-meetings .half-and-half-panel__list p {
+  .half-and-half-panel__list p {
     padding-bottom: 20px; }
-  .events-meetings .half-and-half-panel__list::before {
+  .half-and-half-panel__list::before {
     content: "";
     position: absolute;
     left: 0;
@@ -1013,21 +835,135 @@ h1 {
     width: 72px;
     height: 2px; }
 
-.events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__list {
-  padding-top: 20px; }
-  .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__list::before {
-    top: 28px; }
+.half-and-half-panel__white .half-and-half-panel__container {
+  background-color: white; }
+  .half-and-half-panel__white .half-and-half-panel__container .half-and-half-panel__heading {
+    font-size: 1.5em;
+    line-height: 28px; }
+    @media (min-width: 48em) {
+      .half-and-half-panel__white .half-and-half-panel__container .half-and-half-panel__heading {
+        font-size: 2.25em;
+        line-height: 38px; } }
+    @media (min-width: 70em) {
+      .half-and-half-panel__white .half-and-half-panel__container .half-and-half-panel__heading {
+        font-size: 2.875em;
+        line-height: 48px; } }
   @media (min-width: 48em) {
-    .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__list {
-      padding-top: 0; }
-      .events-meetings .half-and-half-panel__container:first-child .half-and-half-panel__list::before {
-        top: 2px; } }
+    .half-and-half-panel__white .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+      padding: 0 18px 0 0; } }
+  @media (min-width: 87em) {
+    .half-and-half-panel__white .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+      padding: 75px 18px 0 0; } }
+  .half-and-half-panel__white .half-and-half-panel__container:last-child {
+    background-image: url("/wp-content/themes/stclair/img/paper-texture-repeat.jpg"); }
+    @media (min-width: 48em) {
+      .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__inner {
+        justify-content: flex-end; } }
+    @media (min-width: 64em) {
+      .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__inner {
+        align-items: unset;
+        padding: 75px 60px 150px 60px;
+        margin-top: 140px; } }
+    @media (min-width: 87em) {
+      .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__inner {
+        padding: 75px 60px 100px 60px;
+        margin-top: 140px; } }
+    @media (min-width: 48em) {
+      .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__text-section {
+        padding: 0 0 0 40px; } }
+    @media (min-width: 87em) {
+      .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__text-section {
+        padding: 0 0 0 124px; } }
+    @media (min-width: 64em) {
+      .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__image {
+        margin-top: -130px; } }
+    @media (min-width: 87em) {
+      .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__image {
+        margin-top: -168px; } }
 
-.events-meetings .half-and-half-panel__container:last-child .half-and-half-panel__image-section {
-  margin-bottom: 0; }
+@media (min-width: 70em) {
+  .half-and-half-panel__yellow {
+    padding-top: 180px;
+    padding-bottom: 180px; } }
 
-.events-meetings .half-and-half-panel__wrapper {
-  padding-bottom: 30px; }
+@media (min-width: 87em) {
+  .half-and-half-panel__yellow {
+    padding-top: 245px;
+    padding-bottom: 285px; } }
+
+.half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__inner {
+  align-items: normal; }
+  @media (min-width: 48em) {
+    .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__inner {
+      padding: 80px 60px 20px 60px; } }
+  @media (min-width: 70em) {
+    .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__inner {
+      padding: 124px 60px 80px; } }
+  @media (min-width: 98.875em) {
+    .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__inner {
+      padding: 80px 0; } }
+
+@media (max-width: 37.5em) {
+  .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+    max-width: none; } }
+
+@media (min-width: 48em) {
+  .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+    margin-right: 40px;
+    padding: 0 30px 0 0; } }
+
+@media (min-width: 64em) {
+  .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+    max-width: 530px; } }
+
+@media (min-width: 70em) {
+  .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+    padding: 0 62px 0 0; } }
+
+@media (min-width: 87em) {
+  .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__text-section {
+    padding: 0 162px 0 0; } }
+
+.half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__heading {
+  max-width: 300px; }
+
+.half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__paragraph {
+  padding: 25px 10px 18px 0; }
+  @media (min-width: 70em) {
+    .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__paragraph {
+      max-width: 480px;
+      padding: 30px 0 52px 0; } }
+
+@media (min-width: 70em) {
+  .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__image-section {
+    margin-top: -244px; } }
+
+@media (min-width: 70em) {
+  .half-and-half-panel__yellow .half-and-half-panel__container:last-child .half-and-half-panel__image-section {
+    margin-bottom: -210px; } }
+
+.half-and-half-panel__purple {
+  padding-top: 70px; }
+  .half-and-half-panel__purple .half-and-half-panel__container {
+    background-color: #ECECF7; }
+  @media (min-width: 48em) {
+    .half-and-half-panel__purple .half-and-half-panel__inner {
+      padding: 20px 60px 20px 60px; } }
+  @media (min-width: 87em) {
+    .half-and-half-panel__purple .half-and-half-panel__inner {
+      padding: 80px 60px; } }
+  @media (min-width: 98.875em) {
+    .half-and-half-panel__purple .half-and-half-panel__inner {
+      padding: 80px 0; } }
+  @media (min-width: 70em) {
+    .half-and-half-panel__purple .half-and-half-panel__text-section {
+      padding: 0 162px 0 0; } }
+  @media (min-width: 70em) {
+    .half-and-half-panel__purple .half-and-half-panel__image-section {
+      margin-top: -244px; } }
+  @media (min-width: 70em) {
+    .half-and-half-panel__purple .half-and-half-panel__container:nth-child(odd) .half-and-half-panel__text-section {
+      padding: 0 162px 0 0; } }
 
 .half-and-half-content-slider__wrapper {
   max-width: 1562px;

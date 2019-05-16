@@ -1,0 +1,77 @@
+.half-and-half-panel__white {
+    .half-and-half-panel {
+        &__container {
+            background-color: white;
+
+            .half-and-half-panel__heading {
+                font-size: em(24);
+                line-height: 28px;
+
+                @include breakpoint(tablet) {
+                    font-size: em(36);
+                    line-height: 38px;
+                }
+
+                @include breakpoint(desktop) {
+                    font-size: em(46);
+                    line-height: 48px;
+                }
+            }
+
+            &:first-child {
+                .half-and-half-panel__text-section {
+                    @include breakpoint(tablet) {
+                        padding: 0 18px 0 0;
+                    }
+
+                    @include breakpoint(largedesktop) {
+                        padding: 75px 18px 0 0;
+                    }
+                }
+            }
+            
+            &:last-child {
+                background-image: url('/wp-content/themes/stclair/img/paper-texture-repeat.jpg');
+
+                .half-and-half-panel__inner {
+
+                    @include breakpoint(tablet) {
+                        justify-content: flex-end;
+                    }
+    
+                    @include breakpoint(smalldesktop) {
+                        align-items: unset;
+                        padding: 75px 60px 150px 60px;
+                        margin-top: 140px;
+                    }
+    
+                    @include breakpoint(largedesktop) {
+                        padding: 75px 60px 100px 60px;
+                        margin-top: 140px;
+                    }
+                }
+
+                .half-and-half-panel__text-section {
+                    @include breakpoint(tablet) {
+                        padding: 0 0 0 40px;
+                    }
+                    
+                    @include breakpoint(largedesktop) {
+                        padding: 0 0 0 124px;
+
+                    }
+                }
+    
+                .half-and-half-panel__image {
+                    @include breakpoint(smalldesktop) {
+                        margin-top: -130px;
+                    }
+    
+                    @include breakpoint(largedesktop) {
+                        margin-top: -168px;
+                    }
+                }
+            }
+        }
+    }
+}

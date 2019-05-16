@@ -1,6 +1,6 @@
-<?php if ( have_rows( 'half_and_half_panel' ) ) : ?>
+<?php if ( have_rows( 'half_and_half_panel_default' ) ) : ?>
 	<div class="half-and-half-panel__wrapper">
-		<?php while ( have_rows( 'half_and_half_panel' ) ) : the_row(); ?>
+		<?php while ( have_rows( 'half_and_half_panel_default' ) ) : the_row(); ?>
 			<div class="half-and-half-panel__container">
 			<div class="half-and-half-panel__inner">
 				<!-- Text -->

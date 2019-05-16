@@ -13,17 +13,23 @@
 		</section>
 		<!-- /Intro Block Slider -->
 
-		<!-- Half and Half Panel -->
+		<!-- Half and Half Panel Yellow -->
 		<section>
-			<?php get_template_part('partials/half-and-half-panel'); ?> 		
+			<?php get_template_part('partials/half-and-half-panel-yellow'); ?> 		
 		</section>
-		<!-- /Half and Half Panel -->
+		<!-- /Half and Half Panel Yellow -->
 
 		<!-- Highlight Slider -->
 		<section>
 			<?php get_template_part('partials/highlight-slider'); ?> 		
 		</section>
 		<!-- /Highlight Slider -->
+
+		<!-- Half and Half Panel Purple -->
+		<section>
+			<?php get_template_part('partials/half-and-half-panel-purple'); ?> 		
+		</section>
+		<!-- /Half and Half Panel Purple -->
 
 		 <!-- Accordion -->
 		 <section>

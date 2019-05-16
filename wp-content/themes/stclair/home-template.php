@@ -25,11 +25,11 @@
 		</section>
 		<!-- /Background Image Content Panel Slider -->
 
-		<!-- Half and Half Panel -->
+		<!-- Half and Half Panel White -->
 		<section>
-			<?php get_template_part('partials/half-and-half-panel'); ?> 		
+			<?php get_template_part('partials/half-and-half-panel-white'); ?> 		
 		</section>
-		<!-- /Half and Half Panel -->
+		<!-- /Half and Half Panel White -->
 
 		<!-- Book Now Banner -->
 		<section>

@@ -13,11 +13,17 @@
 		</section>
 		<!-- /Intro Block Slider -->
 
-		<!-- Menu List -->
+		<!-- Half and Half Panel Yellow -->
 		<section>
-			<?php get_template_part('partials/half-and-half-panel'); ?> 		
+			<?php get_template_part('partials/half-and-half-panel-yellow'); ?> 		
 		</section>
-		<!-- /Menu List -->
+		<!-- /Half and Half Panel Yellow -->
+
+		<!-- Half and Half Panel Purple -->
+		<section>
+			<?php get_template_part('partials/half-and-half-panel-purple'); ?> 		
+		</section>
+		<!-- /Half and Half Panel Purple -->
 
 		<!-- Content Box Overlay -->
 		<section>

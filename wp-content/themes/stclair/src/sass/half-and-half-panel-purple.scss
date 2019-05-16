@@ -1,0 +1,40 @@
+.half-and-half-panel__purple {
+    padding-top: 70px;
+
+    .half-and-half-panel {
+        &__container {
+            background-color: $quaternary-color;
+        }
+
+        &__inner {
+            @include breakpoint(tablet) {
+                padding: 20px 60px 20px 60px;
+            }
+
+            @include breakpoint(largedesktop) {
+                padding: 80px 60px;
+            }
+    
+            @include breakpoint(xlargedesktop) {
+                padding: 80px 0;
+            }
+        }
+
+        &__text-section {
+            @include breakpoint(desktop) {
+                padding: 0 162px 0 0;
+            }
+        }
+
+        &__image-section {
+            @include breakpoint(desktop) {
+                margin-top: -244px;
+            }
+        }
+    }
+    .half-and-half-panel__container:nth-child(odd) .half-and-half-panel__text-section {
+        @include breakpoint(desktop) {
+            padding: 0 162px 0 0;
+        }
+    }
+}

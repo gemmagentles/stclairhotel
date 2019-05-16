@@ -13,11 +13,11 @@
 		</section>
 		<!-- /Intro Block Slider -->
 
-		<!-- Half and Half Panel -->
+		<!-- Half and Half Panel Yellow -->
 		<section>
-			<?php get_template_part('partials/half-and-half-panel'); ?> 		
+			<?php get_template_part('partials/half-and-half-panel-yellow'); ?> 		
 		</section>
-		<!-- /Half and Half Panel -->
+		<!-- /Half and Half Panel Yellow -->
 
 	</main>
 
