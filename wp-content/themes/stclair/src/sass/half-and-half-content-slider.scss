@@ -197,6 +197,25 @@
         }
     }
 
+    &__disclaimer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: $secondary-font-family;
+        font-size: em(14);
+        line-height: 18px;
+        letter-spacing: 1px;
+        color: $font-color;
+        z-index: 2;
+        padding: 18px;
+
+        @include breakpoint(desktop) {
+            bottom: 0;
+            top: auto;
+            padding: 28px;
+        }
+    }
+
     &__image {
         width: 100%;
 
