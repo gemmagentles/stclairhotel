@@ -41,12 +41,10 @@
     
                     @include breakpoint(smalldesktop) {
                         align-items: unset;
-                        padding: 75px 60px 150px 60px;
                         margin-top: 140px;
                     }
     
                     @include breakpoint(largedesktop) {
-                        padding: 75px 60px 100px 60px;
                         margin-top: 140px;
                     }
                 }

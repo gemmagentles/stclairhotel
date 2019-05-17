@@ -1,6 +1,6 @@
 <?php if ( have_rows( 'intro_block' ) ) : ?>
     <div class="intro-block__wrapper">
-        <div class="intro-block__container">
+        <div class="intro-block__container" data-aos="fade-up" data-aos-delay="250">
             <?php while ( have_rows( 'intro_block' ) ) : the_row(); ?>
                 <?php $heading = get_sub_field( 'heading' ); ?>
                 <?php if ( $heading ) { ?>

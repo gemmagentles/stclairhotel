@@ -862,11 +862,9 @@ h1 {
     @media (min-width: 64em) {
       .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__inner {
         align-items: unset;
-        padding: 75px 60px 150px 60px;
         margin-top: 140px; } }
     @media (min-width: 87em) {
       .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__inner {
-        padding: 75px 60px 100px 60px;
         margin-top: 140px; } }
     @media (min-width: 48em) {
       .half-and-half-panel__white .half-and-half-panel__container:last-child .half-and-half-panel__text-section {
@@ -1825,7 +1823,8 @@ h1 {
     right: 10px;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: rotateX(180deg); }
+    transition: all .3s ease-out;
+    transform: translateY(-50%); }
     @media (min-width: 64em) {
       .accordion__button:after {
         right: 30px; } }
@@ -1837,7 +1836,7 @@ h1 {
     height: 12px;
     position: absolute;
     background-repeat: no-repeat;
-    transform: rotateX(360deg); }
+    transform: translateY(-50%) rotate(180deg); }
 
 .accordion__content {
   max-height: 0;

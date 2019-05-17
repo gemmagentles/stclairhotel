@@ -60,6 +60,7 @@
 				</div>
 			</footer>
 		</div>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<?php wp_footer(); ?>
 	</body>
 </html>
