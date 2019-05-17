@@ -49,8 +49,9 @@
             right: 10px;
             background-repeat: no-repeat;
             background-size: contain;
-            transform: rotateX(180deg);
-            
+            transition: all .3s ease-out;
+            transform: translateY(-50%);
+
             @include breakpoint(smalldesktop) {
                 right: 30px;
             }
@@ -64,7 +65,7 @@
             height: 12px;
             position: absolute;
             background-repeat: no-repeat;
-            transform: rotateX(360deg);
+            transform: translateY(-50%) rotate(180deg);
         }
     }
 

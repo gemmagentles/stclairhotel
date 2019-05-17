@@ -3,9 +3,9 @@
     <?php while ( have_rows( 'icon_list_with_content' ) ) : the_row(); ?>
         <div class="icon-list-with-content__content-wrapper">
 			<!-- Heading -->
-            <h2 class="icon-list-with-content__heading"><?php the_sub_field( 'heading' ); ?></h2>
+            <h2 data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="350" data-aos-duration="550" class="icon-list-with-content__heading"><?php the_sub_field( 'heading' ); ?></h2>
             <!-- Paragraph -->
-            <div class="icon-list-with-content__paragraph">
+            <div data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="550" data-aos-duration="800" class="icon-list-with-content__paragraph">
                 <?php the_sub_field( 'paragraph' ); ?>
             </div>
             <!-- Button -->
@@ -20,9 +20,9 @@
                     <div class="icon-list-with-content__icon-list-container">
                         <?php $icon = get_sub_field( 'icon' ); ?>
                         <?php if ( $icon ) { ?>
-                            <img class="icon-list-with-content__icon" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
+                            <img data-aos="zoom-in" data-aos-duration="550" class="icon-list-with-content__icon" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
                         <?php } ?>
-                        <span class="icon-list-with-content__icon--text"><?php the_sub_field( 'text' ); ?></span>
+                        <span data-aos="fade-right" data-aos-delay="850" class="icon-list-with-content__icon--text"><?php the_sub_field( 'text' ); ?></span>
                     </div>                
                 <?php endwhile; ?>
             <?php else : ?>

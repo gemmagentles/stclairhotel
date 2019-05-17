@@ -12,6 +12,9 @@
 @import 'background-image-content-panel.scss';
 @import 'double-image-content-panel.scss';
 @import 'half-and-half-panel.scss';
+@import 'half-and-half-panel-white.scss';
+@import 'half-and-half-panel-yellow.scss';
+@import 'half-and-half-panel-purple.scss';
 @import 'half-and-half-content-slider.scss';
 @import 'book-now-banner.scss';
 @import 'cards.scss';
@@ -23,8 +26,10 @@
 @import 'icon-list-with-content.scss';
 @import 'accordion.scss';
 @import 'wysiwyg-editor.scss';
+@import 'social-share.scss';
 @import 'button.scss';
 @import 'map.scss';
+@import 'photo-gallery.scss';
 @import 'footer.scss';
 
 * {
@@ -40,6 +45,28 @@ body {
 
 section {
   position: relative;
+}
+
+.pagination {
+  max-width: $site-width;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.page-numbers {
+  color: $font-color;
+  margin: 10px;
+  font-family: $secondary-font-family;
+  color: $font-color;
+  font-size: em(18);
+  text-decoration: none;
+}
+
+.current {
+  color: white;
+  background: $primary-color;
+  padding: 18px;
 }
 
 // used on header.php content
@@ -161,7 +188,7 @@ BUTTON
   font-size: em(14);
 }
 
-.arrow-button {
+.submit-button {
   content: "";
   position: absolute;
   top: 0;

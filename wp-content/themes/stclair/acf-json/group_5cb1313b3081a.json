@@ -1,11 +1,11 @@
 {
     "key": "group_5cb1313b3081a",
-    "title": "Half and Half Panel",
+    "title": "Half and Half Panel Default",
     "fields": [
         {
             "key": "field_5cb52246e42f6",
-            "label": "Half and Half Panel",
-            "name": "half_and_half_panel",
+            "label": "Half and Half Panel Default",
+            "name": "half_and_half_panel_default",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -64,7 +64,7 @@
                     "label": "List",
                     "name": "list",
                     "type": "wysiwyg",
-                    "instructions": "",
+                    "instructions": "Adding a list is optional.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -83,7 +83,7 @@
                     "label": "Download Link",
                     "name": "download_link",
                     "type": "repeater",
-                    "instructions": "",
+                    "instructions": "Adding a download link is optional.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -201,44 +201,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "page",
                 "operator": "==",
-                "value": "home-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "discover-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "weddings-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "events-and-meetings-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "restaurants-and-bars-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "restaurant-template.php"
+                "value": "18"
             }
         ]
     ],
@@ -250,5 +215,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556734907
+    "modified": 1558041027
 }

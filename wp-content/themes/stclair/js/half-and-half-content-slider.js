@@ -6,6 +6,7 @@ if (halfContentSlider.length > 0) {
     items: 1,
     swipeAngle: false,
     speed: 700,
-    rewind: true
+    rewind: true,
+    autoplay: true
   });
 }

@@ -2,7 +2,26 @@
     &__wrapper {
         background: $tertiary-color;
     }
+
+    &__blog-date {
+        color: white;
+        font-size: em(14);
+        letter-spacing: 2.82px;
+        line-height: 20px;
+        font-family: $tertiary-font-family;
+        text-transform: uppercase;
+
+        @include breakpoint(tablet) {
+            font-size: em(18);
+        }
+    }
     
+    &__news {
+        @include breakpoint(tablet) {
+            margin-bottom: 65px;
+        }
+    }
+ 
     &__content {
         text-align: center;
         padding: 80px 40px;
@@ -12,6 +31,7 @@
         }
 
         &--heading {
+            padding-top: 26px;
             color: $quinary-color;
             max-width: 1124px;
             margin: 0 auto;

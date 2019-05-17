@@ -1,0 +1,81 @@
+.half-and-half-panel__yellow {
+
+        @include breakpoint(desktop) {
+            padding-top: 180px;
+            padding-bottom: 180px;
+        }
+
+        @include breakpoint(largedesktop) {
+            padding-top: 245px;
+        }
+
+    .half-and-half-panel__container:first-child {
+
+        .half-and-half-panel__inner {
+            align-items: normal;
+
+            @include breakpoint(tablet) {
+                padding: 80px 60px 20px 60px;
+            }
+
+            @include breakpoint(desktop) {
+                padding: 124px 60px 80px;
+            }
+
+            @include breakpoint(xlargedesktop) {
+                padding: 80px 0;
+            }
+        }
+
+        .half-and-half-panel__text-section {
+
+            @include breakpoint(mobile) {
+                max-width: none;
+            }
+            
+            @include breakpoint(tablet) {
+                margin-right: 40px;
+                padding: 0 30px 0 0;
+            }
+
+            @include breakpoint(smalldesktop) {
+                max-width: 530px;
+            }
+
+            @include breakpoint(desktop) {
+                padding: 0 62px 0 0;
+            }
+
+            @include breakpoint(largedesktop) {
+                padding: 0 162px 0 0;
+            }
+        }
+
+        .half-and-half-panel__heading {
+            max-width: 300px;
+        }
+
+        .half-and-half-panel__paragraph {
+            padding: 25px 10px 18px 0;
+
+            @include breakpoint(desktop) {
+                max-width: 480px;
+                padding: 30px 0 52px 0;
+            }
+        }
+
+        .half-and-half-panel__image-section {
+            @include breakpoint(desktop) {
+                margin-top: -244px;
+            }
+        }
+    }
+
+    .half-and-half-panel__container:last-child {
+        .half-and-half-panel__image-section {
+            @include breakpoint(desktop) {
+                margin-bottom: -210px;
+            }
+        }
+    }
+}

@@ -158,6 +158,8 @@ function html5blank_header_scripts()
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
+        // Enqueue AOS styles
+        wp_enqueue_style(' AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
 }
 
 // Load HTML5 Blank footer scripts
@@ -169,6 +171,8 @@ function html5blank_footer_scripts()
     wp_enqueue_script('highlight-main-slider'); // Enqueue it!
     wp_register_script('half-and-half-content-main-slider', get_template_directory_uri() . '/js/half-and-half-content-slider.js', array('jquery'), '1.0.0'); // Conditional script(s)
     wp_enqueue_script('half-and-half-content-main-slider'); // Enqueue it!
+    wp_register_script('aos-init', get_template_directory_uri() . '/js/aos.js', array('jquery'), '1.0.0'); // Conditional script(s)
+    wp_enqueue_script('aos-init'); // Enqueue it!    
 }
 
 // Load HTML5 Blank conditional scripts
@@ -406,7 +410,7 @@ function html5blankcomments($comment, $args, $depth)
 
 // Add Actions
 add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_footer', 'html5blank_footer_scripts'); // Add Custom Scripts to wp_head
+add_action('wp_footer', 'html5blank_footer_scripts'); // Add Custom Scripts to wp_footer
 //add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
 //add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet

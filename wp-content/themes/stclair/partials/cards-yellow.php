@@ -2,7 +2,7 @@
     <div class="cards__container">
         <h2 class="cards__heading"><?php the_field( 'cards_heading' ); ?></h2>
         <?php if ( have_rows( 'card_repeater' ) ) : ?>
-            <div class="cards__inner">
+            <div class="cards__inner" data-aos="fade-up">
                 <?php while ( have_rows( 'card_repeater' ) ) : the_row(); ?>
                 <!-- INDIVIDUAL CARD -->
                     <div class="cards__individual-card-wrapper">
