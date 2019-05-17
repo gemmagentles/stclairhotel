@@ -3,7 +3,7 @@
 <div class="half-and-half-panel__wrapper half-and-half-panel__yellow">
     <?php while ( have_rows( 'half_and_half_panel_yellow_half_and_half_panel_default' ) ) : the_row(); ?>
         <div class="half-and-half-panel__container">
-        <div class="half-and-half-panel__inner">
+        <div data-aos="fade-up" data-aos-delay="100" class="half-and-half-panel__inner">
             <!-- Text -->
             <div class="half-and-half-panel__text-section">
                 <!-- Heading -->
@@ -15,7 +15,7 @@
                 <!-- List -->
                 <?php $list = get_sub_field( 'list' ); ?>
                 <?php if ( $list ) { ?>
-                    <div class="half-and-half-panel__list">
+                    <div data-aos="fade-right" data-aos-delay="700" class="half-and-half-panel__list">
                         <?php the_sub_field( 'list' ); ?>
                     </div>
                 <?php } ?>
@@ -45,7 +45,7 @@
             <div class="half-and-half-panel__image-section">
                 <?php $image = get_sub_field( 'image' ); ?>
                 <?php if ( $image ) { ?>
-                    <img class="half-and-half-panel__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img data-aos="fade-up" data-aos-delay="250" data-aos-offset="100" class="half-and-half-panel__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                 <?php } ?>
             </div>
         </div>

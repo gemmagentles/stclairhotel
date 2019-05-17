@@ -33,11 +33,11 @@
 						</nav>
 						<hr class="footer__line--mobile">
 						<div class="footer__newsletter">
-							<p class="footer__heading">Join our mailing list.</p>
+							<label class="footer__heading">Join our mailing list.</label>
 							<div class="footer__signup-wrapper">
 								<input class="footer__signup" type="text" name="newsletter" placeholder="Enter your email here">
-								<button class="arrow-button" type="submit" value="">
-              					<?php echo $linkText; ?> <img class="arrow-button--icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt=""></button>
+								<button class="submit-button" type="submit" value="">
+              					<?php echo $linkText; ?> <img class="submit-button--icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt=""></button>
 							</div>
 						</div>
 						<hr class="footer__line--mobile">
@@ -60,6 +60,7 @@
 				</div>
 			</footer>
 		</div>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<?php wp_footer(); ?>
 	</body>
 </html>

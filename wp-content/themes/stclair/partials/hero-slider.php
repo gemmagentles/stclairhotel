@@ -1,7 +1,7 @@
 <?php if ( have_rows( 'images' ) ) : ?>
 <div class="hero-slider__wrapper">
     <div class="hero-slider__content">
-        <div class="hero-slider__content--inner">
+        <div class="hero-slider__content--inner" data-aos="fade-up">
             <img src="<?php echo get_template_directory_uri(); ?>/img/icons/diamond-divider.svg" alt="" class="hero-slider__content--diamond-divider">
             <!-- Logo overlay -->
             <?php $logo = get_field( 'logo' ); ?>

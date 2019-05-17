@@ -1,4 +1,4 @@
-<div class="cards__individual-card-wrapper">
+<div class="cards__individual-card-wrapper" data-aos="fade-up">
     <?php if ( have_rows( 'news_posts_hero' ) ) : ?>
         <?php while ( have_rows( 'news_posts_hero' ) ) : the_row(); ?>
             <?php if ( get_sub_field( 'news_posts_hero_background_image' ) ) { ?>

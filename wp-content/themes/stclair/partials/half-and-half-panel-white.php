@@ -45,7 +45,7 @@
             <div class="half-and-half-panel__image-section">
                 <?php $image = get_sub_field( 'image' ); ?>
                 <?php if ( $image ) { ?>
-                    <img class="half-and-half-panel__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img data-aos="flip-left" data-aos-delay="800" class="half-and-half-panel__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                 <?php } ?>
             </div>
         </div>
