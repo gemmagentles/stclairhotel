@@ -32,9 +32,10 @@
 		<!-- /Half and Half Panel White -->
 
 		<!-- Book Now Banner -->
-		<section>
-			<?php get_template_part('partials/book-now-banner'); ?> 		
-		</section>
+		<!-- Comment out until the client comes back with info -->
+		<!-- <section> 
+			<?php // get_template_part('partials/book-now-banner'); ?> 		
+		</section> -->
 		<!-- /Book Now Banner -->
 
 	</main>
