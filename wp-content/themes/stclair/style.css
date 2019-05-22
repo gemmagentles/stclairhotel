@@ -117,7 +117,7 @@ h1 {
     background-repeat: no-repeat;
     content: "";
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='11px' height='16px' viewBox='0 0 11 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EF0837A29-EDBC-4A55-ADEE-31388DB5FB85%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Home-Page-Copy' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='ST-Clair_Home' transform='translate(-1354.000000, -13.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='Nav' transform='translate(0.000000, -1.000000)'%3E%3Cg id='PreNav'%3E%3Cg%3E%3Cg%3E%3Cg id='pin-icon' transform='translate(1354.000000, 14.000000)'%3E%3Cpath d='M5.5,0 C2.46728362,0 0,2.47446756 0,5.51598449 C0,9.29060207 4.9219612,14.8319613 5.13151806,15.0660157 C5.32835024,15.2858804 5.67200569,15.2854937 5.86848194,15.0660157 C6.0780388,14.8319613 11,9.29060207 11,5.51598449 C10.9999407,2.47446756 8.53268672,0 5.5,0 Z M5.5,8.29123036 C3.97416504,8.29123036 2.73284096,7.04626219 2.73284096,5.51598449 C2.73284096,3.98570678 3.9741947,2.74076836 5.5,2.74076836 C7.0258053,2.74076836 8.26712938,3.98573653 8.26712938,5.51601423 C8.26712938,7.04629194 7.0258053,8.29123036 5.5,8.29123036 Z' id='Map--icon'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    width: 40px;
+    width: 11px;
     height: 100%;
     margin-top: 2px; }
   .pre-header .menu-item:nth-child(2)::before {
@@ -125,7 +125,7 @@ h1 {
     background-repeat: no-repeat;
     content: "";
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='12px' height='16px' viewBox='0 0 12 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E6AA682A1-855E-45BD-B824-A6F1BE8BE333%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Home-Page-Copy' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='ST-Clair_Home' transform='translate(-1493.000000, -14.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='Nav' transform='translate(0.000000, -1.000000)'%3E%3Cg id='Blog'%3E%3Cg transform='translate(1493.000000, 15.000000)'%3E%3Cpath d='M2.25283813,15.6532157 L3.63790602,13.3564214 C2.93604197,13.3564214 2.32258065,13.3564214 1.71045876,13.3564214 C0.567920527,13.348992 0,12.7175003 0,11.453031 C0,8.25941642 0,5.06629711 0,1.87367308 C0.0013394352,0.635949309 0.559883916,0 1.6702757,0 C4.56792053,0 7.46556535,0 10.3632102,0 C11.4682442,0 11.9986606,0.594345149 12,1.81721029 C12,5.05242905 12,8.28764781 12,11.5228666 C12,12.7234438 11.4454738,13.3430486 10.3591919,13.3504779 C8.9943074,13.3623648 7.63076236,13.32819 6.26721732,13.3727658 C5.82343462,13.4029256 5.38887575,13.5264673 4.98671727,13.7368023 C4.31699967,14.0651779 2.98015145,15.3649583 2.33722255,15.7423675 L2.25283813,15.6532157 Z M9.9720951,2.93903676 L2.15649068,2.93903676 L2.15649068,4.08463704 L9.9720951,4.08463704 L9.9720951,2.93903676 Z M2.13907802,7.08905176 L9.9720951,7.08905176 L9.9720951,5.96425357 L2.13907802,5.96425357 L2.13907802,7.08905176 Z M2.13907802,10.1365565 L9.97075566,10.1365565 L9.97075566,8.9924421 L2.13907802,8.9924421 L2.13907802,10.1365565 Z' id='Blog-icon'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    width: 40px;
+    width: 12px;
     height: 100%;
     margin-top: 3px; }
   .pre-header .menu-item:last-child::before {
@@ -133,7 +133,7 @@ h1 {
     background-repeat: no-repeat;
     content: "";
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16px' height='12px' viewBox='0 0 16 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3E0AC55A33-F531-4D57-9363-FFB0A5886CED%3C/title%3E%3Cdesc%3ECreated with sketchtool.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Home-Page-Copy' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='ST-Clair_Home' transform='translate(-1584.000000, -15.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='Nav' transform='translate(0.000000, -1.000000)'%3E%3Cg id='Mail-Icon'%3E%3Cg transform='translate(1584.000000, 16.000000)'%3E%3Cpath d='M15.8573909,0.797783934 L10.9473684,5.58448753 L15.8573909,10.3711911 C15.94615,10.1891599 16,9.98792349 16,9.77303546 L16,1.3959396 C16,1.18102056 15.94615,0.979815124 15.8573909,0.797783934 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M14.5586345,0 L1.44136552,0 C1.22604959,0 1.0244726,0.0505220389 0.842105263,0.133795887 L7.01104495,5.99183074 C7.55649954,6.51241838 8.44350046,6.51241838 8.98895505,5.99183074 L15.1578947,0.133795887 C14.9755274,0.0505220389 14.7739504,0 14.5586345,0 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M0.142609118,0.797783934 C0.053849962,0.979815124 0,1.18102056 0,1.3959396 L0,9.77303546 C0,9.98795451 0.053849962,10.189191 0.142609118,10.3711911 L5.05263158,5.58448753 L0.142609118,0.797783934 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M10.3312682,6.38227147 L9.64826877,7.04464883 C8.7394161,7.92606017 7.26055282,7.92606017 6.35170015,7.04464883 L5.66873182,6.38227147 L0.842105263,11.0330209 C1.0244726,11.117638 1.22604959,11.1689751 1.44136552,11.1689751 L14.5586345,11.1689751 C14.7739504,11.1689751 14.9755274,11.117638 15.1578947,11.0330209 L10.3312682,6.38227147 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    width: 40px;
+    width: 18px;
     height: 100%;
     margin-top: 4px; }
 
@@ -416,6 +416,7 @@ h1 {
     position: absolute;
     display: flex;
     justify-content: space-between;
+    outline: none;
     width: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -1878,7 +1879,7 @@ h1 {
   max-width: 830px;
   margin: 0 auto;
   padding: 40px;
-  font-family: SharpGroteskExp Book;
+  font-family: SharpGroteskExp Light;
   font-size: 1em;
   line-height: 24px;
   letter-spacing: 1px;
@@ -2130,7 +2131,7 @@ h1 {
     border: 1px solid white;
     padding: 0 20px;
     background: #001B71;
-    color: #9b9d9f;
+    color: white;
     font-size: 0.75em;
     font-family: SharpGroteskExp Light;
     letter-spacing: 0.5px;

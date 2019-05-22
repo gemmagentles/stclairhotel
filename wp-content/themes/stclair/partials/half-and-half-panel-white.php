@@ -38,14 +38,14 @@
                 <!-- Button -->
                 <?php $button_link = get_sub_field( 'button_link' ); ?>
                 <?php if ( $button_link ) { ?>
-                    <button class="half-and-half-panel__button stclair-button" onclick="location.href='<?php echo $button_link['url']; ?>'" type="button"><?php the_sub_field( 'button_text' ); ?></button>
+                    <button class="half-and-half-panel__button stclair-button" onclick="location.href='<?php echo $button_link; ?>'" type="button"><?php the_sub_field( 'button_text' ); ?></button>
                 <?php } ?>
             </div>
             <!-- Image -->
             <div class="half-and-half-panel__image-section">
                 <?php $image = get_sub_field( 'image' ); ?>
                 <?php if ( $image ) { ?>
-                    <img data-aos="flip-left" data-aos-delay="800" class="half-and-half-panel__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img data-aos="fade-up" data-aos-delay="250" data-aos-offset="100" class="half-and-half-panel__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                 <?php } ?>
             </div>
         </div>

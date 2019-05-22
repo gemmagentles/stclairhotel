@@ -12,12 +12,12 @@
                 <?php $large_image = get_sub_field( 'large_image' ); ?>
                 <?php if ( $large_image ) { ?>
                     <div class="double-image-content-panel__right--large-image-wrapper">
-                        <img data-aos="zoom-in" data-aos-delay="1750" data-aos-duration="1200" class="double-image-content-panel__right--large-image" src="<?php echo $large_image['url']; ?>" alt="<?php echo $large_image['alt']; ?>" />
+                        <img  data-aos="fade-up" data-aos-delay="250" data-aos-offset="100" class="double-image-content-panel__right--large-image" src="<?php echo $large_image['url']; ?>" alt="<?php echo $large_image['alt']; ?>" />
                     </div>
                 <?php } ?>
                 <?php $small_image = get_sub_field( 'small_image' ); ?>
                 <?php if ( $small_image ) { ?>
-                    <img data-aos="zoom-in" data-aos-delay="2600" data-aos-duration="1050" class="double-image-content-panel__right--small-image" src="<?php echo $small_image['url']; ?>" alt="<?php echo $small_image['alt']; ?>" />
+                    <img data-aos="fade-up" data-aos-delay="250" data-aos-offset="100" class="double-image-content-panel__right--small-image" src="<?php echo $small_image['url']; ?>" alt="<?php echo $small_image['alt']; ?>" />
                 <?php } ?>
             </div>
         <?php endwhile; ?>
