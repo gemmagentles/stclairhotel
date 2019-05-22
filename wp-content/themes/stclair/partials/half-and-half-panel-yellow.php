@@ -38,7 +38,7 @@
                 <!-- Button -->
                 <?php $button_link = get_sub_field( 'button_link' ); ?>
                 <?php if ( $button_link ) { ?>
-                    <button class="half-and-half-panel__button stclair-button" onclick="location.href='<?php echo $button_link['url']; ?>'" type="button"><?php the_sub_field( 'button_text' ); ?></button>
+                    <button class="half-and-half-panel__button stclair-button" onclick="location.href='<?php echo $button_link; ?>'" type="button"><?php the_sub_field( 'button_text' ); ?></button>
                 <?php } ?>
             </div>
             <!-- Image -->

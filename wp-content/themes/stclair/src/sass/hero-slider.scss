@@ -17,6 +17,7 @@
             position: absolute;
             display: flex;
             justify-content: space-between;
+            outline: none;
             width: 100%;
             top: 50%;
             transform: translateY(-50%);
@@ -146,20 +147,6 @@
             width: 100%;
             max-height: none;
         }
-
-        // transition: width ease-in 2s;
-
-        // .tns-slide-active {
-        //     width: 120%;
-
-        //     animation-name: fadeIn;
-        //     animation-duration: 2s;
-
-        //     @keyframes fadeIn {
-        //         from {width: 100%;}
-        //         to {width: 120%;}
-        //     }
-        // }
     }
 
     &__watercolor-wrapper {
