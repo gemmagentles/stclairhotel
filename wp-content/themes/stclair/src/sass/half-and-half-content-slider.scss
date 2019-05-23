@@ -224,6 +224,12 @@
         }
     }
 
+    &__progress-nav-wrapper {
+        .active {
+            z-index: 1;
+        }
+    }
+
     &__progress-nav {
         color: $font-color;
         font-family: $heading-font-family;

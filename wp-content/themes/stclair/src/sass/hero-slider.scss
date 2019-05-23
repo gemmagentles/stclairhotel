@@ -193,8 +193,8 @@
             line-height: 22px;
 
             @include breakpoint(smalldesktop) {
-                font-size: em(18);
-                line-height: 34px;
+                font-size: em(14);
+                line-height: 30px;
             }
         }
     }

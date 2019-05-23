@@ -19,17 +19,52 @@
                     <?php if ( $image_slide ) { ?>
                         <div>
                             <img class="half-and-half-content-slider__image" src="<?php echo $image_slide['url']; ?>" alt="<?php echo $image_slide['alt']; ?>" />
+                            
                         </div>
                     <?php } ?>
                 <?php endwhile; ?>
             </div>
-            <div class="half-and-half-content-slider__progress-nav">
-                <!-- check how many slides there are to add the number in the progress bar end -->
-                <?php $count = count(get_field( 'slider' )); ?>
-                <span class="half-and-half-content-slider__progress-nav--current-number">0<?php echo get_row_index(); ?></span><div class="half-and-half-content-slider__progress-nav--line"><span></span></div><span class="half-and-half-content-slider__progress-nav--total-number">0<?php echo $count; ?></span>
+
+            <div class="half-and-half-content-slider__progress-nav-wrapper">
+                <?php while ( have_rows( 'slider' ) ) : the_row(); ?>
+                    <?php if ( $image_slide ) { ?>
+                        <?php if ( get_row_index() == 1 ) { ?>
+                            <div class="half-and-half-content-slider__progress-nav active">
+                        <?php } else { ?>
+                        <div class="half-and-half-content-slider__progress-nav">
+                        <?php }; ?>
+                            <!-- check how many slides there are to add the number in the progress bar end -->
+                            <?php $count = count(get_field( 'slider' )); ?>
+                            <span class="half-and-half-content-slider__progress-nav--current-number">0<?php echo get_row_index(); ?></span><div class="half-and-half-content-slider__progress-nav--line"><span></span></div><span class="half-and-half-content-slider__progress-nav--total-number">0<?php echo $count; ?></span>
+                        </div>
+                    <?php } ?>
+                <?php endwhile; ?>
             </div>
+            
+
         </div>
     <?php else : ?>
         <?php // no rows found ?>
     <?php endif; ?>
 </div>
+
+
+<script>
+(function ($, root, undefined) {
+
+$(function () {
+
+    'use strict';
+
+    $("[data-controls='next']").click(function() {
+        $(".half-and-half-content-slider__progress-nav-wrapper div.active").next("div").addClass("active").prev("div").removeClass("active");
+    });
+
+    $("[data-controls='prev']").click(function() {
+        $(".half-and-half-content-slider__progress-nav-wrapper div.active").prev("div").addClass("active").next("div").removeClass("active");
+    });
+
+});
+
+})(jQuery, this);
+</script>

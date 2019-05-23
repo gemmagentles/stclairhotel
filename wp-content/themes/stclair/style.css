@@ -556,8 +556,8 @@ h1 {
   line-height: 22px; }
   @media (min-width: 64em) {
     .home .hero-slider__content--text {
-      font-size: 1.125em;
-      line-height: 34px; } }
+      font-size: 0.875em;
+      line-height: 30px; } }
 
 .intro-block__wrapper {
   background-image: url("/wp-content/themes/stclair/img/paper-texture-repeat.jpg"); }
@@ -1142,6 +1142,9 @@ h1 {
   @media (min-width: 87em) {
     .half-and-half-content-slider__image {
       min-width: 776px; } }
+
+.half-and-half-content-slider__progress-nav-wrapper .active {
+  z-index: 1; }
 
 .half-and-half-content-slider__progress-nav {
   color: #424445;

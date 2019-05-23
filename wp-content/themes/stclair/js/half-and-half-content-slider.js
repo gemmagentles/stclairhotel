@@ -1,4 +1,5 @@
 var halfContentSlider = document.getElementsByClassName('half-and-half-content-slider__slider-container');
+
 if (halfContentSlider.length > 0) {
   // elements with class "half-and-half-content-slider__slider-container" exist
   var slider = tns({
@@ -6,7 +7,8 @@ if (halfContentSlider.length > 0) {
     items: 1,
     swipeAngle: false,
     speed: 700,
-    rewind: true,
-    autoplay: true
+    rewind: false,
+    autoplay: false,
+    loop: false
   });
 }
