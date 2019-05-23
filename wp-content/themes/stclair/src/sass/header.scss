@@ -1,3 +1,43 @@
+#navbar-js {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+
+    .pre-header__nav {
+        padding: 10px 0;
+    }
+
+    .header {
+        padding: 14px;
+    }
+
+    .header__logo-desktop {
+        max-width: 82px;
+    }
+
+    .header__reserve-button.stclair-button {
+        padding: 16px 22px;
+    }
+}
+
+main {
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    margin-top: 146px;
+}
+
 // PRE HEADER ******
 .pre-header {
     background: $primary-color;
@@ -14,6 +54,7 @@
         margin: 0 auto;
         padding: 15px 20px;
         text-align: center;
+        transition: 0.4s; /* Adds a transition effect when the padding is decreased */
 
         @include breakpoint(smalldesktop) {
             text-align: right;
@@ -124,8 +165,8 @@
 
 // HEADER ******
 .header {
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
     padding: 20px;
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
 
     @include breakpoint(xlargedesktop) {
         padding: 20px 0;        
@@ -133,6 +174,7 @@
 
     &__logo-desktop {
         max-width: 66px;
+        transition: 0.4s; /* Adds a transition effect when the padding is decreased */
 
         @include breakpoint(largedesktop) {
             max-width: 97px;
@@ -286,6 +328,8 @@
     }
 
     &__reserve-button.stclair-button {
+        transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+
         @include breakpoint(smalldesktop) {
             padding: 15px;
         }

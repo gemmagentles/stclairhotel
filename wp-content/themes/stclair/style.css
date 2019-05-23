@@ -54,6 +54,36 @@ h1 {
 }
 
 ************************/
+#navbar-js {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999; }
+  .sticky .pre-header__nav {
+    padding: 10px 0; }
+  .sticky .header {
+    padding: 14px; }
+  .sticky .header__logo-desktop {
+    max-width: 82px; }
+  .sticky .header__reserve-button.stclair-button {
+    padding: 16px 22px; }
+
+main {
+  transition: 0.4s;
+  /* Adds a transition effect when the padding is decreased */
+  margin-top: 146px; }
+
 .pre-header {
   background: #0F2F95;
   display: none;
@@ -66,7 +96,9 @@ h1 {
     max-width: 1562px;
     margin: 0 auto;
     padding: 15px 20px;
-    text-align: center; }
+    text-align: center;
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */ }
     @media (min-width: 64em) {
       .pre-header__nav {
         text-align: right; } }
@@ -138,13 +170,16 @@ h1 {
     margin-top: 4px; }
 
 .header {
-  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
-  padding: 20px; }
+  padding: 20px;
+  transition: 0.4s;
+  /* Adds a transition effect when the padding is decreased */ }
   @media (min-width: 98.875em) {
     .header {
       padding: 20px 0; } }
   .header__logo-desktop {
-    max-width: 66px; }
+    max-width: 66px;
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */ }
     @media (min-width: 87em) {
       .header__logo-desktop {
         max-width: 97px; } }
@@ -255,12 +290,15 @@ h1 {
 @keyframes fadein {
   from {
     opacity: 0; } }
-  @media (min-width: 64em) {
-    .header__reserve-button.stclair-button {
-      padding: 15px; } }
-  @media (min-width: 70em) {
-    .header__reserve-button.stclair-button {
-      padding: 20px 30px; } }
+  .header__reserve-button.stclair-button {
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */ }
+    @media (min-width: 64em) {
+      .header__reserve-button.stclair-button {
+        padding: 15px; } }
+    @media (min-width: 70em) {
+      .header__reserve-button.stclair-button {
+        padding: 20px 30px; } }
 
 /* styles only for mobile and tablet when menu is a hamburger */
 .nav__hamburger-icon {
