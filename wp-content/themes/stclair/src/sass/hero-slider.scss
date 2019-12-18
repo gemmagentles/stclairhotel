@@ -21,7 +21,7 @@
             width: 100%;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 2;
+            z-index: 3;
         }
 
         [data-controls='prev'],
@@ -62,7 +62,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 2;
+        z-index: 3;
 
         &--inner {
             text-align: center;
@@ -138,14 +138,19 @@
     }
 
     &__image {
-        width: auto;
-        max-height: 480px;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
         // do this to remove empty space below image
         vertical-align: bottom;
 
         @include breakpoint(tablet) {
-            width: 100%;
-            max-height: none;
+            height: 530px;
+        }
+
+        @include breakpoint(desktop) {
+            height: 830px;
         }
     }
 
@@ -196,6 +201,16 @@
                 font-size: em(14);
                 line-height: 30px;
             }
+        }
+
+        &__overlay {
+            background-color: rgba(29,59,155,0.2);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
         }
     }
 }

@@ -17,6 +17,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/icons/diamond-divider.svg" alt="" class="hero-slider__content--diamond-divider">
         </div>
     </div>
+    <div class="hero-slider__overlay"></div>
     <div class="hero-slider">
         <?php while ( have_rows( 'images' ) ) : the_row(); ?>
             <?php $slide_image = get_sub_field( 'slide_image' ); ?>
