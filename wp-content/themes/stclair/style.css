@@ -1642,6 +1642,15 @@ h1 {
       padding: 0 20px;
       font-size: 1.5em; } }
 
+.wpforms-field-description {
+  font-family: SharpGroteskExp Book !important;
+  font-size: 0.625em !important;
+  line-height: 16px !important;
+  letter-spacing: 1px !important; }
+
+.flatpickr-calendar {
+  font-family: SharpGroteskExp Book !important; }
+
 .contact__wrapper {
   padding: 0 40px 60px;
   max-width: 1128px;
