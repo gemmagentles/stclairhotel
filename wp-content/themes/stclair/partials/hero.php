@@ -17,7 +17,11 @@
                         }
                     ?>
                     <h1 class="hero__content--heading"><?php the_sub_field( 'hero_heading' ); ?></h1>
-                    <p class="hero__content--paragraph"><?php the_sub_field( 'hero_paragraph' ); ?></p>
+                    <?php if ( get_sub_field( 'do_you_want_text_below_the_heading' ) == 1 ) { ?>
+                        <p class="hero__content--paragraph"><?php the_sub_field( 'hero_paragraph' ); ?></p>
+                    <?php } else { 
+
+                    } ?>
                 </div>
 
             </div>  
