@@ -13,10 +13,15 @@
             <?php if ( $heading ) { ?>
                 <h1 class="hero-slider__content--heading"><?php the_field( 'heading' ); ?></h1>
             <?php } ?>
+            <?php $subheading = get_field( 'sub_heading' ); ?>
+            <?php if ( $subheading ) { ?>
+                <h2 class="hero-slider__content--sub-heading"><?php the_field( 'sub_heading' ); ?></h2>
+            <?php } ?>
             <p class="hero-slider__content--text"><?php the_field( 'text' ); ?></p>
             <img src="<?php echo get_template_directory_uri(); ?>/img/icons/diamond-divider.svg" alt="" class="hero-slider__content--diamond-divider">
         </div>
     </div>
+    <div class="hero-slider__overlay"></div>
     <div class="hero-slider">
         <?php while ( have_rows( 'images' ) ) : the_row(); ?>
             <?php $slide_image = get_sub_field( 'slide_image' ); ?>

@@ -8,7 +8,7 @@
             "name": "hero",
             "type": "group",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -37,13 +37,40 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5df972455d8b8",
+                    "label": "Do you want text below the heading?",
+                    "name": "do_you_want_text_below_the_heading",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No"
+                },
+                {
                     "key": "field_5cd262aad803e",
                     "label": "Hero Paragraph",
                     "name": "hero_paragraph",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5df972455d8b8",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -147,5 +174,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557861110
+    "modified": 1576630691
 }
