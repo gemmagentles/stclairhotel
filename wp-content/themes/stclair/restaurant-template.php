@@ -20,9 +20,9 @@
 		<!-- /Half and Half Panel Yellow -->
 
 		<!-- Half and Half Panel Purple -->
-		<section>
-			<?php get_template_part('partials/half-and-half-panel-purple'); ?> 		
-		</section>
+		<!-- <section>
+			<?php //get_template_part('partials/half-and-half-panel-purple'); ?> 		
+		</section> -->
 		<!-- /Half and Half Panel Purple -->
 
 		<!-- Content Box Overlay -->
@@ -36,12 +36,6 @@
 			<?php get_template_part('partials/highlight-slider'); ?> 		
 		</section>
 		<!-- /Highlight Slider -->
-
-		<!-- Booking Form -->
-		<section>
-			<?php get_template_part('partials/booking-form'); ?> 		
-		</section>
-		<!-- /Booking Form -->
 
 	</main>
 

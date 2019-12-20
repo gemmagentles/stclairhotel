@@ -49,14 +49,30 @@
                 <!-- mobile only end -->
                 <?php html5blank_nav(); ?>
                 <!-- mobile only start -->
-                <div class="mobile-only mobile-button">
+                <!-- <div class="mobile-only mobile-button">
                     <button class="stclair-button-white" type="button" formtarget="_blank" onClick="window.open('https://www.marriott.com/hotels/travel/dtwtx-the-st-clair-inn-a-tribute-portfolio-hotel/');">Reserve</button>
-                </div>
+                </div> -->
                 <div class="mobile-only">
                     <?php pre_header_nav(); ?>
                 </div>
                 <!-- mobile only end -->
             </nav>
-            <button class="stclair-button header__reserve-button" type="button" formtarget="_blank" onClick="window.open('https://www.marriott.com/hotels/travel/dtwtx-the-st-clair-inn-a-tribute-portfolio-hotel/');">Reserve</button>
+
+            <!-- Trigger/Open The Modal -->
+            <button data-modal="modal-window-one" class="stclair-button header__reserve-button click-to-open" type="button">Reserve</button>
+
+            <!-- The Modal -->
+            <div id="modal-window-one" class="modal-window modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p class="modal-content__paragraph">Please contact us at (810) 637-9005 to make your room reservation at The St. Clair Inn and create your own story.</p>
+                </div>
+
+            </div>
+
+            <!-- Use below button when the client is ready to direct to booking agent -->
+            <!-- <button class="stclair-button header__reserve-button" type="button" formtarget="_blank" onClick="window.open('https://www.marriott.com/hotels/travel/dtwtx-the-st-clair-inn-a-tribute-portfolio-hotel/');">Reserve</button> -->
         </div>
     </header>

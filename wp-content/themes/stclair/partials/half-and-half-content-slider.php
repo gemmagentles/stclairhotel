@@ -5,7 +5,22 @@
             <?php while ( have_rows( 'content' ) ) : the_row(); ?>
                 <h2 data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="350" data-aos-duration="550" class="half-and-half-content-slider__heading"><?php the_sub_field( 'heading' ); ?></h2>
                 <div data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="550" data-aos-duration="800" class="half-and-half-content-slider__paragraph"><?php the_sub_field( 'paragraph' ); ?></div>
-                <button data-aos="fade-in" data-aos-easing="ease-in" data-aos-delay="1350" class="half-and-half-content-slider__button stclair-button" onclick="location.href='<?php the_sub_field( 'button_link' ) ?>'" type="button"><?php the_sub_field( 'button_text' ); ?></button>
+                
+                <!-- <button data-aos="fade-in" data-aos-easing="ease-in" data-aos-delay="1350" class="half-and-half-content-slider__button stclair-button" onclick="location.href='<?php //the_sub_field( 'button_link' ) ?>'" type="button"><?php //the_sub_field( 'button_text' ); ?></button> -->
+                
+                <!-- Trigger/Open The Modal -->
+                <button data-modal="modal-window-two" data-aos="fade-in" data-aos-easing="ease-in" data-aos-delay="1350" id="booking-modal-btn-js-2" class="half-and-half-content-slider__button stclair-button click-to-open" type="button">Reserve</button>
+
+                <!-- The Modal -->
+                <div id="modal-window-two" class="modal-window modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p class="modal-content__paragraph">Please contact us at (810) 637-9005 to make your room reservation at The St. Clair Inn and create your own story.</p>
+                    </div>
+
+                </div>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>

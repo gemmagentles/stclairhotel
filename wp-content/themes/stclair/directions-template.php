@@ -2,11 +2,11 @@
 
 	<main role="main">
 
-        <!-- Hero -->
+        <!-- Map -->
 		<section>
-			<?php get_template_part('partials/hero'); ?> 		
+			<?php get_template_part('partials/map'); ?> 		
 		</section>
-        <!-- /Hero -->
+        <!-- /Map -->
 
         <!-- Wysiwyg Editor -->
 		<section>
@@ -14,12 +14,6 @@
 		</section>
 		<!-- /Wysiwyg Editor -->
 		
-		<!-- Map -->
-		<section>
-			<?php get_template_part('partials/map'); ?> 		
-		</section>
-        <!-- /Map -->
-
 		<!-- Icon List with Content -->
 		<section>
 			<?php get_template_part('partials/icon-list-with-content'); ?> 		
