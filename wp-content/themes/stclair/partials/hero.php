@@ -2,7 +2,7 @@
 
     <?php while ( have_rows( 'hero' ) ) : the_row(); ?>
 
-        <div class="hero__wrapper <?php if( get_sub_field('background_option') == 'backgroundimage' ): ?>hero__wrapper--background-image<?php endif; ?>" <?php if( get_sub_field('background_option') == 'backgroundimage' ): ?>style="background-image: url('<?php the_sub_field( 'background_image' ); ?>');"<?php endif; ?>>
+        <div class="hero__wrapper <?php if( get_sub_field('background_option') == 'backgroundimage' ): ?>hero__wrapper--background-image<?php endif; ?>" <?php if( get_sub_field('background_option') == 'backgroundimage' ): ?>style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('<?php the_sub_field( 'background_image' ); ?>');"<?php endif; ?>>
             <div class="hero__container">
 
                 <div class="hero__content">
