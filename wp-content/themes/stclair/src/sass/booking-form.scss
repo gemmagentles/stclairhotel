@@ -24,3 +24,14 @@
         }
     }
 }
+
+.wpforms-field-description {
+    font-family: $secondary-font-family !important;
+    font-size: em(10) !important;
+    line-height: 16px !important;
+    letter-spacing: 1px !important;
+}
+
+.flatpickr-calendar {
+    font-family: $secondary-font-family !important;
+}

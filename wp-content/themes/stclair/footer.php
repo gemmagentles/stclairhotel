@@ -25,6 +25,7 @@
 							<p><?php the_field( 'contact_info_address_line_2', 'option' ); ?></p>
 							<br>
 							<p><span>T: </span><span class="footer__tel"><?php the_field( 'contact_info_phone_number', 'option' ); ?></span></p>
+							<p><span>F: </span><span class="footer__fax"><?php the_field( 'contact_info_fax_number', 'option' ); ?></span></p>
 							<p><span>E: </span><a class="email" href="mailto:<?php the_field( 'contact_info_email', 'option' ); ?>" target="_blank"><?php the_field( 'contact_info_email', 'option' ); ?></a></p>
 						</div>
 						<hr class="footer__line--mobile">

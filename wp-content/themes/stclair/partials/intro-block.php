@@ -12,6 +12,16 @@
                         <?php the_sub_field( 'paragraph' ); ?>
                 </div>
                 <?php } ?>
+                <?php if ( get_sub_field( 'add_button' ) == 1 ) { ?>
+                    <?php $button = get_sub_field( 'button' ); ?>
+                    <?php if ( $button ) { ?>
+                        <div class="intro-block__button-wrapper">
+                            <a class="stclair-button" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+                        </div>
+                    <?php } ?>
+                <?php } else { 
+                // echo 'false'; 
+                } ?>
             <?php endwhile; ?>
         </div>
     </div>

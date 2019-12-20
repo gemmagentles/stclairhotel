@@ -128,7 +128,7 @@ h1 {
     width: 12px;
     height: 100%;
     margin-top: 3px; }
-  .pre-header .menu-item:last-child::before {
+  .pre-header .menu-item:nth-child(3)::before {
     position: absolute;
     background-repeat: no-repeat;
     content: "";
@@ -349,6 +349,62 @@ h1 {
     left: 25px;
     position: relative; }
 
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 9999;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black w/ opacity */ }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border: 4px solid #061852;
+  width: 80%;
+  max-width: 550px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  @media (min-width: 64em) {
+    .modal-content {
+      padding: 60px;
+      width: 100%; } }
+  .modal-content__paragraph {
+    font-family: SharpGroteskExp Light;
+    line-height: 28px; }
+
+/* The Close Button */
+.close {
+  color: #979797;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 6px;
+  right: 14px; }
+
+.close:hover,
+.close:focus {
+  color: #061852;
+  text-decoration: none;
+  cursor: pointer; }
+
 .hero__wrapper {
   background: #F7F6EC; }
 
@@ -396,7 +452,8 @@ h1 {
 
 .hero__wrapper--background-image {
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .hero__wrapper--background-image .hero__content--heading {
     color: white; }
   .hero__wrapper--background-image .hero__content--paragraph {
@@ -420,7 +477,7 @@ h1 {
     width: 100%;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2; }
+    z-index: 3; }
   .hero-slider__wrapper [data-controls='prev'],
   .hero-slider__wrapper [data-controls='next'] {
     background: transparent;
@@ -451,14 +508,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; }
+  z-index: 3; }
   .hero-slider__content--inner {
     text-align: center; }
   .hero-slider__content--diamond-divider {
     display: none;
     visibility: hidden; }
   .hero-slider__content--logo {
-    margin: 40px 40px 0;
     max-width: 160px;
     width: 100%;
     animation-name: fadeIn;
@@ -474,16 +530,36 @@ h1 {
         max-width: 230px; } }
     @media (min-width: 70em) {
       .hero-slider__content--logo {
-        max-width: 260px; } }
+        max-width: 260px;
+        margin: 40px; } }
     @media (min-width: 87em) {
       .hero-slider__content--logo {
         max-width: 288px; } }
   .hero-slider__content--heading {
     color: white;
-    padding: 30px 30px 0;
+    padding: 0 30px 0;
     animation-name: fadeIn;
     animation-duration: 2s;
     max-width: 935px; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+  .hero-slider__content--sub-heading {
+    color: white;
+    padding: 5px 30px 0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    max-width: 935px;
+    font-size: 1.25em; }
+    @media (min-width: 64em) {
+      .hero-slider__content--sub-heading {
+        font-size: 2em; } }
+    @media (min-width: 87em) {
+      .hero-slider__content--sub-heading {
+        font-size: 2.8125em; } }
 
 @keyframes fadeIn {
   from {
@@ -514,14 +590,27 @@ h1 {
         line-height: 27px;
         padding: 30px; } }
 
+.hero-slider__overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
 .hero-slider__image {
-  width: auto;
-  max-height: 480px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
   vertical-align: bottom; }
   @media (min-width: 48em) {
     .hero-slider__image {
-      width: 100%;
-      max-height: none; } }
+      height: 530px; } }
+  @media (min-width: 70em) {
+    .hero-slider__image {
+      height: 830px; } }
 
 .hero-slider__watercolor-wrapper {
   overflow: hidden;
@@ -556,8 +645,17 @@ h1 {
   line-height: 22px; }
   @media (min-width: 64em) {
     .home .hero-slider__content--text {
-      font-size: 1.125em;
-      line-height: 34px; } }
+      font-size: 0.875em;
+      line-height: 30px; } }
+
+.home .hero-slider__overlay {
+  background-color: rgba(29, 59, 155, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
 
 .intro-block__wrapper {
   background-image: url("/wp-content/themes/stclair/img/paper-texture-repeat.jpg"); }
@@ -595,6 +693,9 @@ h1 {
     .intro-block__paragraph {
       font-size: 2.25em;
       line-height: 56px; } }
+
+.intro-block__button-wrapper {
+  margin-top: 40px; }
 
 .background-image-content-panel__wrapper {
   background-image: url("/wp-content/themes/stclair/img/wedding.jpg");
@@ -810,10 +911,22 @@ h1 {
 
 .half-and-half-panel__image {
   margin-top: 30px;
-  width: 100%; }
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center; }
   @media (min-width: 48em) {
     .half-and-half-panel__image {
-      margin-top: 0; } }
+      margin-top: 0;
+      height: 566px; } }
+  @media (min-width: 64em) {
+    .half-and-half-panel__image {
+      height: 666px;
+      width: 600px; } }
+  @media (min-width: 87em) {
+    .half-and-half-panel__image {
+      height: 866px;
+      width: 800px; } }
 
 .half-and-half-panel__list {
   font-family: SharpGroteskExp Book;
@@ -932,7 +1045,7 @@ h1 {
       max-width: 480px;
       padding: 30px 0 52px 0; } }
 
-@media (min-width: 70em) {
+@media (min-width: 87em) {
   .half-and-half-panel__yellow .half-and-half-panel__container:first-child .half-and-half-panel__image-section {
     margin-top: -244px; } }
 
@@ -1142,6 +1255,9 @@ h1 {
   @media (min-width: 87em) {
     .half-and-half-content-slider__image {
       min-width: 776px; } }
+
+.half-and-half-content-slider__progress-nav-wrapper .active {
+  z-index: 1; }
 
 .half-and-half-content-slider__progress-nav {
   color: #424445;
@@ -1353,7 +1469,16 @@ h1 {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='40' viewBox='0 0 19 40'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23424445' stroke-linecap='round' stroke-width='2' d='M18 39L2 20 18 1'/%3E%3C/svg%3E%0A"); } }
 
 .highlight-slider__slide-image {
-  width: 100%; }
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center; }
+  @media (min-width: 70em) {
+    .highlight-slider__slide-image {
+      height: 650px; } }
+  @media (min-width: 87em) {
+    .highlight-slider__slide-image {
+      height: 800px; } }
 
 .highlight-slider__info {
   background: white;
@@ -1491,7 +1616,20 @@ h1 {
     .content_box_overlay__image-box {
       padding: 70px; } }
   .content_box_overlay__image-box--image {
-    width: 100%; }
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: center; }
+    @media (max-width: 37.5em) {
+      .content_box_overlay__image-box--image {
+        height: 512px; } }
+    @media (min-width: 48em) {
+      .content_box_overlay__image-box--image {
+        height: 712px;
+        width: 700px; } }
+    @media (min-width: 70em) {
+      .content_box_overlay__image-box--image {
+        width: 1024px; } }
 
 .stclair-forms .wpforms-field-container {
   display: flex;
@@ -1605,6 +1743,15 @@ h1 {
     .booking-form__sub-heading {
       padding: 0 20px;
       font-size: 1.5em; } }
+
+.wpforms-field-description {
+  font-family: SharpGroteskExp Book !important;
+  font-size: 0.625em !important;
+  line-height: 16px !important;
+  letter-spacing: 1px !important; }
+
+.flatpickr-calendar {
+  font-family: SharpGroteskExp Book !important; }
 
 .contact__wrapper {
   padding: 0 40px 60px;
@@ -2176,6 +2323,12 @@ h1 {
       .footer__accredit--link:hover, .footer__accredit--link:focus, .footer__accredit--link:active {
         text-decoration: underline; }
 
+h1,
+h2,
+h3,
+h4 {
+  padding-bottom: 20px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -2281,7 +2434,8 @@ BUTTON
   letter-spacing: 3.05px;
   padding: 20px 30px;
   font-size: 0.75em;
-  transition: background-color 0.7s ease; }
+  transition: background-color 0.7s ease;
+  text-decoration: none; }
   .stclair-button:hover, .stclair-button:focus, .stclair-button:active {
     background-color: #061852;
     cursor: pointer; }

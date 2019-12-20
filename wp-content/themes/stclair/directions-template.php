@@ -2,11 +2,11 @@
 
 	<main role="main">
 
-        <!-- Hero -->
+        <!-- Map -->
 		<section>
-			<?php get_template_part('partials/hero'); ?> 		
+			<?php get_template_part('partials/map'); ?> 		
 		</section>
-        <!-- /Hero -->
+        <!-- /Map -->
 
         <!-- Wysiwyg Editor -->
 		<section>
@@ -14,23 +14,23 @@
 		</section>
 		<!-- /Wysiwyg Editor -->
 		
-		<!-- Map -->
-		<section>
-			<?php get_template_part('partials/map'); ?> 		
-		</section>
-        <!-- /Map -->
-
 		<!-- Icon List with Content -->
 		<section>
 			<?php get_template_part('partials/icon-list-with-content'); ?> 		
 		</section>
         <!-- /Icon List with Content -->
         
-        <!-- Accordion -->
-		<section>
-			<?php get_template_part('partials/accordion'); ?> 		
-		</section>
-		<!-- /Accordion -->
+		<?php if ( have_rows( 'accordion_content' ) ) : ?>
+			<?php while ( have_rows( 'accordion_content' ) ) : the_row(); ?>
+				<!-- Accordion -->
+				<section>
+					<?php get_template_part('partials/accordion'); ?> 		
+				</section>
+				<!-- /Accordion -->
+			<?php endwhile; ?>
+		<?php else : ?>
+			<?php // no rows found ?>
+		<?php endif; ?>
 
 	</main>
 

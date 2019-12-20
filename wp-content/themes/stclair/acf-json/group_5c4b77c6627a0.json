@@ -166,6 +166,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5df805b6a2c64",
+            "label": "Contact Info: Fax Number",
+            "name": "contact_info_fax_number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c4bb4262b6c7",
             "label": "Contact Info: Email",
             "name": "contact_info_email",
@@ -276,5 +295,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1554246100
+    "modified": 1576535557
 }
