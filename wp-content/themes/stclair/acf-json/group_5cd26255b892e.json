@@ -146,13 +146,6 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "directions-template.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
                 "value": "basic-page-template.php"
             }
         ],
@@ -174,5 +167,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576630691
+    "modified": 1576727308
 }
