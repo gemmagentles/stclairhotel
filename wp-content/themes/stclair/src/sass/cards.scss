@@ -60,12 +60,12 @@
     }
 
     &__title {
-        font-size: em(26);
+        font-size: em(22);
         line-height: 32px;
         letter-spacing: 2.1px;
 
         @include breakpoint(smalldesktop) {
-            font-size: em(32);
+            font-size: em(24);
             line-height: 36px;
         }
     }

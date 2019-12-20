@@ -1,7 +1,7 @@
 <?php if ( have_rows( 'news_posts_hero' ) ) : ?>
     <?php while ( have_rows( 'news_posts_hero' ) ) : the_row(); ?>
     
-    <div class="hero__wrapper hero__wrapper--background-image" style="background-image: url('<?php the_sub_field( 'news_posts_hero_background_image' ); ?>');">
+    <div class="hero__wrapper hero__wrapper--background-image" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('<?php the_sub_field( 'news_posts_hero_background_image' ); ?>');">
         <div class="hero__container">
 
             <div class="hero__content">

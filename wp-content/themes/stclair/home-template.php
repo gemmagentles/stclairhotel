@@ -19,17 +19,17 @@
 		</section>
 		<!-- /Double Image Content Panel Slider -->
 
-		<!-- Background Image Content Panel Slider -->
-		<section>
-			<?php get_template_part('partials/background-image-content-panel'); ?> 		
-		</section>
-		<!-- /Background Image Content Panel Slider -->
-
 		<!-- Half and Half Panel White -->
 		<section>
 			<?php get_template_part('partials/half-and-half-panel-white'); ?> 		
 		</section>
 		<!-- /Half and Half Panel White -->
+
+		<!-- Background Image Content Panel Slider -->
+		<section>
+			<?php get_template_part('partials/background-image-content-panel'); ?> 		
+		</section>
+		<!-- /Background Image Content Panel Slider -->
 
 		<!-- Book Now Banner -->
 		<!-- Comment out until the client comes back with info -->
