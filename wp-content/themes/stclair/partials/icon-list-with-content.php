@@ -26,13 +26,14 @@
 
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="close close-three">&times;</span>
                     <p class="modal-content__paragraph">Please contact us at (810) 637-9005 to make your room reservation at The St. Clair Inn and create your own story.</p>
                 </div>
 
             </div>
         </div>
-		<?php } ?>
+        <?php } ?>
+        <?php if ( get_sub_field( 'icon_list_only' ) == 1 ) { ?><div class="icon-list-only"><?php } ?>
 		<?php if ( have_rows( 'icon_list' ) ) : ?>
             <div class="icon-list-with-content__icon-list-wrapper">
                 <?php while ( have_rows( 'icon_list' ) ) : the_row(); ?>
@@ -47,7 +48,8 @@
             <?php else : ?>
                 <?php // no rows found ?>
             </div>                
-		<?php endif; ?>
+        <?php endif; ?>
+        <?php if ( get_sub_field( 'icon_list_only' ) == 1 ) { ?></div><?php } ?>
 	<?php endwhile; ?>
 </div>                
 <div class="icon-list-with-content__background"></div>
