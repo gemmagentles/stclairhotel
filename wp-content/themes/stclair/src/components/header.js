@@ -24,10 +24,18 @@
 
     // Close 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var spanOne = document.getElementsByClassName("close-one")[0];
+        var spanTwo = document.getElementsByClassName("close-two")[0];
+        var spanThree = document.getElementsByClassName("close-three")[0];
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+        spanOne.onclick = function() {
+            modal.style.display = "none";
+        }
+        spanTwo.onclick = function() {
+            modal.style.display = "none";
+        }
+        spanThree.onclick = function() {
             modal.style.display = "none";
         }
         
