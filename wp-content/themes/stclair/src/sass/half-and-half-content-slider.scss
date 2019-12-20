@@ -218,9 +218,16 @@
 
     &__image {
         width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+
+        @include breakpoint(smalldesktop) {
+            height: 666px;
+        }
 
         @include breakpoint(largedesktop) {
-            min-width: 776px;
+            height: 866px;
         }
     }
 
