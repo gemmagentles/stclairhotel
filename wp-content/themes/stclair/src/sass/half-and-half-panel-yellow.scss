@@ -65,7 +65,7 @@
         }
 
         .half-and-half-panel__image-section {
-            @include breakpoint(desktop) {
+            @include breakpoint(largedesktop) {
                 margin-top: -244px;
             }
         }

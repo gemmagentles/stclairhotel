@@ -140,9 +140,23 @@
     &__image {
         margin-top: 30px;
         width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
 
         @include breakpoint(tablet) {
             margin-top: 0;
+            height: 566px;
+        }
+
+        @include breakpoint(smalldesktop) {
+            height: 666px;
+            width: 600px;
+        }
+
+        @include breakpoint(largedesktop) {
+            height: 866px;
+            width: 800px;
         }
     }
 
