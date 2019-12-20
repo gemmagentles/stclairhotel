@@ -66,7 +66,7 @@
 
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="close close-one">&times;</span>
                     <p class="modal-content__paragraph">Please contact us at (810) 637-9005 to make your room reservation at The St. Clair Inn and create your own story.</p>
                 </div>
 

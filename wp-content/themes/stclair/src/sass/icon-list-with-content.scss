@@ -24,6 +24,12 @@
         @include breakpoint(smalldesktop) {
             margin: 0 auto 100px;
         }
+
+        .icon-list-only {
+            .icon-list-with-content__icon-list-wrapper {
+                max-width: 100%;
+            }
+        }
     }
 
     &__content-wrapper {
@@ -96,6 +102,7 @@
             padding: 100px;
         }
     }
+    
 
     &__icon-list-container {
         display: flex;
