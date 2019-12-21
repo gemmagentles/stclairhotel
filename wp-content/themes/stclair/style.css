@@ -1653,6 +1653,30 @@ h1 {
     font-size: 0.75em !important;
     line-height: 28px !important;
     letter-spacing: 1px !important; }
+  .stclair-forms .wpforms-field-container select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000; }
+  .stclair-forms .wpforms-field-container select {
+    /* styling */
+    background-color: white;
+    border: thin solid #000;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    /* reset */
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+  .stclair-forms .wpforms-field-container select {
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat; }
 
 .stclair-forms .wpforms-field-label {
   color: #001B71 !important;
@@ -1682,12 +1706,12 @@ h1 {
   left: 0;
   font-family: Ogg Roman;
   color: #424445;
-  font-size: 1.25em;
+  font-size: 1.125em;
   letter-spacing: 1px; }
   @media (min-width: 48em) {
     .stclair-forms .wpforms-field-textarea::before {
       left: 20px;
-      font-size: 1.5em; } }
+      font-size: 1.25em; } }
 
 .stclair-forms__input--full {
   min-width: 100%;
@@ -1702,15 +1726,9 @@ h1 {
 
 .stclair-forms__input--half {
   min-width: 100%; }
-  @media (min-width: 48em) {
-    .stclair-forms__input--half {
-      min-width: 50%; } }
 
 .stclair-forms__input--third {
   min-width: 100%; }
-  @media (min-width: 48em) {
-    .stclair-forms__input--third {
-      min-width: 33.33%; } }
 
 .stclair-forms__button {
   border: 0 !important;
