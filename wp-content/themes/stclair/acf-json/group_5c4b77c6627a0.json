@@ -276,6 +276,204 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5e18e2ed1cd5b",
+            "label": "Open Graph Data",
+            "name": "open_graph_data",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e18e31c1cd5c",
+                    "label": "Open Graph Title",
+                    "name": "open_graph_title",
+                    "type": "text",
+                    "instructions": "Add a title for Open Graph (Facebook sharing details).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e18e3321cd5d",
+                    "label": "Open Graph URL",
+                    "name": "open_graph_url",
+                    "type": "url",
+                    "instructions": "Add the expected final URL for the website's homepage for Open Graph (Facebook sharing details).",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e18e34d1cd5e",
+                    "label": "Open Graph Image",
+                    "name": "open_graph_image",
+                    "type": "image",
+                    "instructions": "Add an image for Open Graph (Facebook sharing details). Make sure to add this at the production level (live site) so the URL is correct.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e18e43aba750",
+            "label": "SEO",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e18d6a11cd56",
+            "label": "Meta Data",
+            "name": "meta_data",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e18e1501cd57",
+                    "label": "Site Favicon",
+                    "name": "site_favicon",
+                    "type": "image",
+                    "instructions": "Add a .ico or .png file here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ".ico, .png"
+                },
+                {
+                    "key": "field_5e18e1dc1cd58",
+                    "label": "Site Apple Icon",
+                    "name": "site_apple_icon",
+                    "type": "image",
+                    "instructions": "Add a .png file here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5e18e2741cd59",
+                    "label": "Site Keywords",
+                    "name": "site_keywords",
+                    "type": "repeater",
+                    "instructions": "Add as many keywords as you'd like.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e18e2bd1cd5a",
+                            "label": "Keywords",
+                            "name": "keywords",
+                            "type": "text",
+                            "instructions": "Add Keywords, spaces are fine, they will be automatically separated by commas.",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ",",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -295,5 +493,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576535557
+    "modified": 1578689662
 }
