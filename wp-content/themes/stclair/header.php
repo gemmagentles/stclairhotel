@@ -10,6 +10,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="<?php if ( have_rows( 'site_keywords' ) ) : ?><?php while ( have_rows( 'site_keywords' ) ) : the_row(); ?> <?php the_sub_field( 'keywords' ); ?>, <?php endwhile; ?><?php else : ?>Keywords<?php endif; ?>" />
+
+	<meta property="og:title" content="<?php if ( have_rows( 'open_graph_data', 'option' ) ) : ?><?php while ( have_rows( 'open_graph_data', 'option' ) ) : the_row(); ?> <?php the_sub_field( 'open_graph_title' ); ?> <?php endwhile; ?><?php endif; ?>" />
+
+	<meta property="og:url" content="<?php if ( have_rows( 'open_graph_data', 'option' ) ) : ?><?php while ( have_rows( 'open_graph_data', 'option' ) ) : the_row(); ?><?php the_sub_field( 'open_graph_url' ); ?> <?php endwhile; ?><?php endif; ?>" />
+
+	<meta property="og:image" content="<?php if ( have_rows( 'open_graph_data', 'option' ) ) : ?><?php while ( have_rows( 'open_graph_data', 'option' ) ) : the_row(); ?> <?php if ( get_sub_field( 'open_graph_image' ) ) { the_sub_field( 'open_graph_image', 'option' ); } ?> <?php endwhile; ?><?php endif; ?>" />
+
+    <?php if ( have_rows( 'meta_data', 'option' ) ) : ?>
+        <?php while ( have_rows( 'meta_data', 'option' ) ) : the_row(); ?>
+
+            <?php if ( get_sub_field( 'site_favicon' ) ) { ?>
+                <link href="<?php the_sub_field( 'site_favicon' ); ?>" rel="shortcut icon">
+            <?php } ?>
+	        
+            <?php if ( get_sub_field( 'site_apple_icon' ) ) { ?>
+                <link href="<?php the_sub_field( 'site_apple_icon' ); ?>" rel="apple-touch-icon-precomposed">
+            <?php } ?>
+
+        <?php endwhile; ?>
+    <?php endif; ?>
+
     <?php wp_head(); ?>
 </head>
 <body id="top" <?php body_class(); ?>>
