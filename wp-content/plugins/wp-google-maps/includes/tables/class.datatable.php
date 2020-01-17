@@ -2,10 +2,15 @@
 
 namespace WPGMZA;
 
+if(!defined('ABSPATH'))
+	return;
+
 class DataTable extends AjaxTable
 {
 	public function __construct($table_name, $ajax_parameters=null, $datatable_options=null)
 	{
+		global $wpgmza;
+		
 		AjaxTable::__construct($table_name, '/datatables/', $ajax_parameters);
 		
 		$this->element->setAttribute('data-wpgmza-datatable', 'true');
@@ -28,7 +33,8 @@ class DataTable extends AjaxTable
 		if(!empty($orderBy))
 			return $orderBy;
 		
-		return "{$this->table_name}.id";
+		// return "{$this->table_name}.id";
+		return "id";
 	}
 	
 	protected function getOrderDirection($input_params)
@@ -55,7 +61,10 @@ class DataTable extends AjaxTable
 	{
 		$result = AjaxTable::data($input_params);
 		
-		$result->draw = $input_params['draw'];
+		if(isset($input_params['draw']))
+			$result->draw = $input_params['draw'];
+		else
+			$result->draw = (isset($_SERVER['HTTP_X_DATATABLES_DRAW']) ? $_SERVER['HTTP_X_DATATABLES_DRAW'] : 0);
 		
 		return $result;
 	}

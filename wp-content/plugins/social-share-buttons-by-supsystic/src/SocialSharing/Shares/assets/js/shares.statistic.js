@@ -249,10 +249,10 @@
                 totalShares();
                 last30();
                 popular5Pages();
-
-                totalViews();
                 popular5PagesViews();
             }
+
+             totalViews();
 
             $(this).attr('data-shown', true);
         });

@@ -1,8 +1,8 @@
 ﻿=== Social Share Buttons by Supsystic ===
 Contributors: supsystic.com
 Tags: share counter, social media share, social network share, social share, social share buttons, social sharing, facebook like, facebook share, facebook share button, like, share buttons, share links, sharebar, social buttons, facebook, facebook integration, facebook connect, google+, twitter, twitter share, linkedin share, pinterest button, button, share
-Tested up to: 5.2
-Stable tag: 2.1.3
+Tested up to: 5.3
+Stable tag: 2.1.13
 
 Social share buttons to increase social traffic and popularity. Social sharing to Facebook like and share, Twitter, Pinterest and other social networks
 
@@ -198,6 +198,45 @@ Here you can set when to show social share buttons:
 
 
 == Changelog ==
+
+= 2.1.13 / 14.01.2020 =
+* Minor fixes
+* Fix issue with tabs
+
+= 2.1.12 / 27.11.2019 =
+* Minor fixes
+* Fix error with tabs
+
+= 2.1.11 / 20.11.2019 =
+* Minor fixes
+
+= 2.1.10 / 05.11.2019 =
+* Fix issue with fa-ssbs.css
+
+= 2.1.9 / 30.10.2019 =
+ * Small fix for CSS floating
+ * Remove not working social links
+ * Add custom font-awesome ssbs-fa
+ * Add fix for feature button hover CSS
+ * Remove delicious
+
+= 2.1.8 / 14.10.2019 =
+ * Fix ok.ru link
+ * Fix slimscroll
+
+= 2.1.7 / 25.09.2019 =
+ * Minor code improvements
+
+= 2.1.6 / 03.09.2019 =
+ * Minor issue fix
+
+= 2.1.5 / 05.08.2019 =
+ * Fixed broken layout
+ * Minor issue fix
+
+= 2.1.4 / 12.06.2019 =
+ * Fix buttons appearance
+ * Minor issue fix
 
 = 2.1.3 / 13.05.2019 =
  * Set right pinterest default text issue

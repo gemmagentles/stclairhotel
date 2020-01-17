@@ -3,11 +3,7 @@
 /**
  * Settings class.
  *
- * @package    WPForms
- * @author     WPForms
- * @since      1.0.0
- * @license    GPL-2.0+
- * @copyright  Copyright (c) 2016, WPForms LLC
+ * @since 1.0.0
  */
 class WPForms_Settings {
 
@@ -38,7 +34,7 @@ class WPForms_Settings {
 	public function init() {
 
 		// Check what page we are on.
-		$page = isset( $_GET['page'] ) ? $_GET['page'] : '';
+		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : ''; // phpcs:ignore WordPress.CSRF.NonceVerification
 
 		// Only load if we are actually on the settings page.
 		if ( 'wpforms-settings' === $page ) {
@@ -50,7 +46,7 @@ class WPForms_Settings {
 			$this->save_settings();
 
 			// Determine the current active settings tab.
-			$this->view = isset( $_GET['view'] ) ? esc_html( $_GET['view'] ) : 'general';
+			$this->view = isset( $_GET['view'] ) ? sanitize_key( wp_unslash( $_GET['view'] ) ) : 'general'; // phpcs:ignore WordPress.CSRF.NonceVerification
 
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueues' ) );
 			add_action( 'wpforms_admin_page', array( $this, 'output' ) );
@@ -68,11 +64,11 @@ class WPForms_Settings {
 	public function save_settings() {
 
 		// Check nonce and other various security checks.
-		if ( ! isset( $_POST['wpforms-settings-submit'] ) ) {
+		if ( ! isset( $_POST['wpforms-settings-submit'] ) || empty( $_POST['nonce'] ) ) {
 			return;
 		}
 
-		if ( ! wp_verify_nonce( $_POST['nonce'], 'wpforms-settings-nonce' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ) ), 'wpforms-settings-nonce' ) ) {
 			return;
 		}
 
@@ -84,9 +80,20 @@ class WPForms_Settings {
 			return;
 		}
 
+		$current_view = sanitize_key( $_POST['view'] );
+
 		// Get registered fields and current settings.
-		$fields   = $this->get_registered_settings( $_POST['view'] );
+		$fields   = $this->get_registered_settings( $current_view );
 		$settings = get_option( 'wpforms_settings', array() );
+
+		// Views excluded from saving list.
+		$exclude_views = apply_filters( 'wpforms_settings_exclude_view', array(), $fields, $settings );
+
+		if ( is_array( $exclude_views ) && in_array( $current_view, $exclude_views, true ) ) {
+			// Run a custom save processing for excluded views.
+			do_action( 'wpforms_settings_custom_process', $current_view, $fields, $settings );
+			return;
+		}
 
 		if ( empty( $fields ) || ! is_array( $fields ) ) {
 			return;
@@ -123,6 +130,9 @@ class WPForms_Settings {
 					case 'color':
 						$value = wpforms_sanitize_hex_color( $value );
 						break;
+					case 'number':
+						$value = (float) $value;
+						break;
 					case 'text':
 					case 'radio':
 					case 'select':
@@ -148,6 +158,7 @@ class WPForms_Settings {
 	 * @since 1.0.0
 	 */
 	public function enqueues() {
+
 		do_action( 'wpforms_settings_enqueue' );
 	}
 
@@ -228,8 +239,37 @@ class WPForms_Settings {
 
 		// reCAPTCHA heading description is long so we define it separately.
 		$recaptcha_desc  = '<p>' . esc_html__( 'reCAPTCHA is a free anti-spam service from Google which helps to protect your website from spam and abuse while letting real people pass through with ease.', 'wpforms-lite' ) . '</p>';
-		$recaptcha_desc .= '<p>' . esc_html__( 'Google\'s original checkbox reCAPTCHA prompts users to check a box to prove they\'re human, whereas the newer Invisible reCAPTCHA uses advanced technology to detect real users without requiring any input. WPForms supports both versions of Google\'s v2 reCAPTCHA.', 'wpforms-lite' ) . '</p>';
-		$recaptcha_desc .= '<p>' . esc_html__( 'Sites already using the original checkbox reCAPTCHA will need to create new site keys before switching to the Invisible reCAPTCHA.', 'wpforms-lite' ) . '</p>';
+		$recaptcha_desc .= '<p>' . esc_html__( 'Google offers 3 versions of reCAPTCHA (all supported within WPForms):', 'wpforms-lite' ) . '</p>';
+		$recaptcha_desc .= '<ul style="list-style: disc;margin-left: 20px;">';
+		$recaptcha_desc .=
+			'<li>' .
+				wp_kses(
+					__( '<strong>v2 Checkbox reCAPTCHA</strong>: Prompts users to check a box to prove they\'re human.', 'wpforms-lite' ),
+					array(
+						'strong' => array()
+					)
+				) .
+			'</li>';
+		$recaptcha_desc .=
+			'<li>' .
+				wp_kses(
+					__( '<strong>v2 Invisible reCAPTCHA</strong>: Uses advanced technology to detect real users without requiring any input.', 'wpforms-lite' ),
+					array(
+						'strong' => array()
+					)
+				) .
+			'</li>';
+		$recaptcha_desc .=
+			'<li>' .
+				wp_kses(
+					__( '<strong>v3 reCAPTCHA</strong>: Uses a behind-the-scenes scoring system to detect abusive traffic, and lets you decide the minimum passing score. Recommended for advanced use only (or if using Google AMP).', 'wpforms-lite' ),
+					array(
+						'strong' => array()
+					)
+				) .
+			'</li>';
+		$recaptcha_desc .= '</ul>';
+		$recaptcha_desc .= '<p>' . esc_html__( 'Sites already using one type of reCAPTCHA will need to create new site keys before switching to a different option.', 'wpforms-lite' ) . '</p>';
 		$recaptcha_desc .=
 			'<p>' .
 			sprintf(
@@ -246,7 +286,7 @@ class WPForms_Settings {
 				),
 				'https://wpforms.com/docs/setup-captcha-wpforms/'
 			) .
-			'</p>';
+			'</p></ul>';
 
 		$defaults = array(
 			// General Settings tab.
@@ -382,10 +422,11 @@ class WPForms_Settings {
 					'id'      => 'recaptcha-type',
 					'name'    => esc_html__( 'Type', 'wpforms-lite' ),
 					'type'    => 'radio',
-					'default' => 'default',
+					'default' => 'v2',
 					'options' => array(
 						'v2'        => esc_html__( 'Checkbox reCAPTCHA v2', 'wpforms-lite' ),
 						'invisible' => esc_html__( 'Invisible reCAPTCHA v2', 'wpforms-lite' ),
+						'v3'        => esc_html__( 'reCAPTCHA v3', 'wpforms-lite' ),
 					),
 				),
 				'recaptcha-site-key'   => array(
@@ -397,6 +438,25 @@ class WPForms_Settings {
 					'id'   => 'recaptcha-secret-key',
 					'name' => esc_html__( 'Secret Key', 'wpforms-lite' ),
 					'type' => 'text',
+				),
+				'recaptcha-fail-msg' => array(
+					'id'      => 'recaptcha-fail-msg',
+					'name'    => esc_html__( 'Fail Message', 'wpforms-lite' ),
+					'desc'    => esc_html__( 'The message displayed to users who fail the reCAPTCHA verification process.', 'wpforms-lite' ),
+					'type'    => 'text',
+					'default' => esc_html__( 'Google reCAPTCHA verification failed, please try again later.', 'wpforms-lite' ),
+				),
+				'recaptcha-v3-threshold' => array(
+					'id'      => 'recaptcha-v3-threshold',
+					'name'    => esc_html__( 'Score Threshold', 'wpforms-lite' ),
+					'desc'    => esc_html__( 'reCAPTCHA v3 returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot). If the score less than or equal to this threshold, the form submission will be blocked and the message above will be displayed.', 'wpforms-lite' ),
+					'type'    => 'number',
+					'attr'    => array(
+						'step' => '0.1',
+						'min'  => '0.0',
+						'max'  => '1.0',
+					),
+					'default' => esc_html__( '0.4', 'wpforms-lite' ),
 				),
 				'recaptcha-noconflict' => array(
 					'id'   => 'recaptcha-noconflict',
@@ -491,12 +551,23 @@ class WPForms_Settings {
 				'uninstall-data'     => array(
 					'id'   => 'uninstall-data',
 					'name' => esc_html__( 'Uninstall WPForms', 'wpforms-lite' ),
-					'desc' => esc_html__( 'Check this if you would like to remove ALL WPForms data upon plugin deletion. All forms, entries, and uploaded files will be unrecoverable.', 'wpforms-lite' ),
+					'desc' => esc_html__( 'Check this if you would like to remove ALL WPForms data upon plugin deletion. All forms and settings will be unrecoverable.', 'wpforms-lite' ),
 					'type' => 'checkbox',
 				),
 			),
 		);
+
+		if ( wpforms()->pro ) {
+			$defaults['misc']['uninstall-data']['desc'] = esc_html__( 'Check this if you would like to remove ALL WPForms data upon plugin deletion. All forms, entries, and uploaded files will be unrecoverable.', 'wpforms' );
+		}
+
 		$defaults = apply_filters( 'wpforms_settings_defaults', $defaults );
+
+		// Take care of invalid views.
+		if ( ! empty( $view ) && ! array_key_exists( $view, $defaults ) ) {
+			$this->view = key( $defaults );
+			return reset( $defaults );
+		}
 
 		return empty( $view ) ? $defaults : $defaults[ $view ];
 	}
@@ -506,7 +577,7 @@ class WPForms_Settings {
 	 *
 	 * @since 1.3.9
 	 *
-	 * @param string $view
+	 * @param string $view View slug.
 	 *
 	 * @return array
 	 */
@@ -546,7 +617,7 @@ class WPForms_Settings {
 			}
 			?>
 
-			<div class="wpforms-admin-content wpforms-admin-settings">
+			<div class="wpforms-admin-content wpforms-admin-settings wpforms-admin-content-<?php echo esc_attr( $this->view ); ?> wpforms-admin-settings-<?php echo esc_attr( $this->view ); ?>">
 
 				<?php
 				// Some tabs rely on AJAX and do not contain a form, such as Integrations.

@@ -32,6 +32,13 @@
             "wpgmza"
         ]
     },
+    "wpgmza-elias-fano": {
+        "src": "js\/v8\/elias-fano.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza"
+        ]
+    },
     "wpgmza-event-dispatcher": {
         "src": "js\/v8\/event-dispatcher.js",
         "pro": false,
@@ -41,6 +48,13 @@
     },
     "wpgmza-event": {
         "src": "js\/v8\/event.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza"
+        ]
+    },
+    "wpgmza-fancy-controls": {
+        "src": "js\/v8\/fancy-controls.js",
         "pro": false,
         "dependencies": [
             "wpgmza"
@@ -83,6 +97,13 @@
     },
     "wpgmza-lat-lng-bounds": {
         "src": "js\/v8\/latlngbounds.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza"
+        ]
+    },
+    "wpgmza-map-edit-page": {
+        "src": "js\/v8\/map-edit-page.js",
         "pro": false,
         "dependencies": [
             "wpgmza"
@@ -158,6 +179,13 @@
             "wpgmza"
         ]
     },
+    "wpgmza-polyfills": {
+        "src": "js\/v8\/polyfills.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza"
+        ]
+    },
     "wpgmza-polygon": {
         "src": "js\/v8\/polygon.js",
         "pro": false,
@@ -186,6 +214,13 @@
             "wpgmza"
         ]
     },
+    "wpgmza-settings-page": {
+        "src": "js\/v8\/settings-page.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza"
+        ]
+    },
     "wpgmza-store-locator": {
         "src": "js\/v8\/store-locator.js",
         "pro": false,
@@ -195,6 +230,20 @@
     },
     "wpgmza-text": {
         "src": "js\/v8\/text.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza"
+        ]
+    },
+    "wpgmza-theme-editor": {
+        "src": "js\/v8\/theme-editor.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza-event-dispatcher"
+        ]
+    },
+    "wpgmza-theme-panel": {
+        "src": "js\/v8\/theme-panel.js",
         "pro": false,
         "dependencies": [
             "wpgmza"
@@ -223,6 +272,13 @@
             "wp-blocks",
             "wp-editor",
             "wp-components"
+        ]
+    },
+    "wpgmza-astra-theme-compatiblity": {
+        "src": "js\/v8\/compatibility\/astra-theme-compatibility.js",
+        "pro": false,
+        "dependencies": [
+            "wpgmza"
         ]
     },
     "wpgmza-google-ui-compatibility": {
@@ -306,7 +362,7 @@
         "src": "js\/v8\/google-maps\/google-text-overlay.js",
         "pro": false,
         "dependencies": [
-            "wpgmza-text"
+            "wpgmza-google-text"
         ]
     },
     "wpgmza-google-text": {

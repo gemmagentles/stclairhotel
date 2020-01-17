@@ -1,10 +1,10 @@
-=== Lazy Load by WP Rocket ===
+=== Lazy Load - Optimize Images ===
 Contributors: wp_rocket, wp_media
 Tags: lazyload, lazy load, images, iframes, thumbnail, thumbnails, smiley, smilies, avatar, gravatar, youtube
 Requires at least: 4.7
-Tested up to: 5.2
+Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 2.2.2
+Stable tag: 2.3.2
 
 Lazy Load your images and iframes, replace Youtube videos by a preview thumbnail.
 
@@ -32,7 +32,7 @@ Lazyload script: [https://github.com/verlok/lazyload](https://github.com/verlok/
 
 == Frequently Asked Questions ==
 
-= How can I deactivate Lazy Load on some pages? = 
+= How can I deactivate Lazy Load on some pages? =
 
 You can use the `do_rocket_lazyload` filter.
 
@@ -47,7 +47,7 @@ function deactivate_rocket_lazyload_on_single() {
 }
 `
 
-= How can I deactivate Lazy Load on some images? = 
+= How can I deactivate Lazy Load on some images? =
 
 Simply add a `data-no-lazy="1"` property in you `img` or `iframe` tag.
 
@@ -85,6 +85,27 @@ You can also apply it manually. The element you want to apply lazyload on must h
 The element must have the class `rocket-lazyload`, and a `data-bg` attribute, which value is the CSS url for the image.
 
 == Changelog ==
+= 2.3.2 =
+Bugfix: Incorrect characters used in Youtube thumbnail HTML code
+
+= 2.3.1 =
+Bugfix: Prevent a conflict with WP Rocket
+Bugfix: apply loading="lazy" on Youtube thumbnail
+Bugfix: Add autoplay attribute on iframe loaded with Youtube thumbnail
+
+= 2.3 =
+Enhancement: Add support for browser native lazyload
+Bugfix: Prevent broken image in some cases for picture element
+Bugfix: Prevent wrong lazy attributes for srcset and sizes on an image inside a picture element
+
+= 2.2.3 =
+* Enhancement: Improve compatibility for the picture element
+* Enhancement: Apply lazyload on background images set on section, span and li elements
+* Enhancement: also pass $width and $height values to the rocket_lazyload_placeholder filter
+* Bugfix: Use 0 instead of 1 for the default placeholder dimensions to improve compatibility
+* Bugfix: Improve infinite scroll support
+* Bugfix: Exclude Enfold avia-background-fixed background images and data-large_image from lazyload
+
 = 2.2.2 =
 * Bugfix: Auto-exclude data-height-percentage attribute to prevent display issues
 * Bugfix: Correctly handle responsive videos using fitVids again
@@ -164,7 +185,7 @@ The element must have the class `rocket-lazyload`, and a `data-bg` attribute, wh
 * Enhancement: Possibility to apply lazyload on background-images with a specific markup, see FAQ
 * Enhancement: Use a svg image as placeholder instead of a base64 gif
 * Bugfix: Only use MutationObserver if available in the browser
-* Bugfix: When using the Youtube thumbnail option, correctly format the Youtube query if the video URL is encoded 
+* Bugfix: When using the Youtube thumbnail option, correctly format the Youtube query if the video URL is encoded
 * Bugfix: Improve iframe matching to prevent unexpected results
 * Bugfix: Update CSS for the Youtube thumbnail option to prevent issue with the Gutenberg embeds block
 
@@ -269,7 +290,7 @@ The element must have the class `rocket-lazyload`, and a `data-bg` attribute, wh
 
 = 1.0.2 =
 * 2014-12-28
-* Improvement: Add « rocket_lazyload_html » filter to manage the output that will be printed. 
+* Improvement: Add « rocket_lazyload_html » filter to manage the output that will be printed.
 
 = 1.0.1.1 =
 * 2014-07-25
