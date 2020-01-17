@@ -2151,32 +2151,80 @@ h1 {
     .map__wrapper {
       margin-bottom: 122px; } }
 
-.photo-gallery__wrapper {
-  max-width: 1562px;
-  margin: 0 auto;
-  padding: 80px 40px;
-  text-align: center; }
-  @media (min-width: 48em) {
-    .photo-gallery__wrapper {
-      padding: 120px 40px;
-      display: grid;
-      grid-template-columns: auto auto auto;
-      grid-gap: 55px; } }
-  @media (min-width: 98.875em) {
-    .photo-gallery__wrapper {
-      padding: 120px 0; } }
+.photo-gallery {
+  /* Style the tab */
+  /* Style the buttons inside the tab */
+  /* Create an active/current tablink class */
+  /* Style the tab content */
+  /* Go from zero to full opacity */ }
+  .photo-gallery__wrapper {
+    max-width: 1602px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center; }
+    @media (min-width: 48em) {
+      .photo-gallery__wrapper {
+        padding: 120px 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; } }
+    @media (min-width: 98.875em) {
+      .photo-gallery__wrapper {
+        padding: 120px 0; } }
+  .photo-gallery__image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 40px; }
+    .photo-gallery__image:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 37.5em) {
+      .photo-gallery__image {
+        width: 350px;
+        height: 350px; } }
+    @media (min-width: 48em) {
+      .photo-gallery__image {
+        margin: 20px;
+        width: 484px;
+        height: 484px; } }
+  .photo-gallery__tab {
+    max-width: 1562px;
+    margin: 0 auto;
+    padding-top: 120px;
+    text-align: center; }
+  .photo-gallery__tab button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 10px;
+    background: #0F2F95;
+    color: white;
+    text-transform: uppercase;
+    font-family: SharpGroteskExp Light;
+    letter-spacing: 3.05px;
+    padding: 20px 30px;
+    font-size: 0.75em;
+    transition: background-color 0.7s ease;
+    text-decoration: none; }
+    .photo-gallery__tab button:hover, .photo-gallery__tab button:focus, .photo-gallery__tab button:active {
+      background-color: #061852;
+      cursor: pointer; }
+    @media (min-width: 87em) {
+      .photo-gallery__tab button {
+        font-size: 0.875em;
+        padding: 24px 46px; } }
+  .photo-gallery__tab button.active {
+    background-color: #061852; }
+  .photo-gallery__tabcontent {
+    display: none;
+    animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */ }
 
-.photo-gallery__image {
-  width: 100%;
-  max-width: 484px;
-  max-height: 484px;
-  overflow: hidden;
-  margin-bottom: 40px; }
-  .photo-gallery__image:last-child {
-    margin-bottom: 0; }
-  @media (min-width: 48em) {
-    .photo-gallery__image {
-      margin-bottom: 0; } }
+@keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .footer {
   background-color: #001B71; }

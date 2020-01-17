@@ -28,5 +28,10 @@ BREAKPOINTS
        @media (max-width: 37.5em)  { @content ; }
   
     }
+    @else if $point == minmobile {
+      // 600px
+      @media (min-width: 37.5em)  { @content ; }
+ 
+   }
   }
   
