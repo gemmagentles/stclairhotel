@@ -9,7 +9,15 @@ jQuery(function($) {
 	{
 		var self = this;
 		
+		this.preventCaching = true;
+		
 		WPGMZA.DataTable.call(this, element);
+		
+		// NB: Pro marker panel currently manages edit marker buttons
+		
+		$(element).on("click", "[data-delete-marker-id]", function(event) {
+			self.onDeleteMarker(event);
+		});
 		
 		$(element).find(".wpgmza.select_all_markers").on("click", function(event) {
 			self.onSelectAll(event);
@@ -30,12 +38,57 @@ jQuery(function($) {
 		
 		options.createdRow = function(row, data, index)
 		{
-			var ajax = self.dataTable.ajax.json();
-			var meta = ajax.meta[index];
+			var meta = self.lastResponse.meta[index];
 			row.wpgmzaMarkerData = meta;
 		}
 		
 		return options;
+	}
+	
+	WPGMZA.AdminMarkerDataTable.prototype.onEditMarker = function(event)
+	{
+		WPGMZA.animatedScroll("#wpgmaps_tabs_markers");
+	}
+	
+	WPGMZA.AdminMarkerDataTable.prototype.onDeleteMarker = function(event)
+	{
+		var self	= this;
+		var id		= $(event.currentTarget).attr("data-delete-marker-id");
+		
+		var data	= {
+			action: 'delete_marker',
+			security: WPGMZA.legacyajaxnonce,
+			map_id: WPGMZA.mapEditPage.map.id,
+			marker_id: id
+		};
+		
+		$.post(ajaxurl, data, function(response) {
+			
+			WPGMZA.mapEditPage.map.removeMarkerByID(id);
+			self.reload();
+			
+		});
+	}
+	
+	// NB: Move this to UGM
+	WPGMZA.AdminMarkerDataTable.prototype.onApproveMarker = function(event)
+	{
+		var self	= this;
+		var cur_id	= $(this).attr("id");
+		
+		var data = {
+			action:		'approve_marker',
+			security:	WPGMZA.legacyajaxnonce,
+			map_id:		WPGMZA.mapEditPage.map.id,
+			marker_id:	cur_id
+		};
+		$.post(ajaxurl, data, function (response) {
+			
+			
+			wpgmza_InitMap();
+			wpgmza_reinitialisetbl();
+
+		});
 	}
 	
 	WPGMZA.AdminMarkerDataTable.prototype.onSelectAll = function(event)
@@ -47,10 +100,18 @@ jQuery(function($) {
 	{
 		var self = this;
 		var ids = [];
+		var map = WPGMZA.maps[0];
 		
 		$(this.element).find("input[name='mark']:checked").each(function(index, el) {
 			var row = $(el).closest("tr")[0];
 			ids.push(row.wpgmzaMarkerData.id);
+		});
+		
+		ids.forEach(function(marker_id) {
+			var marker = map.getMarkerByID(marker_id);
+			
+			if(marker)
+				map.removeMarker(marker);
 		});
 		
 		WPGMZA.restAPI.call("/markers/", {

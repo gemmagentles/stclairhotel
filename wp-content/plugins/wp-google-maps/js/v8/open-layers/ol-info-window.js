@@ -14,7 +14,7 @@ jQuery(function($) {
 		
 		Parent.call(this, mapObject);
 		
-		this.element = $("<div class='ol-info-window-container ol-info-window-plain'></div>")[0];
+		this.element = $("<div class='wpgmza-infowindow ol-info-window-container ol-info-window-plain'></div>")[0];
 			
 		$(this.element).on("click", ".ol-info-window-close", function(event) {
 			self.close();
@@ -49,7 +49,8 @@ jQuery(function($) {
 			this.mapObject.map.olMap.removeOverlay(this.overlay);
 			
 		this.overlay = new ol.Overlay({
-			element: this.element
+			element: this.element,
+			stopEvent: false
 		});
 		
 		this.overlay.setPosition(ol.proj.fromLonLat([
@@ -59,6 +60,15 @@ jQuery(function($) {
 		self.mapObject.map.olMap.addOverlay(this.overlay);
 		
 		$(this.element).show();
+		
+		if(WPGMZA.OLMarker.renderMode == WPGMZA.OLMarker.RENDER_MODE_VECTOR_LAYER)
+		{
+			WPGMZA.getImageDimensions(mapObject.getIcon(), function(size) {
+				
+				$(self.element).css({left: Math.round(size.width / 2) + "px"});
+				
+			});
+		}
 		
 		this.trigger("infowindowopen");
 		this.trigger("domready");
@@ -91,6 +101,45 @@ jQuery(function($) {
 		{
 			$(this.element).css({"max-width": options.maxWidth + "px"});
 		}
+	}
+	
+	WPGMZA.OLInfoWindow.prototype.onOpen = function()
+	{
+		var self = this;
+		var imgs = $(this.element).find("img");
+		var numImages = imgs.length;
+		var numImagesLoaded = 0;
+		
+		WPGMZA.InfoWindow.prototype.onOpen.apply(this, arguments);
+		
+		function inside(el, viewport)
+		{
+			var a = el.getBoundingClientRect();
+			var b = viewport.getBoundingClientRect();
+			
+			return a.left >= b.left && a.left <= b.right &&
+					a.right <= b.right && a.right >= b.left &&
+					a.top >= b.top && a.top <= b.bottom &&
+					a.bottom <= b.bottom && a.bottom >= b.top;
+		}
+		
+		function panIntoView()
+		{
+			var height	= $(self.element).height();
+			var offset	= -height * 0.45;
+			
+			self.mapObject.map.animateNudge(0, offset, self.mapObject.getPosition());
+		}
+		
+		imgs.each(function(index, el) {
+			el.onload = function() {
+				if(++numImagesLoaded == numImages && !inside(self.element, self.mapObject.map.element))
+					panIntoView();
+			}
+		});
+		
+		if(numImages == 0 && !inside(self.element, self.mapObject.map.element))
+			panIntoView();
 	}
 	
 });

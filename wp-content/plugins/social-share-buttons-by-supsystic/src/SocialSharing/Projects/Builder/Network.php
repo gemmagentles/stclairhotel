@@ -496,67 +496,67 @@ class SocialSharing_Projects_Builder_Network
     {
         switch ($this->class) {
             case 'facebook':
-                return 'fa-facebook';
+                return 'fa-ssbs-facebook';
 
             case 'twitter':
-                return 'fa-twitter';
+                return 'fa-ssbs-twitter';
 
             case 'twitter-follow':
-                return 'fa-twitter';
+                return 'fa-ssbs-twitter';
 
             case 'googleplus':
-                return 'fa-google-plus';
+                return 'fa-ssbs-google-plus';
 
             case 'vk':
-                return 'fa-vk';
+                return 'fa-ssbs-vk';
 
             case 'like':
-                return 'fa-heart';
+                return 'fa-ssbs-heart';
 
             case 'reddit':
-                return 'fa-reddit';
+                return 'fa-ssbs-reddit';
 
             case 'pinterest':
-                return 'fa-pinterest';
+                return 'fa-ssbs-pinterest';
 
             case 'digg':
-                return 'fa-digg';
+                return 'fa-ssbs-digg';
 
             case 'stumbleupon':
-                return 'fa-stumbleupon';
+                return 'fa-ssbs-stumbleupon';
 
             case 'delicious':
-                return 'fa-delicious';
+                return 'fa-ssbs-delicious';
 
             case 'livejournal':
-                return 'fa-pencil';
+                return 'fa-ssbs-pencil';
 
             case 'odnoklassniki':
-                return 'fa-odnoklassniki';
+                return 'fa-ssbs-odnoklassniki';
 
             case 'linkedin':
-                return 'fa-linkedin';
+                return 'fa-ssbs-linkedin';
 
             case 'print':
-                return 'fa-print';
+                return 'fa-ssbs-print';
 
             case 'bookmark':
-                return 'fa-plus';
+                return 'fa-ssbs-plus';
 
             case 'mail':
-                return 'fa-envelope-o';
+                return 'fa-ssbs-envelope-o';
 
             case 'evernote':
                 return 'bd-evernote';
 
             case 'whatsapp':
-                return 'fa-whatsapp';
+                return 'fa-ssbs-whatsapp';
 
             case 'tumblr':
-                return 'fa-tumblr';
+                return 'fa-ssbs-tumblr';
         }
 
-        return 'fa-share-alt';
+        return 'fa-ssbs-share-alt';
     }
 
     /**

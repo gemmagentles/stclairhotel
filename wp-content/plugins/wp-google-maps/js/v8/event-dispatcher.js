@@ -89,7 +89,7 @@ jQuery(function($) {
 		{
 			obj = arr[i];
 		
-			if(obj.listener == listener && obj.thisObject == thisObject && obj.useCapture == useCapture)
+			if((arguments.length == 1 || obj.listener == listener) && obj.thisObject == thisObject && obj.useCapture == useCapture)
 			{
 				arr.splice(i, 1);
 				return;
@@ -158,7 +158,15 @@ jQuery(function($) {
 		for(i = path.length - 1; i >= 0 && !event._cancelled; i--)
 			path[i]._triggerListeners(event);
 		
-		if(this.element)
+		// Native DOM event
+		var topMostElement = this.element;
+		for(var obj = this.parent; obj != null; obj = obj.parent)
+		{
+			if(obj.element)
+				topMostElement = obj.element;
+		}
+		
+		if(topMostElement)
 		{
 			var customEvent = {};
 			
@@ -172,7 +180,7 @@ jQuery(function($) {
 				customEvent[key] = value;
 			}
 			
-			$(this.element).trigger(customEvent);
+			$(topMostElement).trigger(customEvent);
 		}
 	}
 

@@ -492,7 +492,7 @@ h2.nav-tab-wrapper, h3.nav-tab-wrapper {
 }
 
 .supsystic-plugin .description,
-.supsystic-plugin i:not(.fa) {
+.supsystic-plugin i:not(.fa) && .supsystic-plugin i:not(.fa-ssbs) {
     font-style: normal;
     color: #a4aaac;
     font-weight: 500;

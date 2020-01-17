@@ -7,7 +7,7 @@
                 {%- for button in networks -%}
                     <a class="pricon social-sharing-button sharer-{{ builder }} sharer-{{ design }} {{ button }} counter-{{ project.settings.shares_style | default('standard') }} {% if project.settings.display_total_shares is not defined %}without-counter{% endif %}"
                        href="javascript:void(0);">
-                        <i class="fa fa-fw fa-{{ button }}">
+                        <i class="fa-ssbs fa-ssbs-fw fa-ssbs-{{ button }}">
                             {% if hasText | length and number in hasText %}
                                 <span>{{- environment.translate('Share') -}}</span>
                             {% endif %}

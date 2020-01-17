@@ -9,9 +9,9 @@ namespace RocketLazyLoadPlugin\Subscriber;
 
 use RocketLazyLoadPlugin\EventManagement\SubscriberInterface;
 use RocketLazyLoadPlugin\Options\OptionArray;
-use RocketLazyload\Assets;
-use RocketLazyload\Image;
-use RocketLazyload\Iframe;
+use RocketLazyLoadPlugin\Dependencies\RocketLazyload\Assets;
+use RocketLazyLoadPlugin\Dependencies\RocketLazyload\Image;
+use RocketLazyLoadPlugin\Dependencies\RocketLazyload\Iframe;
 
 /**
  * Lazyload Subscriber
@@ -136,20 +136,25 @@ class LazyloadSubscriber implements SubscriberInterface
          */
         $polyfill = apply_filters('rocket_lazyload_polyfill', false);
 
-        $args = [
-            'base_url'  => ROCKET_LL_FRONT_JS_URL,
-            'threshold' => $threshold,
-            'version'   => '11.0.6',
-            'polyfill'  => $polyfill,
+        $script_args = [
+            'base_url' => ROCKET_LL_FRONT_JS_URL,
+            'version'  => '12.0',
+            'polyfill' => $polyfill,
         ];
 
-        if ($this->option_array->get('images')) {
-            $args['elements']['image']            = 'img[data-lazy-src]';
-            $args['elements']['background_image'] = '.rocket-lazyload';
+        $inline_args = [
+            'threshold' => $threshold,
+            'options'   => [
+                'use_native' => 'true',
+            ],
+        ];
+
+        if ($this->option_array->get('images') || $this->option_array->get('iframes')) {
+            $inline_args['elements']['loading'] = '[loading=lazy]';
         }
 
-        if ($this->option_array->get('iframes')) {
-            $args['elements']['iframe'] = 'iframe[data-lazy-src]';
+        if ($this->option_array->get('images')) {
+            $inline_args['elements']['background_image'] = '.rocket-lazyload';
         }
 
         /**
@@ -158,11 +163,12 @@ class LazyloadSubscriber implements SubscriberInterface
          * @since 2.0
          * @author Remy Perona
          *
-         * @param array $args Arguments used for the lazyload script options.
+         * @param array $inline_args Arguments used for the lazyload script options.
          */
-        $args = apply_filters('rocket_lazyload_script_args', $args);
+        $inline_args = apply_filters('rocket_lazyload_script_args', $inline_args);
 
-        $this->assets->insertLazyloadScript($args);
+        echo '<script>' . $this->assets->getInlineLazyloadScript($inline_args) . '</script>';
+        $this->assets->insertLazyloadScript($script_args);
     }
 
     /**

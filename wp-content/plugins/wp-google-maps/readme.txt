@@ -3,7 +3,7 @@ Contributors: WPGMaps, NickDuncan, CodeCabin_, DylanAuty, PerryRylance
 Donate link: https://www.wpgmaps.com
 Tags: google maps, maps, map, map markers, google map, google maps plugin, wp google maps, wp google map, map plugin, directions, google map plugin, map widget
 Requires at least: 3.5
-Tested up to: 5.1
+Tested up to: 5.3.2
 Requires PHP: 5.3
 Stable tag: trunk
 License: GPLv2
@@ -123,7 +123,7 @@ WP Google Maps Pro
 * [Marker listings - Simple](https://www.wpgmaps.com/demo/list-markers/)
 * [Marker listings - Advanced](https://www.wpgmaps.com/demo/map-with-markers-listed-below-advanced/)
 * [Google Maps Directions](https://www.wpgmaps.com/demo/directions/)
-* [Resposive Map](https://www.wpgmaps.com/demo/responsive-maps/)
+* [Responsive Map](https://www.wpgmaps.com/demo/responsive-maps/)
 * [Marker Categories](https://www.wpgmaps.com/demo/marker-categories/) (Filtering)
 * [Advanced Store Locator](https://www.wpgmaps.com/demo/store-locator/)
 * [WP Google Maps Editor](https://www.wpgmaps.com/demo/screenshots-back-end/) (Back-end Screenshots)
@@ -220,7 +220,278 @@ Please upgrade your version of WP Google Maps to version 6.0.27 as it includes m
 
 == Changelog ==
 
-= 7.21.22 :- 2019-05-08 :- Low priority =
+= 8.0.14 :- 2020-01-13 :- Medium priority =
+* Added Gesture Handling (Ctrl + Zoom and Two-finger pan) for OpenLayers
+* "No Google Maps API key entered" message will no longer obscure map for new users
+
+= 8.0.13 :- 2020-01-07 :- Low priority =
+* Tested up to WordPress 5.3.2
+* Relaxed "invalid route" check in RestAPI to allow external JSON to be used
+* Database no longer specifies InnoDB as database engine, enabling support for MyISAM
+* Database no longer specifies UTF-8 as character set for tables, the default for the database will be used
+
+= 8.0.12 :- 2020-01-02 :- Medium priority =
+* New event on window - ready.wpgmza. This fires when all modules are ready, but maps haven't started loading
+* WPGMZA.LatLng.fromString is now static
+* Removed console logging on theme panel when theme data is invalid
+* WPGMZA.EventDispatcher can now unbind all event listeners with off / removeEventListener
+* Fixed incompatibility with GTranslate due to no check for google.maps in MYMAP.init
+* Fixed OpenLayers geocoder trying to geocode coordinates resulting in markers added by coordinates moving
+* Fixed redirection loop after entering Google Maps API key into prompt on map edit page
+* Fixed "Cannot read property 'markerFilter' of undefined" in modern-store-locator.js
+* Fixed OpenLayers HTML marker in wrong position after refreshing and switching tabs during load
+* Fixed infowindowclose.wpgmza being dispatched from the map, rather than the infowindow
+* Fixed OpenLayers polyline not displayed
+
+= 8.0.11 :- 2019-12-11 :- Medium priority =
+* Added WPGMZA.LatLngBounds.prototype.toLiteral
+* Rest API now removes trailing = on compressed path variable requests as certain security suites and servers would block this as Forbidden
+* Increased map_title to 256 characters, fixes imports not working on files with long filenames
+* Fixed user roles below admin cannot save map settings by correcting permissions check
+* Fixed modern store locator always showing alert
+* Fixed modern store locator "not found" alert blank
+* Fixed experimental vector source layer markers firing multiple click events when their icons overlap
+
+= 8.0.10 :- 2019-11-26 :- Medium priority =
+* Added animated panning effect for OpenLayers infowindows, including a dynamic offset to make infowindows fully visible on click
+* Removed var_dump from wp-google-maps-polylines.php
+* Restricted include/exclude Maps API on page inputs to comma separated integers
+* Changed default map alignment to "None"
+* Dropped legacy store locator marker and circle code, module now controls this fully
+* Fixed array shorthand parse error in PHP < 5.4
+* Fixed getCurrentPosition only calling the supplied error callback function on the first failure
+* Fixed autocomplete not initialising when global settings have not been saved
+* Fixed shapes not being added when global settings have never been saved
+* Fixed Store Locator setting "show bouncing icon" not working
+* Fixed trashing a map redirects user to map edit page for the trashed map
+* Fixed store locator circles too small when using miles as distance units
+* Fixed store locator not found message not showing
+
+= 8.0.9 :- 2019-11-12 :- Medium priority =
+* Updated Dutch translations
+* Changed Humanitarian tileserver URL to https://
+* Added workaround for syntax error in class.marker.php on PHP versions 5.5 and below
+* Fixed "No API key" error showing until the page is refreshed after entering API key in notice
+* Fixed getCurrentPosition is not a function on setups which don't have this function on the navigator
+* Fixed issue with OpenLayers circle fill color
+
+= 8.0.8 :- 2019-11-04 :- Medium priority =
+* Fixed AJAX fallback routes not registered for GET only REST routes
+* Fixed some REST API routes 404ing with plain permalinks when route URL + is replaced with space
+* Fixed ?skip_cache=1 breaking plain permalink REST URLs by detecting when query variables are in use
+
+= 8.0.7 :- 2019-10-25 :- Medium priority =
+* Tested up to WordPress 5.3
+* Localized all remote images
+* Separated all inline JavaScript and PHP
+* Removed developer documentation
+* Removed redundant files
+* Removed legacy bundled jQuery
+
+= 8.0.6 :- 2019-10-22 :- Low priority =
+* Legacy UI style InfoWindow text width fix now only applies to Google Maps engine
+* Google API script loader now adds data-usercentrics attribute
+* InfoWindow now tracks open / closed state in this.state
+* InfoWindow no longer dispatches infowindowclose.wpgmza event if already closed
+
+= 8.0.5 :- 2019-10-17 :- Medium priority =
+* Fixed additional "undefined" infowindow appearing when using XML cache
+* Fixed XML cache not regenerated when POSTing to marker endpoint
+
+= 8.0.4 :- 2019-10-15 :- Medium priority =
+* Now tested up to WordPress 5.2.4
+* Added REST endpoints for counting and removing duplicate markers
+* Safeguards added to switch back to DB pull if execution time limit or memory limit is reached during XML cache generation
+* Theme parser will now attempt to strip slashes before abandoning parsing
+
+= 8.0.3 :- 2019-10-13 :- Medium priority =
+* Added workaround for Enfold theme issue with Safari preventing map from loading
+* Relaxed CRUD class to issue warning when ID is passed in with field data instead creating a new object
+* Fixed edit marker button not working on map edit page
+
+= 8.0.2 :- 2019-10-10 :- Medium priority =
+* Fixed file not found on settings page when using OpenLayers engine
+* Fixed translation strings not being applied
+* Fixed dragging a marker also pans map when using OpenLayers
+
+= 8.0.1 :- 2019-10-08 :- Medium priority =
+* Fixed Warning: unserialize() expects parameter 1 to be string, array given
+* Fixed restructured code preventing marker delete and approve buttons from working
+* Fixed markers not being removed from map panel following deletion
+
+= 8.0.0 :- 2019-10-07 :- Medium priority =
+* New theme panel and theme editor
+* New User Interface Style setting and variety of UI styles added
+* Several user experience improvements
+* Significant performance improvements and optimizations
+* Significantly enhanced REST API
+
+= 7.11.53 :- 2019-10-03 :- Low priority =
+* Fixed "All" missing from datatables page size dropdown
+* Fixed bundled translations only loaded on backend since 7.11.45
+* Added polyfill for slice on Uint8Array, fixing issues with compressed path variables and IE
+* Added no-op JS to wpgmza_data.js
+* Added isFilterable property to Marker
+* Removed .gitattributes from production build
+
+= 7.11.52 :- 2019-09-24 :- Medium priority =
+* Added Astra theme compatibilty module, fixes InfoWindows not opening with Astra theme
+* Added fallback for older versions of WordPress where wp_doing_ajax is not present, fixes fatal error on WordPress < 4.7
+
+= 7.11.51 :- 2019-09-19 :- Medium Priority =
+* Fixed Modern Store Locator Radius causing Safari (mobile) to reload page
+
+= 7.11.50 :- 2019-09-13 :- Medium priority =
+* Fixed markers not visible in Internet Explorer when using OpenLayers (append is not a method)
+
+= 7.11.49 :- 2019-09-10 :- Medium priority =
+* Added warning when "Do not enqueue datatables" is selected, but dataTables library is not loaded
+* Added comment to wpgmza_data.js to fix issues with empty files and Safari
+* Altered "zero-results" message to "No results found for this address"
+* Fixed skipNonceCheck flag being ignored when Live Tracking App is used
+
+= 7.11.48 :- 2019-08-28 :- Low priority =
+* Fixed polygons and polylines not displaying back end before global settings have been saved
+* Increased link column to accept 2083 characters
+
+= 7.11.47 :- 2019-08-09 :- Medium priority =
+* Fixed map engine dialog submission not working
+* Fixed WPGMZA.EventDispatcher not handing some native events over to DOM correctly
+
+= 7.11.46 :- 2019-08-08 :- Medium priority =
+* Fixed conflict with WooCommerce effecting checkout page on installations with debug notices turned on
+* Fixed WPGMZA.getQueryParamValue matching location hash on last parameter
+
+= 7.11.45 :- 2019-08-07 :- Medium priority =
+* Added ABSPATH checks to .html.php files, class.settings.php and backwards_compat_v6.php
+* Fixed add shape buttons disabled for Google when global settings have never been saved
+* Fixed permissions issues when attempting to save global settings (HTTP error 401)
+* Fixed permissions issues preventing users without manage_options capability from logging in
+
+= 7.11.44 :- 2019-08-01 :- Low priority =
+* Added REST API parameter skipNonceCheck for Live Tracking App
+* Fixed map type settings not "live" in map edit page
+* Fixed map type setting not reflected when map edit page initialises
+
+= 7.11.43 :- 2019-07-31 :- Low priority =
+* RestAPI now exposes registerRoute as a public function for add-ons to register REST API routes
+* New action wpgmza_register_rest_api_routes added
+
+= 7.11.42 :- 2019-07-30 :- Medium priority =
+* Added checks for ABSPATH to all PHP modules
+* Added a console warning when Array prototype has been improperly extended, which breaks for ... in loops
+* Improved parameter sanitization
+* Dropped deprecated usage tracking function
+* Dropped unused GoogleGeocoder class
+* Dropped old admin head function, added update notice for users running Pro < 5.24
+* Fixed AJAX REST API POST calls always failing nonce security check
+
+= 7.11.41 :- 2019-07-29 :- Medium priority =
+* Fixed store locator not working in OpenLayers since 7.11.40 due to missing nonce
+
+= 7.11.40 :- 2019-07-29 :- Medium priority =
+* REST API security enhanced with additional per-route nonces
+* getScrollAnimationOffset now accounts for WP admin bar height
+* removeMarker now closes marker InfoWindow before removing it
+* Fixed notice on map edit page on setups with E_NOTICE error display
+* Fixed markers not removed from map panel following bulk delete
+* Fixed GoogleHTMLOverlay is not a constructor when WPGMZA.settings.engine is null
+
+= 7.11.39 :- 2019-07-25 :- Medium priority =
+* Added code to update OpenLayers marker position following icon loading
+* Fixed marker being off-position before user interaction on certain setups
+* Fixed dataTables translations not working
+* Fixed fatal error on map pages when GDPR notice filter returns an empty string
+* Fixed category icon not respected in map panel when running Pro <= 6.*
+
+= 7.11.38 :- 2019-07-22 :- Low priority =
+* Removed advisory REST AJAX notice due to false positives
+
+= 7.11.37 :- 2019-07-16 :- Low priority =
+* Fixed polyline color control not "live" on polygon edit page
+
+= 7.11.36 :- 2019-07-11 :- Low priority =
+* Re-added admin-ajax fallback for when REST API is blocked
+* Fixed Polyline color issue
+
+= 7.11.35 :- 2019-07-08 :- High priority =
+* Security vulnerabilities fixed (Thank you Plugin Review Team at WordPress.org and pluginvulnerabilities.com)
+
+= 7.11.34 :- 2019-07-07 :- Medium priority =
+* Fixed DataTable sort order unpredictable with mixture of numeric and non-numeric data
+* Rolled back admin-ajax changes pending review
+
+= 7.11.33 :- 2019-07-02 :- Low priority =
+* Added admin-ajax fallback for when REST API is blocked
+* Fixed characters such as accents showing as plain text HTML entities in DOMElement
+* Fixed object must implement countable notice on QueryFragment
+* Regenerated temporary API key
+* Removed unreachable code
+
+= 7.11.32 :- 2019-06-21 :- Low priority =
+* Added mechanism to report 403 Forbidden on REST API, this is usually caused by security plugins blocking REST requests for non-logged in users
+
+= 7.11.31 :- 2019-06-18 :- Low priority =
+* Added checkbox to disable Autoptimize workaround for setups where the workaround prevents CSS aggregation
+* DataTable module now uses RestAPI module to make AJAX requests
+* Fixed "Permalink Manager Lite" breaking admin marker table when POST requests are used
+* Fixed welcome screen not working
+
+= 7.11.30 :- 2019-06-12 :- Medium priority =
+* Added /decompress REST API endpoint for debugging compressed path variable requests
+* Added integration with WP REST Cache by Acato
+* Added Elias Fano encoding modules for efficient transmission of marker ID's on compressed path variable requests
+* REST API module now no longer loads the entire WP REST API client side library
+* Moved clearInterval on Google infowindow to before event is triggered, the event will no longer fire repeatedly if any attached listeners cause an error
+* Fixed bulk delete not working
+* Removed performance intensive regex checks on template_redirect. Short code flag is now set by short code callbacks
+* Fixed notice in legacy-core.php when no map ID present on shortcode
+* Fixed cannot use scalar value as array when localizing legacy current map ID global
+* Fixed issues with older versions of Pro add-on and admin marker table
+
+= 7.11.29 :- 2019-06-06 :- Low priority =
+* Added support for compressed path variables on REST API module (experimental)
+
+= 7.11.28 :- 2019-06-03 :- Medium priority =
+* Added nonce to settings form on admin post action
+* Fixed errors on PHP installations where documentElement is not a property on DOMDocument
+
+= 7.11.27 :- 2019-05-29 :- Medium priority =
+* Added keypress listener for enter on store locator for configurations which don't emit keydown
+* Changed (experimental) compressed REST datatables GET request to use a cachable path variable rather than query string
+* Fixed classes that subclass WPGMZA.AdvancedTableDataTable not having "Show X items" setting applied in Pro
+* Fixed missing spatial function prefixes in WPGMZA\MarkerFilter::applyRadiusClause, now works with MySQL 8.*
+* Fixed "no results found" not showing when new MarkerFilter returns zero results
+* DataTables AJAX route no longer issues notice when used without a HTTP_REFERER
+
+= 7.11.26 - 2019-05-22 :- Medium Priority =
+* Tested with WordPress 5.2.1
+* REST API only passes map ID to child classes of MarkerListing and AdvancedTable
+* Fixed admin marker table not loading due to the above
+
+= 7.11.25 - 2019-05-21 :- Low priority =
+* Added CSS max width fix to override themes breaking OpenLayers markers
+* Added WPGMZA.Text and WPGMZA.GoogleText modules
+* Added experimental setting WPGMZA.settings.useCompressedDataTablesRequests
+* Developer mode and SCRIPT_DEBUG will now enqueue OpenLayers unminified
+* WPGMZA.LatLngBounds can now take an instance of WPGMZA.LatLngBounds in constructor arguments
+* Renamed deletePolygon, deletePolyline to removePolygon, removePolyline etc. on WPGMZA.Map
+* wpgmaps_check_shortcode no longer sets short_code_active to false
+* Fixed links not clickable in Pro InfoWindows
+* Fixed issue with WPGMZA.LatLngBounds around 180th meridian
+* Fixed various typos
+* Fixed error where _gdprCompliance on Plugin class would be empty for Gutenberg integration
+
+= 7.11.24 :- 2019-05-20 :- Medium priority =
+* Store Locator module no longer triggers a filter update when the address was not found
+
+= 7.21.23 =
+* Tested with WordPress 5.2
+* Added more robust error handling for missing files and failed initialisations (when NOT in developer mode)
+* Fixed LatLngBounds issue with 180th meridian
+* Fixed "undefined" in map edit page infowindows
+
+= 7.11.22 :- 2019-05-08 :- Low priority =
 * Added the ability to toggle auto night mode as well as a theme
 * Added a min height to bakend map so that it does not break when height is set to 100%
 * Added shift-click range selection to admin marker table
@@ -1125,6 +1396,61 @@ Please upgrade your version of WP Google Maps to version 6.0.27 as it includes m
 
 
 For more, please view the WP Google Maps site
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
