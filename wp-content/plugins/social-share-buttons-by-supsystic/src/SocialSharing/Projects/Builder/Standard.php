@@ -27,7 +27,7 @@ abstract class SocialSharing_Projects_Builder_Standard extends SocialSharing_Pro
         if ($project->has('grad')) {
             $classes[] = 'grad';
         }
-        
+
         // Hide counters
         if (!$project->isDisplayTotalShares()) {
             $classes[] = 'without-counter';
@@ -208,7 +208,7 @@ abstract class SocialSharing_Projects_Builder_Standard extends SocialSharing_Pro
 
         $atributesIcon[] = $builder->createAttribute(
             'class',
-            array('fa', 'fa-fw', $network->getIcon())
+            array('fa-ssbs', 'fa-ssbs-fw', $network->getIcon())
         );
 
 	    // add custom icon styles - pro version

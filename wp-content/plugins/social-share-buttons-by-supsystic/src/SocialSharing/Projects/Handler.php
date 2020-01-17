@@ -165,7 +165,7 @@ class SocialSharing_Projects_Handler
                 // Remove default wp trim handler
                 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 
-                $this->filter('the_content', 'applyContentCallback');
+                $this->filter('the_content', 'applyContentCallback', 99);
                 $this->filter('the_excerpt', 'applyContentCallback');
 
                 /* fix for AMP and FBIA */

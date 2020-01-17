@@ -113,6 +113,16 @@ class SocialSharing_Projects_Module extends SocialSharing_Core_BaseModule
             ->setHookName($hookName)
         );
 
+        $ui->addAsset($ui->create('style', 'ssbs-fa')
+            ->setModuleSource($this, 'css/fa-ssbs.css')
+            ->setHookName($hookName)
+        );
+
+        $ui->addAsset($ui->create('style', 'ssbs-fa')
+            ->setModuleSource($this, 'css/fa-ssbs.css')
+            ->setHookName($prefix . 'before_html_build')
+        );
+
         $ui->addAsset($ui->create('style', 'sss-base')
             ->setModuleSource($this, 'css/base.css')
             ->setHookName($prefix . 'before_html_build')

@@ -735,3 +735,14 @@ ul.wpgmza_marker_list_class {
     letter-spacing: 0.05em;
 }
 
+.ol-marker > img
+{
+	max-width: none !important;
+}
+
+.wpgmza_polygon_title {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

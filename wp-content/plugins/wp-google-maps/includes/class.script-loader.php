@@ -2,6 +2,9 @@
 
 namespace WPGMZA;
 
+if(!defined('ABSPATH'))
+	return;
+
 // TODO: Remove, an autoloader is now used
 require_once(plugin_dir_path(__FILE__) . 'google-maps/class.google-maps-loader.php');
 require_once(plugin_dir_path(__FILE__) . 'open-layers/class.ol-loader.php');
@@ -40,6 +43,9 @@ class ScriptLoader
 			$this->scriptsFileLocation = plugin_dir_path(WPGMZA_PRO_FILE) . 'js/v8/pro-scripts.json';
 		else
 			$this->scriptsFileLocation = plugin_dir_path(__DIR__) . 'js/v8/scripts.json';
+
+		if (function_exists('add_filter')) 
+			add_filter('wpgmza-get-library-dependencies', array($this, 'dequeueDataTablesScript'), 10, 1);
 	}
 	
 	/**
@@ -112,10 +118,14 @@ class ScriptLoader
 		$minified = ($wpgmza->isUsingMinifiedScripts() ? '.min' : '');
 		
 		$libraryDependencies = array(
-			'datatables'		=> $plugin_dir_url . "js/jquery.dataTables{$minified}.js",
-			'javascript-cookie'	=> $plugin_dir_url . 'lib/jquery-cookie.js',
-			'remodal'			=> $plugin_dir_url . "lib/remodal{$minified}.js",
-			'spectrum'			=> $plugin_dir_url . 'lib/spectrum.js'
+			'datatables'			=> $plugin_dir_url . "js/jquery.dataTables{$minified}.js",
+			'javascript-cookie'		=> $plugin_dir_url . 'lib/jquery-cookie.js',
+			'remodal'				=> $plugin_dir_url . "lib/remodal{$minified}.js",
+			'spectrum'				=> $plugin_dir_url . 'lib/spectrum.js',
+			
+			// TODO: These are only needed if the server supports inflate
+			'fast-text-encoding'	=> $plugin_dir_url . 'lib/text.min.js',
+			'pako'					=> $plugin_dir_url . 'lib/pako_deflate.min.js'
 		);
 		
 		/*if($wpgmza->isProVersion())
@@ -458,9 +468,35 @@ class ScriptLoader
 		// wp_enqueue_style('wpgmza-color-picker', plugin_dir_url(__DIR__) . 'lib/spectrum.css');
 		// wp_enqueue_style('datatables', '//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css');
 		
-		wp_enqueue_style('wpgmza-common', plugin_dir_url(__DIR__) . 'css/common.css');
-		wp_enqueue_style('remodal', plugin_dir_url(__DIR__) . 'lib/remodal.css');
-		wp_enqueue_style('remodal-default-theme', plugin_dir_url(__DIR__) . 'lib/remodal-default-theme.css');
+		$base = plugin_dir_url(__DIR__);
+		
+		wp_enqueue_style('wpgmza-common', $base . 'css/common.css');
+		
+		wp_enqueue_style('remodal', $base . 'lib/remodal.css');
+		wp_enqueue_style('remodal-default-theme', $base . 'lib/remodal-default-theme.css');
+		
+		$style = $wpgmza->settings->user_interface_style;
+		switch($style)
+		{
+			case 'bare-bones':
+				break;
+			
+			case 'legacy':
+			case 'default':
+			case 'compact':
+			case 'minimal':
+				wp_enqueue_style("wpgmza-ui-$style", $base . "css/styles/$style.css");
+				break;
+				
+			case 'modern':
+				wp_enqueue_style("wpgmza-ui-legacy", $base . "css/styles/legacy.css");
+				wp_enqueue_style("wpgmza-ui-modern", $base . "css/styles/modern.css");
+				break;
+			
+			default:
+				wp_enqueue_style("wpgmza-ui-default", $base . "css/styles/default.css");
+				break;
+		}
 	}
 	
 	/**
@@ -487,9 +523,6 @@ class ScriptLoader
 			
 			if(!$minified_file_exists || $delta > 0)
 				$src = $combined;
-			
-			// TODO: Remove this, fix errors
-			// $src = $combined;
 			
 			$scripts = array('wpgmza' => 
 				(object)array(
@@ -583,6 +616,8 @@ class ScriptLoader
 			wp_enqueue_script($handle, $fullpath, $script->dependencies, $version_string);
 		}
 		
+		do_action('wpgmza_enqueue_scripts');
+		
 		// Enqueue localized data
 		$this->enqueueLocalizedData();
 		//$this->enqueueTourData();
@@ -600,5 +635,24 @@ class ScriptLoader
 		$data = $wpgmza->getLocalizedData();
 
 		wp_localize_script('wpgmza', 'WPGMZA_localized_data', $data);
+	}
+
+	/**
+	 * Dequeues the datatables if the setting is enabled
+	 * @return array
+	 */
+	public function dequeueDataTablesScript($dep)
+	{
+		global $wpgmza;
+
+		if (!empty($wpgmza->settings->wpgmza_do_not_enqueue_datatables)) 
+		{
+			if (!empty($dep['datatables'])) 
+			{
+				unset($dep['datatables']);
+			}
+		}
+
+		return $dep;
 	}
 }

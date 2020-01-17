@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `%prefix%project_networks` (
   INDEX `FK__%prefix%projects` (`project_id`),
   INDEX `FK__%prefix%networks` (`network_id`),
   CONSTRAINT `FK__%prefix%networks` FOREIGN KEY (`network_id`) REFERENCES `%prefix%networks` (`id`),
-  CONSTRAINT `FK__%prefix%projects` FOREIGN KEY (`project_id`) REFERENCES `%prefix%projects` (`id`) ON DELETE CASCADE 
+  CONSTRAINT `FK__%prefix%projects` FOREIGN KEY (`project_id`) REFERENCES `%prefix%projects` (`id`) ON DELETE CASCADE
 )
   COLLATE='utf8_general_ci'
 ;
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `%prefix%views` (
   `timestamp` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   INDEX `FK_%prefix%views_%prefix%projects` (`project_id`),
-  CONSTRAINT `FK_%prefix%views_%prefix%projects` FOREIGN KEY (`project_id`) REFERENCES `%prefix%projects` (`id`) ON DELETE CASCADE 
+  CONSTRAINT `FK_%prefix%views_%prefix%projects` FOREIGN KEY (`project_id`) REFERENCES `%prefix%projects` (`id`) ON DELETE CASCADE
 )
   COLLATE='utf8_general_ci'
 ;
@@ -99,23 +99,23 @@ INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `
 ON DUPLICATE KEY UPDATE
     name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
 
-INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (8, 'Digg', 'http://digg.com/submit?url={url}&title={title}', 'digg', '#000000', '#ffffff', 0)
-ON DUPLICATE KEY UPDATE
-    name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
+-- INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (8, 'Digg', 'http://digg.com/submit?url={url}&title={title}', 'digg', '#000000', '#ffffff', 0)
+-- ON DUPLICATE KEY UPDATE
+--     name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
 
-INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (9, 'StumbleUpon', 'http://www.stumbleupon.com/submit?url={url}&title={title}', 'stumbleupon', '#eb4924', '#ffffff', 0)
-ON DUPLICATE KEY UPDATE
-    name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
+-- INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (9, 'StumbleUpon', 'http://www.stumbleupon.com/submit?url={url}&title={title}', 'stumbleupon', '#eb4924', '#ffffff', 0)
+-- ON DUPLICATE KEY UPDATE
+--     name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
 
-INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (10, 'Delicious', 'https://del.icio.us/save?v=5&jump=close&url={url}&title={title}', 'delicious', '#3399ff', '#ffffff', 0)
-ON DUPLICATE KEY UPDATE
-    name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
+-- INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (10, 'Delicious', 'https://del.icio.us/save?v=5&jump=close&url={url}&title={title}', 'delicious', '#3399ff', '#ffffff', 0)
+-- ON DUPLICATE KEY UPDATE
+--     name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
 
 INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (11, 'Livejournal', 'http://www.livejournal.com/update.bml?subject={title}&event={url}', 'livejournal', '#3399ff', '#ffffff', 0)
 ON DUPLICATE KEY UPDATE
     name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
 
-INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (12, 'Odnoklassniki', 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments={title}&st._surl={url}', 'odnoklassniki', '#3399ff', '#ffffff', 0)
+INSERT INTO `%prefix%networks` (`id`, `name`, `url`, `class`, `brand_primary`, `brand_secondary`, `total_shares`) VALUES (12, 'Odnoklassniki', 'https://connect.ok.ru/offer?url={url}&title={title}', 'odnoklassniki', '#3399ff', '#ffffff', 0)
 ON DUPLICATE KEY UPDATE
     name = VALUES(name), url = VALUES(url), class = VALUES(class), brand_primary = VALUES(brand_primary), brand_secondary = VALUES(brand_secondary), total_shares = VALUES(total_shares);
 
